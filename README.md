@@ -1,24 +1,27 @@
-Prayas Bharadwaj
-Code-Slinging, Pixel-Pushing Chaos Machine
+# Prayas Bharadwaj
+*Code-Slinging, 3D-Rendering, Pixel-Pushing Maniac*
 
-About Me
-I’m Prayas Bharadwaj, a [insert your role, e.g., software dev, creative ninja] who’s basically a one-man army of code, design, and sheer audacity. I juggle languages like Java and Python while churning out 3D renders and app UIs so sexy they’d make a GPU blush. My life’s a high-stakes game of “Will it compile or will it explode?”—and I always win.
+## About Me
+I’m Prayas Bharadwaj, a [self-proclaimed] software sorcerer and creative chaos agent who juggles more languages than a UN translator on a caffeine bender. I’m fluent in Java, C++, C, Python, C#, Kotlin, and Dart—because why settle for one when you can flex seven? I bend PyTorch and Flutter to my will, and when I’m not coding, I’m sculpting digital dreams in Blender, Unreal, Substance, Illustrator, Photoshop, and Resolve. Basically, I’m the human equivalent of a Swiss Army knife, but sexier and with better render times.
 
-Core Features
-Polyglot Programmer: I speak Java, C++, C, Python, C#, Kotlin, and Dart fluently—your compiler’s basically my bitch.
-Library Lord: Wielding PyTorch for ML magic and Flutter for apps so smooth they’ll make you question your life choices.
-Software Sorcerer: I bend Blender, Unreal, Substance, Illustrator, Photoshop, and Resolve to my will—call me the Da Vinci of digital disasters.
-Setup Instructions
-Wanna tap into this greatness? Here’s the deal:
+## Core Features
+### Polyglot Programmer: 
+I speak Java, C++, C, Python, C#, Kotlin, and Dart so fluently, I could sweet-talk your compiler into a date.
+### Library Lord:
+I wield PyTorch like a flamethrower and Flutter like a magic wand—AI and apps bow before me.
+### Creative Beast: 
+Blender? Unreal? Substance? I’m out here 3D-modeling your mom’s new kitchen while editing her vacation vids in Resolve. Photoshop and Illustrator just cry “yes, daddy” when I log in.
+## Setup Instructions
+Wanna activate this one-man tech army? Here’s the drill:
 
-Hit me up on [your contact, e.g., X, smoke signals].
-Throw me a project wilder than a Blender crash on render day.
-Watch me crank out brilliance faster than you can say “segmentation fault.”
-Contributions
-Got a crazy idea? Pitch it my way—but if it’s duller than a C++ manual, I’ll yeet it into orbit. Bring your A-game, and I might just bless it with some Prayas pizzazz.
+*Hit me up on LinkedIn or pray I don’t ghost you.*
+*Throw me a project so wild it’d make a GPU sweat.*
+*Watch me crank out code, graphics, and renders faster than you can say “where’s the documentation?”*
+## Contributions
+*Got a gig that needs a code ninja who can also 3D-print your dreams? Slide into my inbox with something that doesn’t make me yawn. I don’t do “basic”—bring me the good shit.*
 
-License
-I’m licensed under “Catch Me If You Can, Suckers.” Terms include coffee tributes and eternal bragging rights.
+## License
+I’m licensed under “Prayas Ain’t Cheap, Bro.” Want my skills? Bring coffee, cash, or a really good sob story. Terms negotiable over a render queue.
 
-Contact
-Crafted and maintained by the unstoppable Prayas Bharadwaj. Stalk me on [GitHub, X, etc.]—or don’t, I’ll be too busy rendering your mom’s Unreal Engine fanfic anyway.
+## Contact
+Built, maintained, and occasionally overclocked by Prayas Bharadwaj. Stalk me on [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) or pray I’m in a good mood when you ping me.
