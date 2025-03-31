@@ -1,27 +1,36 @@
 # Prayas Bharadwaj
-*Code-Slinging, 3D-Rendering, Pixel-Pushing Maniac*
+Software Engineer | Graphics Programmer | Multithreading Specialist | 3D Artist | Creative Technologist
 
 ## About Me
-I’m Prayas Bharadwaj, a [self-proclaimed] software sorcerer and creative chaos agent who juggles more languages than a UN translator on a caffeine bender. I’m fluent in Java, C++, C, Python, C#, Kotlin, and Dart—because why settle for one when you can flex seven? I bend PyTorch and Flutter to my will, and when I’m not coding, I’m sculpting digital dreams in Blender, Unreal, Substance, Illustrator, Photoshop, and Resolve. Basically, I’m the human equivalent of a Swiss Army knife, but sexier and with better render times.
+I’m Prayas Bharadwaj, a dynamic software engineer and creative powerhouse with a knack for turning complex problems into elegant solutions. Whether I’m crafting pixel-perfect visuals, optimizing performance with multithreaded wizardry, or sculpting digital worlds, I bring a rare blend of technical mastery and artistic vision to the table. I’m here to build, innovate, and occasionally make your hardware sweat.
 
-## Core Features
-### Polyglot Programmer: 
-I speak Java, C++, C, Python, C#, Kotlin, and Dart so fluently, I could sweet-talk your compiler into a date.
-### Library Lord:
-I wield PyTorch like a flamethrower and Flutter like a magic wand—AI and apps bow before me.
-### Creative Beast: 
-Blender? Unreal? Substance? I’m out here 3D-modeling your mom’s new kitchen while editing her vacation vids in Resolve. Photoshop and Illustrator just cry “yes, daddy” when I log in.
-## Setup Instructions
-Wanna activate this one-man tech army? Here’s the drill:
+## Core Competencies
+### Software Development
+Fluent in Java, C++, C, Python, C#, Kotlin, and Dart, I deliver robust, scalable code for even the most demanding projects.
 
-*Hit me up on LinkedIn or pray I don’t ghost you.*
-*Throw me a project so wild it’d make a GPU sweat.*
-*Watch me crank out code, graphics, and renders faster than you can say “where’s the documentation?”*
-## Contributions
-*Got a gig that needs a code ninja who can also 3D-print your dreams? Slide into my inbox with something that doesn’t make me yawn. I don’t do “basic”—bring me the good shit.*
+### Graphics Programming
+A maestro of shaders, rendering pipelines, and real-time visuals, I push the boundaries of graphical performance and aesthetics.
 
-## License
-I’m licensed under “Prayas Ain’t Cheap, Bro.” Want my skills? Bring coffee, cash, or a really good sob story. Terms negotiable over a render queue.
+### Multithreading Engineering
+I tame concurrency like a pro, leveraging multithreading to squeeze every ounce of power from modern hardware.
 
-## Contact
-Built, maintained, and occasionally overclocked by Prayas Bharadwaj. Stalk me on [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) or pray I’m in a good mood when you ping me.
+### Machine Learning & Mobile Development
+Skilled with PyTorch for cutting-edge AI and Flutter for seamless, high-performance mobile apps.
+
+### Creative Design & Visualization
+Proficient in Blender, Unreal Engine, Substance, Adobe Illustrator, Photoshop, and DaVinci Resolve, I create breathtaking 3D models, animations, and visual narratives.
+
+### How to Collaborate
+Ready to unleash a tech-and-art hybrid on your next project? Here’s the playbook:
+
+### Connect with me on LinkedIn.
+Pitch me a challenge that demands creativity, technical depth, or both—I live for the wild ones.
+Sit back as I deliver top-tier code, visuals, and performance faster than your last frame render.
+### Contributions
+I’m on the hunt for projects that crave a mix of graphics programming finesse, multithreading muscle, and creative flair. Got a gig that’s ambitious, intricate, or just gloriously insane? I’m in—bring me the good stuff.
+
+### Terms of Engagement
+Operating under the “Prayas Ain’t Cheap” license, my expertise comes with a price tag that matches its value. Terms are flexible—coffee, cash, or a killer concept will get us talking.
+
+### Contact
+Built and maintained by Prayas Bharadwaj. Reach out via [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) for collaborations, inquiries, or to throw something brilliant my way.
