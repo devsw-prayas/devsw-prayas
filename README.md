@@ -1,36 +1,89 @@
-# Prayas Bharadwaj
-Software Engineer | Graphics Programmer | Multithreading Specialist | 3D Artist | Creative Technologist
+# 🚀 Prayas Bharadwaj  
+**Software Engineer · Graphics Programmer · Multithreading Architect · 3D Artist · Creative Technologist**
 
-## About Me
-I’m Prayas Bharadwaj, a dynamic software engineer and creative powerhouse with a knack for turning complex problems into elegant solutions. Whether I’m crafting pixel-perfect visuals, optimizing performance with multithreaded wizardry, or sculpting digital worlds, I bring a rare blend of technical mastery and artistic vision to the table. I’m here to build, innovate, and occasionally make your hardware sweat.
+---
 
-## Core Competencies
-### Software Development
-Fluent in Java, C++, C, Python, C#, Kotlin, and Dart, I deliver robust, scalable code for even the most demanding projects.
+## 👋 About Me  
+I’m **Prayas Bharadwaj** — part engineer, part artist, all-in innovator. I build powerful systems that blend hardcore performance with beautiful visuals. Whether I’m deep in C++ internals or designing cinematic 3D scenes, I bring both grit and imagination to every line of code.
 
-### Graphics Programming
-A maestro of shaders, rendering pipelines, and real-time visuals, I push the boundaries of graphical performance and aesthetics.
+I specialize in **multithreaded rendering**, **graphics engines**, and **creative tooling** — the kind of work that turns big ideas into breathtaking execution.
 
-### Multithreading Engineering
-I tame concurrency like a pro, leveraging multithreading to squeeze every ounce of power from modern hardware.
+---
 
-### Machine Learning & Mobile Development
-Skilled with PyTorch for cutting-edge AI and Flutter for seamless, high-performance mobile apps.
+## 🧠 Core Expertise  
 
-### Creative Design & Visualization
-Proficient in Blender, Unreal Engine, Substance, Adobe Illustrator, Photoshop, and DaVinci Resolve, I create breathtaking 3D models, animations, and visual narratives.
+### ⚙️ Software & Systems Engineering  
+- Languages: `C++`, `Java`, `C`, `C#`, `Python`, `Kotlin`, `Dart`  
+- Low-level architecture, performance tuning, and scalable codebases  
+- Custom thread pools, SIMD pipelines, and memory-safe systems  
 
-### How to Collaborate
-Ready to unleash a tech-and-art hybrid on your next project? Here’s the playbook:
+### 🎮 Graphics Programming  
+- Real-time rendering, PBR pipelines, shader systems  
+- Vulkan, OpenGL, DirectX — fluent in low-level GPU APIs  
+- Engine infrastructure, scene graphs, material systems  
 
-### Connect with me on LinkedIn.
-Pitch me a challenge that demands creativity, technical depth, or both—I live for the wild ones.
-Sit back as I deliver top-tier code, visuals, and performance faster than your last frame render.
-### Contributions
-I’m on the hunt for projects that crave a mix of graphics programming finesse, multithreading muscle, and creative flair. Got a gig that’s ambitious, intricate, or just gloriously insane? I’m in—bring me the good stuff.
+### 🧵 Multithreading & Concurrency  
+- Lock-free design, thread affinity, NUMA-awareness  
+- Built **Blaze**: a custom real-time task engine for parallel processing  
+- Deep understanding of synchronization, scheduling, and contention control  
 
-### Terms of Engagement
-Operating under the “Prayas Ain’t Cheap” license, my expertise comes with a price tag that matches its value. Terms are flexible—coffee, cash, or a killer concept will get us talking.
+### 🧠 Machine Learning Integration  
+- PyTorch + transformer models  
+- Neural rendering, adaptive sampling, and vision pipelines  
+- ML applied to performance, prediction, and graphics enhancement  
 
-### Contact
-Built and maintained by Prayas Bharadwaj. Reach out via [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) for collaborations, inquiries, or to throw something brilliant my way.
+### 🎨 Creative Tech & 3D Art  
+- Blender, Unreal Engine, Substance, Photoshop, DaVinci Resolve  
+- Real-time visualization, cinematic scene design, motion graphics  
+- Full asset pipeline: modeling → texturing → rendering → post  
+
+---
+
+## 🔧 Active Projects  
+
+### 🖥️ Spectra  
+A custom **real-time rendering engine**, built from the ground up in C++. Focused on precision, performance, and visual fidelity.
+
+### 🧠 Iota  
+A high-performance **deep learning engine**, written in C++/CUDA — designed to power intelligent systems and future AI-integrated visuals.
+
+### ⚙️ Blaze  
+My lightweight, high-throughput **multithreading engine** for real-time systems — built with modern hardware in mind.
+
+---
+
+## 🎯 How to Collaborate  
+
+1. **Connect**: [LinkedIn →](https://www.linkedin.com/in/prayas-bharadwaj-053886323/)  
+2. **Challenge me**: Bring something ambitious, technical, artistic — or all three.  
+3. **Get results**: High-performance code. Stunning visuals. Real-time speed.
+
+---
+
+## 🧾 Terms of Engagement  
+
+**License**: `Prayas Ain’t Cheap`  
+Bring **coffee, cash, or chaos** — I’ll bring code that bites back.  
+
+---
+
+## 💬 Contact  
+
+Built & maintained by **Prayas Bharadwaj**  
+Reach out via [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) for collaborations, consulting, or creative missions worth building.
+
+---
+
+## 📊 GitHub Activity & Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=devsw-prayas&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="Prayas' GitHub Stats" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devsw-prayas&layout=compact&theme=tokyonight&langs_count=8" alt="Top Languages Used" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=devsw-prayas&theme=tokyonight" alt="GitHub Contribution Streak" width="500"/>
+</p>
