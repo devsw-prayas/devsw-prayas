@@ -1,89 +1,119 @@
-# 🚀 Prayas Bharadwaj  
-**Software Engineer · Graphics Programmer · Multithreading Architect · 3D Artist · Creative Technologist**
+# ⚡ **Prayas Bharadwaj**  
+**Founder & Research Lead — StormWeaver Studios**  
+High-Performance Computing · Graphics Research · Neural Systems
 
----
+## 👋 **About Me**
+I’m **Prayas Bharadwaj**, founder and research lead of **StormWeaver Studios** — an independent R&D studio focused on advancing high-performance computing, graphics, and neural systems.
 
-## 👋 About Me  
-I’m **Prayas Bharadwaj** — part engineer, part artist, all-in innovator. I build powerful systems that blend hardcore performance with beautiful visuals. Whether I’m deep in C++ internals or designing cinematic 3D scenes, I bring both grit and imagination to every line of code.
+My work centers on building foundational technologies: large-scale multithreading runtimes, wavelength-domain light transport, deterministic deep learning engines, and the infrastructures that tie them together. I approach problems from a research perspective, and then engineer them into real, production-grade systems.
 
-I specialize in **multithreaded rendering**, **graphics engines**, and **creative tooling** — the kind of work that turns big ideas into breathtaking execution.
+StormWeaver Studios is structured as a three-division research unit, each exploring a core domain of modern computation: **HPC**, **Graphics**, and **Deep Learning**.
 
----
+# 🔬 **Research Divisions — StormWeaver Studios**
 
-## 🧠 Core Expertise  
+## **1. High-Performance Computing (HPC) Division**
+The HPC division develops the **ultra-high-performance compute infrastructure** that forms the backbone of every system at StormWeaver Studios.
 
-### ⚙️ Software & Systems Engineering  
-- Languages: `C++`, `Java`, `C`, `C#`, `Python`, `Kotlin`, `Dart`  
-- Low-level architecture, performance tuning, and scalable codebases  
-- Custom thread pools, SIMD pipelines, and memory-safe systems  
+### **Focus areas:**
+- Large-scale multithreading, scheduling, and task graphs  
+- Advanced memory safety: shadow memory, lifetime tracking, deterministic heaps  
+- High-throughput data structures, cache-aware and NUMA-aware layouts  
+- HPC math: SIMD kernels, probabilistic numerics, stable computation  
+- Lock-free concurrency and contention-aware systems  
+- Deterministic execution and zero-overhead instrumentation  
 
-### 🎮 Graphics Programming  
-- Real-time rendering, PBR pipelines, shader systems  
-- Vulkan, OpenGL, DirectX — fluent in low-level GPU APIs  
-- Engine infrastructure, scene graphs, material systems  
+### **Projects in this division:**
+- **StormSTL** — data structures, allocators, memory primitives  
+- **Corium** — parallel runtime & scheduler  
+- **Stratum** — deterministic tracing & instrumentation  
+- **Kerbecs** — shadow-memory sanitizer  
+- **Leibniz** — SIMD-optimized math library  
+- **Iota** — deep learning runtime (HPC + DL)  
+- **Spectra Infrastructure Layer** — core HPC underpinning for the renderer  
 
-### 🧵 Multithreading & Concurrency  
-- Lock-free design, thread affinity, NUMA-awareness  
-- Built **Blaze**: a custom real-time task engine for parallel processing  
-- Deep understanding of synchronization, scheduling, and contention control  
+## **2. Graphics & Rendering Research Division**
+The Graphics division investigates the foundations and evolution of **light transport**, spanning RGB, spectral, and neural-augmented rendering models.
 
-### 🧠 Machine Learning Integration  
-- PyTorch + transformer models  
-- Neural rendering, adaptive sampling, and vision pipelines  
-- ML applied to performance, prediction, and graphics enhancement  
+### **Focus areas:**
+- Path Tracing — uni/bidirectional, mutation-based  
+- RGB Rendering and hybrid real-time pipelines  
+- Spectral Rendering and wavelength-domain simulation  
+- Light Transport Theory — sampling, integrators, variance reduction  
+- Neural Rendering — reconstruction and prediction models integrated into pipelines  
 
-### 🎨 Creative Tech & 3D Art  
-- Blender, Unreal Engine, Substance, Photoshop, DaVinci Resolve  
-- Real-time visualization, cinematic scene design, motion graphics  
-- Full asset pipeline: modeling → texturing → rendering → post  
+### **Projects in this division:**
+- **Spectra** — research-first rendering engine  
+- **Spectral & Neural Transport Modules** — neural and λ-domain extensions for Spectra  
 
----
+## **3. Deep Learning Systems Division**
+The Deep Learning division builds **HPC-oriented neural computation systems**, enabling deterministic, throughput-optimized AI pipelines for rendering and vision research.
 
-## 🔧 Active Projects  
+### **Focus areas:**
+- HPC Deep Learning with C++/CUDA  
+- Throughput-optimized inference kernels  
+- SIMD-accelerated neural math  
+- Deterministic kernel execution and reproducibility  
+- Custom operators for sampling, denoising, reconstruction  
+- Vision Transformers and encoder models supporting rendering experiments  
 
-### 🖥️ Spectra  
-A custom **real-time rendering engine**, built from the ground up in C++. Focused on precision, performance, and visual fidelity.
+### **Projects in this division:**
+- **Iota** — in-house deep learning inference engine (DL + HPC)  
+- **Neural Transport Models** — models consumed by Spectra  
 
-### 🧠 Iota  
-A high-performance **deep learning engine**, written in C++/CUDA — designed to power intelligent systems and future AI-integrated visuals.
+# 🧠 **Core Competencies**
 
-### ⚙️ Blaze  
-My lightweight, high-throughput **multithreading engine** for real-time systems — built with modern hardware in mind.
+### **High-Performance Computing**
+- Multithreading models, task graph runtimes, high-throughput scheduling  
+- NUMA-aware execution and CPU affinity design  
+- Cache-efficient, lock-free data structures and concurrent systems  
+- Shadow memory, deterministic heaps, memory lifetime analysis  
+- SIMD/SIMT kernel design, probabilistic numerics, HPC math primitives  
 
----
+### **Graphics & Rendering**
+- Path tracing: unidirectional, bidirectional, and mutation-based transport  
+- RGB pipelines, real-time hybrid raster–path tracing systems  
+- Spectral rendering and wavelength-domain simulation  
+- Light transport theory, sampling strategies, integrator formulation  
+- **GPU Systems:** DX12, DXR, OptiX, TensorRT pipelines  
 
-## 🎯 How to Collaborate  
+### **Deep Learning & Neural Systems**
+- C++/CUDA inference engine design and low-level neural runtimes  
+- Deterministic neural execution, custom operator design  
+- Vision Transformers and encoder models for rendering and reconstruction  
+- Neural sampling, denoising, and real-time reconstruction pipelines  
+- Throughput-optimized kernels and framework-free AI infrastructure  
 
-1. **Connect**: [LinkedIn →](https://www.linkedin.com/in/prayas-bharadwaj-053886323/)  
-2. **Challenge me**: Bring something ambitious, technical, artistic — or all three.  
-3. **Get results**: High-performance code. Stunning visuals. Real-time speed.
+### **Systems Architecture & Tooling**
+- Engine architecture, systems design, and runtime organization  
+- Profiling, instrumentation, deterministic tracing with zero-overhead tools  
+- Platform-level runtimes, memory debugging, and performance analysis  
+- Internal tooling for rendering, simulation, and distributed workflows
 
----
 
-## 🧾 Terms of Engagement  
+# 🎯 **Collaboration**
+I collaborate on projects that intersect **HPC**, **Graphics**, and **Deep Learning** — especially those involving advanced rendering, systems research, or neural computation.
 
-**License**: `Prayas Ain’t Cheap`  
-Bring **coffee, cash, or chaos** — I’ll bring code that bites back.  
+If you’re working on something ambitious, experimental, or technically challenging, I’m open to discussing it.
 
----
+# 🧾 **Engagement Model**
+StormWeaver Studios operates on a research-first, engineering-driven workflow.
 
-## 💬 Contact  
+- **Scope clearly. Build precisely. Iterate intelligently.**  
+- All engagements prioritize performance, determinism, and technical depth.  
+- For custom work or collaborations, reach out with a clear problem statement or research direction.
 
-Built & maintained by **Prayas Bharadwaj**  
-Reach out via [LinkedIn](https://www.linkedin.com/in/prayas-bharadwaj-053886323/) for collaborations, consulting, or creative missions worth building.
+*(Personal note: coffee is always welcome.)*
 
----
+# 💬 **Contact**
+Built & maintained by **Prayas Bharadwaj**.  
+For collaborations, research partnerships, or consulting:
 
-## 📊 GitHub Activity & Stats
+🔗 **LinkedIn:** https://www.linkedin.com/in/prayas-bharadwaj-053886323/
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=devsw-prayas&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="Prayas' GitHub Stats" width="500"/>
-</p>
+# 📊 **GitHub Activity & Stats**
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devsw-prayas&layout=compact&theme=tokyonight&langs_count=8" alt="Top Languages Used" width="500"/>
-</p>
+<img src="https://github-readme-stats.vercel.app/api?username=devsw-prayas&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" width="500"/>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=devsw-prayas&theme=tokyonight" alt="GitHub Contribution Streak" width="500"/>
-</p>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devsw-prayas&layout=compact&theme=tokyonight&langs_count=8" width="500"/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=devsw-prayas&theme=tokyonight" width="500"/>
