@@ -1,15 +1,21 @@
-# ⚡ **Prayas Bharadwaj**  
+# **Prayas Bharadwaj**  
 **Founder & Research Lead — StormWeaver Studios**  
 High-Performance Computing · Graphics Research · Neural Systems
 
-## 👋 **About Me**
+
+<img src="https://img.shields.io/badge/Engine-Spectra-blueviolet?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Inference-Iota-purple?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/MonteCarlo-Requiem-darkred?style=for-the-badge"/>
+
+
+##  **About Me**
 I’m **Prayas Bharadwaj**, founder and research lead of **StormWeaver Studios** — an independent R&D studio focused on advancing high-performance computing, graphics, and neural systems.
 
 My work centers on building foundational technologies: large-scale multithreading runtimes, wavelength-domain light transport, deterministic deep learning engines, and the infrastructures that tie them together. I approach problems from a research perspective, and then engineer them into real, production-grade systems.
 
 StormWeaver Studios is structured as a three-division research unit, each exploring a core domain of modern computation: **HPC**, **Graphics**, and **Deep Learning**.
 
-# 🔬 **Research Divisions — StormWeaver Studios**
+#  **Research Divisions — StormWeaver Studios**
 
 ## **1. High-Performance Computing (HPC) Division**
 The HPC division develops the **ultra-high-performance compute infrastructure** that forms the backbone of every system at StormWeaver Studios.
@@ -60,7 +66,7 @@ The Deep Learning division builds **HPC-oriented neural computation systems**, e
 - **Iota** — in-house deep learning inference engine (DL + HPC)  
 - **Neural Transport Models** — models consumed by Spectra  
 
-# 🧠 **Core Competencies**
+#  **Core Competencies**
 
 ### **High-Performance Computing**
 - Multithreading models, task graph runtimes, high-throughput scheduling  
@@ -90,12 +96,12 @@ The Deep Learning division builds **HPC-oriented neural computation systems**, e
 - Internal tooling for rendering, simulation, and distributed workflows
 
 
-# 🎯 **Collaboration**
+#  **Collaboration**
 I collaborate on projects that intersect **HPC**, **Graphics**, and **Deep Learning** — especially those involving advanced rendering, systems research, or neural computation.
 
 If you’re working on something ambitious, experimental, or technically challenging, I’m open to discussing it.
 
-# 🧾 **Engagement Model**
+#  **Engagement Model**
 StormWeaver Studios operates on a research-first, engineering-driven workflow.
 
 - **Scope clearly. Build precisely. Iterate intelligently.**  
@@ -104,16 +110,22 @@ StormWeaver Studios operates on a research-first, engineering-driven workflow.
 
 *(Personal note: coffee is always welcome.)*
 
-# 💬 **Contact**
+#  **Contact**
 Built & maintained by **Prayas Bharadwaj**.  
 For collaborations, research partnerships, or consulting:
 
 🔗 **LinkedIn:** https://www.linkedin.com/in/prayas-bharadwaj-053886323/
 
-# 📊 **GitHub Activity & Stats**
+#  **GitHub Activity & Stats**
 
-<img src="https://github-readme-stats.vercel.app/api?username=devsw-prayas&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" width="500"/>
+<!-- Contribution Graph (Full Width) -->
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=devsw-prayas&theme=tokyo-night" width="100%"/>
+</p>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devsw-prayas&layout=compact&theme=tokyonight&langs_count=8" width="500"/>
+<!-- Streak + Top Languages Side by Side -->
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=devsw-prayas&theme=tokyonight" width="48%"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=devsw-prayas&layout=compact&theme=tokyonight" width="48%"/>
+</p>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=devsw-prayas&theme=tokyonight" width="500"/>
