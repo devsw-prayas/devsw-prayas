@@ -1,0 +1,533 @@
+import fs from "fs";
+
+const USERNAME = "devsw-prayas";
+
+async function main(): Promise<void> {
+  const headers = {
+    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    "Content-Type": "application/json",
+  };
+
+  // ----------------------------
+  // USER DATA
+  // ----------------------------
+  const userRes = await fetch(
+    `https://api.github.com/users/${USERNAME}`,
+    { headers }
+  );
+
+  const user = await userRes.json();
+
+  const reposCount: number = user.public_repos ?? 0;
+  const followers: number = user.followers ?? 0;
+
+  // ----------------------------
+  // REPO DATA
+  // ----------------------------
+  const reposRes = await fetch(
+    `https://api.github.com/users/${USERNAME}/repos?per_page=100`,
+    { headers }
+  );
+
+  const repos = await reposRes.json();
+
+  const totalStars: number = repos.reduce(
+    (sum: number, repo: any) => sum + repo.stargazers_count,
+    0
+  );
+
+  const ownedRepos = repos.filter((repo: any) => !repo.fork);
+
+  const languageResponses = await Promise.all(
+    ownedRepos.map((repo: any) =>
+      fetch(repo.languages_url, { headers }).then((res) => res.json())
+    )
+  );
+
+  const languageBytes: Record<string, number> = {};
+
+  for (const langs of languageResponses) {
+    for (const [lang, bytes] of Object.entries(langs)) {
+      languageBytes[lang] =
+        (languageBytes[lang] || 0) + (bytes as number);
+    }
+  }
+
+  const totalBytes = Object.values(languageBytes).reduce(
+    (a, b) => a + b,
+    0
+  );
+
+  const languages = Object.entries(languageBytes)
+    .map(([lang, bytes]) => ({
+      lang,
+      percent: totalBytes > 0
+        ? (bytes / totalBytes) * 100
+        : 0,
+    }))
+    .sort((a, b) => b.percent - a.percent)
+    .slice(0, 4);
+
+  const languageBars = languages
+    .map((l, i) => {
+      const baseY = 720;
+      const y = baseY + i * 32;
+      const barWidth = (l.percent / 100) * 200;
+
+      return `
+        <text x="1090" y="${y}" class="mono-label">${l.lang}</text>
+        <rect x="1190" y="${y - 10}" width="220" height="8" fill="#2a1a1a" />
+        <rect x="1190" y="${y - 10}" width="${barWidth}" height="8" fill="#ff4757" />
+        <text x="1470" y="${y}" class="mono-label" text-anchor="end">
+          ${l.percent.toFixed(1)}%
+        </text>
+      `;
+    })
+    .join("");
+
+  // ----------------------------
+  // CONTRIBUTIONS
+  // ----------------------------
+  const graphQLQuery = {
+    query: `
+      {
+        user(login: "${USERNAME}") {
+          contributionsCollection {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  contributionCount
+                  date
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  };
+
+  const graphRes = await fetch(
+    "https://api.github.com/graphql",
+    {
+      method: "POST",
+      headers,
+      body: JSON.stringify(graphQLQuery),
+    }
+  );
+
+  const graphData = await graphRes.json();
+
+  const calendar =
+    graphData?.data?.user?.contributionsCollection?.contributionCalendar;
+
+  const totalContributions =
+    calendar?.totalContributions ?? 0;
+
+  const allDays =
+    calendar?.weeks
+      ?.flatMap((w: any) => w.contributionDays)
+      ?.sort((a: any, b: any) =>
+        new Date(a.date) > new Date(b.date) ? 1 : -1
+      ) ?? [];
+
+  let currentStreak = 0;
+  let longestStreak = 0;
+  let tempStreak = 0;
+
+  for (const day of allDays) {
+    if (day.contributionCount > 0) {
+      tempStreak++;
+      longestStreak = Math.max(longestStreak, tempStreak);
+    } else {
+      tempStreak = 0;
+    }
+  }
+
+  for (let i = allDays.length - 1; i >= 0; i--) {
+    if (allDays[i].contributionCount > 0) {
+      currentStreak++;
+    } else {
+      break;
+    }
+  }
+
+  // ----------------------------
+  // SVG OUTPUT
+  // ----------------------------
+ const svg = ` <svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep Dark Red Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="50%" stop-color="#2a0f0f"/>
+      <stop offset="100%" stop-color="#1f0d0d"/>
+    </linearGradient>
+    
+    <!-- Highlight Panel Gradient (Darker Red) -->
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#150808"/>
+      <stop offset="50%" stop-color="#1d0a0a"/>
+      <stop offset="100%" stop-color="#180909"/>
+    </linearGradient>
+    
+    <!-- Coral Red Accent (Primary) -->
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4757"/>
+      <stop offset="100%" stop-color="#ff6b7a"/>
+    </linearGradient>
+    
+    <!-- Muted Gold for Theoretical Highlights -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#e6b887"/>
+    </linearGradient>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
+      
+      .studio-name {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 48px;
+        fill: #ffffff;
+        font-weight: 900;
+        letter-spacing: 2px;
+      }
+      .watermark {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 180px;
+        fill: #ffffff;
+        font-weight: 900;
+        letter-spacing: 20px;
+        opacity: 0.05;
+      }
+      .watermark-small {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 11px;
+        fill: #5a4049;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .orbitron-stat {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 22px;
+        fill: #d4a574;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .mono-title {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 32px;
+        fill: #f5e8e8;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-section {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 22px;
+        fill: #e8d4d4;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-body {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 15px;
+        fill: #b8a8a8;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 1.6;
+      }
+      .mono-label {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 13px;
+        fill: #8a7a7a;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .mono-highlight {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 15px;
+        fill: #d4a574;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-accent {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 13px;
+        fill: #ff4757;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .status-text {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 12px;
+        fill: #9a8a8a;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .metadata-text {
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+        font-size: 10px;
+        fill: #5a4968;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern (very low opacity) -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3a1515" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="1.0"/>
+  
+  <!-- Left Margin Vertical Accent Line -->
+  <line x1="80" y1="0" x2="80" y2="3200" stroke="#ff4757" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Large Background Watermark -->
+  <text x="1400" y="1750" class="watermark" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
+  
+  <!-- Header Section -->
+  <text x="100" y="100" class="studio-name">STORMWEAVER STUDIOS</text>
+  <text x="100" y="125" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
+  
+
+  <!-- Top Divider -->
+  <line x1="100" y1="180" x2="1520" y2="180" stroke="#3a2020" stroke-width="1"/>
+  
+  <!-- Overview Section -->
+  <text x="100" y="260" class="mono-title">LABORATORY OVERVIEW</text>
+  
+  <text x="100" y="305" class="mono-body">StormWeaver Studios is where I build the stuff nobody asked for but everybody</text>
+  <text x="100" y="325" class="mono-body">needs. Independent R&amp;D lab focused on high-performance computing, graphics that</text>
+  <text x="100" y="345" class="mono-body">actually render, and neural nets that don't randomly decide Tuesday is opposite</text>
+  <text x="100" y="365" class="mono-body">day. Research-first mindset, production-grade execution.</text>
+  
+  <text x="100" y="405" class="mono-body">We're talking massive multithreading (because cores exist), wavelength-accurate</text>
+  <text x="100" y="425" class="mono-body">light transport (yes, the full spectrum), memory systems that remember their job,</text>
+  <text x="100" y="445" class="mono-body">and deep learning engines that produce the same answer twice. Deterministic</text>
+  <text x="100" y="465" class="mono-body">everything. Zero "works on my machine" energy.</text>
+  
+  <!-- Divider -->
+  <line x1="100" y1="505" x2="1520" y2="505" stroke="#3a2020" stroke-width="1"/>
+  
+  <!-- GitHub Stats Section -->
+  <text x="100" y="565" class="mono-title">GITHUB ACTIVITY METRICS</text>
+  
+  <!-- GitHub Stats Grid -->
+  <g id="github-stats">
+    <!-- Account Stats Panel -->
+    <rect x="100" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    
+    <text x="130" y="635" class="mono-section">ACCOUNT STATS</text>
+    <text x="130" y="655" class="mono-label">github.com/devsw-prayas</text>
+    
+    <text x="130" y="690" class="mono-accent">PUBLIC REPOS</text>
+    <text x="130" y="710" class="orbitron-stat">${reposCount}</text>
+    
+    <text x="130" y="745" class="mono-accent">FOLLOWERS</text>
+  <text x="130" y="765" class="orbitron-stat"> ${followers}</text>    
+    <text x="330" y="690" class="mono-accent">STARS EARNED</text>
+<text x="330" y="710" class="orbitron-stat">
+    ${totalStars.toLocaleString()}
+  </text>
+    
+    <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
+  <text x="330" y="765" class="orbitron-stat">
+    ${totalContributions.toLocaleString()}
+  </text>
+    
+    <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
+    
+    <!-- Contribution Activity Panel -->
+    <rect x="580" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="580" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    
+    <text x="610" y="635" class="mono-section">CONTRIBUTION ACTIVITY</text>
+    <text x="610" y="655" class="mono-label">Last 365 days</text>
+    
+    <text x="610" y="745" class="mono-accent">CURRENT STREAK</text>
+ <text x="610" y="765" class="orbitron-stat">
+    ${currentStreak} days
+  </text>    
+    <text x="610" y="800" class="mono-accent">LONGEST STREAK</text>
+  <text x="610" y="820" class="mono-body">
+    ${longestStreak} days
+  </text>
+  
+  <!-- Language Distribution Panel -->
+<rect x="1060" y="600" width="460" height="240"
+      fill="url(#panelGrad)"
+      stroke="#3a2020"
+      stroke-width="1"/>
+
+<rect x="1060" y="600" width="4" height="240"
+      fill="url(#blueAccent)"/>
+
+<text x="1090" y="635" class="mono-section">
+  LANGUAGE DISTRIBUTION
+</text>
+
+<text x="1090" y="655" class="mono-label">
+  Aggregated across owned repositories
+</text>
+
+<!-- Column Headers -->
+<text x="1090" y="690" class="mono-accent">LANG</text>
+<text x="1240" y="690" class="mono-accent">UTILIZATION</text>
+<text x="1470" y="690" class="mono-accent" text-anchor="end">%</text>
+
+<!-- Bars Injected Dynamically -->
+<g id="language-bars">
+  ${languageBars}
+</g>
+
+    </g>
+  
+  <!-- Divider -->
+  <line x1="100" y1="880" x2="1520" y2="880" stroke="#3a2020" stroke-width="1"/>
+  
+  <!-- Research Divisions Section -->
+  <text x="100" y="940" class="mono-title">RESEARCH DIVISIONS</text>
+  
+  <!-- Division 01: HPC -->
+  <text x="100" y="995" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
+  <line x1="100" y1="1005" x2="680" y2="1005" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="1040" class="mono-body">The "make it go brrrr" department. Building compute infrastructure that doesn't</text>
+  <text x="100" y="1060" class="mono-body">crash, leak, race, or mysteriously slow down when you're not looking.</text>
+  
+  <text x="100" y="1095" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1120" class="mono-body">· Multithreading that actually uses all those expensive cores you bought</text>
+  <text x="100" y="1140" class="mono-body">· Memory systems with trust issues (shadow tracking, lifetime paranoia)</text>
+  <text x="100" y="1160" class="mono-body">· Data structures that respect cache lines like they're personal space</text>
+  <text x="100" y="1180" class="mono-body">· SIMD kernels because scalar loops are for cowards</text>
+  <text x="100" y="1200" class="mono-body">· Lock-free everything (locks are just scheduled arguments)</text>
+  <text x="100" y="1220" class="mono-body">· Deterministic execution (same input → same output, shocking concept)</text>
+  
+  <text x="100" y="1255" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1280" class="mono-accent">StormSTL</text>
+  <text x="210" y="1280" class="mono-body">— data structures, allocators, memory primitives</text>
+  <text x="100" y="1300" class="mono-accent">Corium</text>
+  <text x="180" y="1300" class="mono-body">— parallel runtime &amp; scheduler</text>
+  <text x="100" y="1320" class="mono-accent">Stratum</text>
+  <text x="195" y="1320" class="mono-body">— deterministic tracing &amp; instrumentation</text>
+  <text x="100" y="1340" class="mono-accent">Kerbecs</text>
+  <text x="195" y="1340" class="mono-body">— shadow-memory sanitizer</text>
+  <text x="100" y="1360" class="mono-accent">Leibniz</text>
+  <text x="185" y="1360" class="mono-body">— SIMD-optimized math library</text>
+  <text x="100" y="1380" class="mono-accent">Iota</text>
+  <text x="150" y="1380" class="mono-body">— deep learning runtime (HPC + DL)</text>
+  
+  <!-- Division 02: Graphics -->
+  <line x1="100" y1="1420" x2="1520" y2="1420" stroke="#3a2020" stroke-width="1"/>
+  
+  <text x="100" y="1475" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+  <line x1="100" y1="1485" x2="720" y2="1485" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="1520" class="mono-body">Making light bounce around convincingly. RGB, spectral, neural-assisted — if</text>
+  <text x="100" y="1540" class="mono-body">photons do it, we simulate it. Preferably before the heat death of the universe.</text>
+  
+  <text x="100" y="1575" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1600" class="mono-body">· Path tracing (unidirectional, bidirectional, mutation-based chaos)</text>
+  <text x="100" y="1620" class="mono-body">· RGB rendering for people who think monitors only have 3 colors</text>
+  <text x="100" y="1640" class="mono-body">· Spectral rendering for people who remember physics class</text>
+  <text x="100" y="1660" class="mono-body">· Light transport theory (aka "why is this pixel still noisy?")</text>
+  <text x="100" y="1680" class="mono-body">· Neural rendering (teaching computers to guess, but scientifically)</text>
+  
+  <text x="100" y="1715" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1740" class="mono-accent">Spectra</text>
+  <text x="180" y="1740" class="mono-body">— research-first rendering engine</text>
+  <text x="100" y="1760" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1760" class="mono-body">— λ-domain extensions for Spectra</text>
+  
+  <!-- Division 03: Deep Learning -->
+  <line x1="100" y1="1800" x2="1520" y2="1800" stroke="#3a2020" stroke-width="1"/>
+  
+  <text x="100" y="1855" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+  <line x1="100" y1="1865" x2="640" y2="1865" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="1900" class="mono-body">Neural networks, but for people who write C++ and care about nanoseconds.</text>
+  <text x="100" y="1920" class="mono-body">Deterministic AI that doesn't mysteriously change answers between builds.</text>
+  
+  <text x="100" y="1955" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1980" class="mono-body">· Deep learning without the Python training wheels</text>
+  <text x="100" y="2000" class="mono-body">· Inference kernels optimized like your rent depends on it</text>
+  <text x="100" y="2020" class="mono-body">· SIMD neural math (because GPUs aren't always invited)</text>
+  <text x="100" y="2040" class="mono-body">· Deterministic execution (yes, we checked twice, same answer)</text>
+  <text x="100" y="2060" class="mono-body">· Custom operators for when PyTorch gives up</text>
+  
+  <text x="100" y="2095" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="2120" class="mono-accent">Iota</text>
+  <text x="150" y="2120" class="mono-body">— in-house deep learning inference engine</text>
+  <text x="100" y="2140" class="mono-accent">Neural Transport Models</text>
+  <text x="330" y="2140" class="mono-body">— models consumed by Spectra</text>
+  
+  <!-- Major Divider -->
+  <line x1="100" y1="2200" x2="1520" y2="2200" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Research Highlight Section -->
+  <text x="100" y="2280" class="mono-title">RESEARCH HIGHLIGHT</text>
+  
+  <!-- BsSPT Panel -->
+  <g id="highlight-panel">
+    <!-- Panel Background -->
+    <rect x="100" y="2315" width="1420" height="500" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <!-- Left Accent Bar -->
+    <rect x="100" y="2315" width="4" height="500" fill="url(#goldAccent)"/>
+    
+    <!-- Content -->
+    <text x="140" y="2360" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
+    <text x="140" y="2380" class="mono-label">THE "WAVELENGTHS ARE JUST VECTORS" FRAMEWORK</text>
+    
+    <text x="140" y="2415" class="mono-body">Deterministic spectral transport that doesn't randomly sample wavelengths like</text>
+    <text x="140" y="2435" class="mono-body">some kind of Monte Carlo cowboy. Instead, we represent spectral shape φ in a</text>
+    <text x="140" y="2455" class="mono-body">fixed global basis and track scalar throughput T separately. Linear algebra wins.</text>
+    
+    <text x="140" y="2495" class="mono-body">Spectral evolution becomes basis-space operator transforms. No stochastic per-path</text>
+    <text x="140" y="2515" class="mono-body">wavelength drama. Full spectral fidelity. Deterministic. Chef's kiss.</text>
+    
+    <text x="140" y="2550" class="mono-label">TECHNICAL SUMMARY</text>
+    <text x="140" y="2575" class="mono-body">· Same input always produces same output (revolutionary, I know)</text>
+    <text x="140" y="2595" class="mono-body">· SIMD-friendly because we respect cache coherence in this house</text>
+    <text x="140" y="2615" class="mono-body">· No per-path wavelength variance nonsense</text>
+    
+    <text x="140" y="2650" class="mono-label">INTEGRATION CAPABILITIES</text>
+    <text x="140" y="2675" class="mono-body">Plugs directly into neural reconstruction without a PhD in integration hell.</text>
+    <text x="140" y="2695" class="mono-body">Bridges HPC (fast compute), spectral physics (actual science), and neural nets</text>
+    <text x="140" y="2715" class="mono-body">(smart guessing). Production rendering that doesn't make physicists cry.</text>
+    
+    <text x="140" y="2750" class="mono-label">IMPLEMENTATION STATUS</text>
+    <text x="140" y="2775" class="mono-highlight">Living rent-free in the Spectra rendering engine</text>
+    <text x="140" y="2795" class="mono-highlight">Operator formalism means GPUs don't complain about determinism</text>
+  </g>
+  
+  <!-- Bottom Section -->
+  <line x1="100" y1="2875" x2="1520" y2="2875" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  
+  <text x="100" y="2935" class="mono-body">CORE RESEARCH FOCUS</text>
+  <text x="100" y="2960" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
+  
+  <text x="100" y="3005" class="mono-label">LABORATORY LEADERSHIP</text>
+  <text x="100" y="3030" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Chief "Why Isn't This Faster" Officer</text>
+  
+  <!-- Bottom Metadata Stamp -->
+  <text x="100" y="3105" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  
+  <!-- Bottom Right Watermark -->
+  <text x="1520" y="3165" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
+</svg> `;
+  fs.writeFileSync("assets/research.svg", svg);
+
+  console.log("SVG updated successfully.");
+}
+
+main();
