@@ -525,7 +525,7 @@ async function main(): Promise<void> {
   <!-- Bottom Right Watermark -->
   <text x="1520" y="3165" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
 </svg> `;
-  fs.writeFileSync("assets/research.svg", svg);
+  fs.writeFileSync("readme.svg", svg);
 
   console.log("SVG updated successfully.");
 }
