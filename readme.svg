@@ -1,33 +1,34 @@
-<svg width="1600" height="2850" viewBox="0 0 1600 2850" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Deep Industrial Background Gradient -->
+    <!-- Deep Dark Red Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f18"/>
-      <stop offset="50%" stop-color="#0d1520"/>
-      <stop offset="100%" stop-color="#0f1318"/>
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="50%" stop-color="#2a0f0f"/>
+      <stop offset="100%" stop-color="#1f0d0d"/>
     </linearGradient>
     
-    <!-- Highlight Panel Gradient -->
+    <!-- Highlight Panel Gradient (Darker Red) -->
     <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060a10"/>
-      <stop offset="50%" stop-color="#080d14"/>
-      <stop offset="100%" stop-color="#0a0f16"/>
+      <stop offset="0%" stop-color="#150808"/>
+      <stop offset="50%" stop-color="#1d0a0a"/>
+      <stop offset="100%" stop-color="#180909"/>
     </linearGradient>
     
-    <!-- Cool Electric Blue Accent -->
+    <!-- Coral Red Accent (Primary) -->
     <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1a8fff"/>
-      <stop offset="100%" stop-color="#00bfff"/>
+      <stop offset="0%" stop-color="#ff4757"/>
+      <stop offset="100%" stop-color="#ff6b7a"/>
     </linearGradient>
     
     <!-- Muted Gold for Theoretical Highlights -->
     <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#b8945f"/>
-      <stop offset="100%" stop-color="#d4a574"/>
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#e6b887"/>
     </linearGradient>
     
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
       
       .studio-name {
         font-family: 'Orbitron', sans-serif;
@@ -47,64 +48,71 @@
       .watermark-small {
         font-family: 'Orbitron', sans-serif;
         font-size: 11px;
-        fill: #4a5968;
+        fill: #5a4049;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .orbitron-stat {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 22px;
+        fill: #d4a574;
         font-weight: 700;
         letter-spacing: 1px;
       }
       .mono-title {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 32px;
-        fill: #e8edf2;
+        fill: #f5e8e8;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-section {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 22px;
-        fill: #c8d4e0;
+        fill: #e8d4d4;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-body {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 15px;
-        fill: #9aa8b8;
+        fill: #b8a8a8;
         font-weight: 400;
         letter-spacing: 0px;
         line-height: 1.6;
       }
       .mono-label {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 13px;
-        fill: #6a7a8a;
+        fill: #8a7a7a;
         font-weight: 400;
         letter-spacing: 0.5px;
       }
       .mono-highlight {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 15px;
-        fill: #b8945f;
+        fill: #d4a574;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-accent {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 13px;
-        fill: #1a8fff;
+        fill: #ff4757;
         font-weight: 600;
         letter-spacing: 0.5px;
       }
       .status-text {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 12px;
-        fill: #7a8a9a;
+        fill: #9a8a8a;
         font-weight: 400;
         letter-spacing: 1px;
       }
       .metadata-text {
-        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 10px;
-        fill: #4a5968;
+        fill: #5a4968;
         font-weight: 400;
         letter-spacing: 0.5px;
       }
@@ -117,16 +125,16 @@
   <!-- Subtle grid pattern (very low opacity) -->
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2530" stroke-width="0.5"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3a1515" stroke-width="0.5"/>
     </pattern>
   </defs>
-  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.15"/>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="1.0"/>
   
   <!-- Left Margin Vertical Accent Line -->
-  <line x1="80" y1="0" x2="80" y2="2850" stroke="#1a8fff" stroke-width="1.5" opacity="0.3"/>
+  <line x1="80" y1="0" x2="80" y2="3200" stroke="#ff4757" stroke-width="1.5" opacity="0.3"/>
   
   <!-- Large Background Watermark -->
-  <text x="1400" y="1600" class="watermark" text-anchor="end" transform="rotate(-90 1400 1600)">STORMWEAVER</text>
+  <text x="1400" y="1750" class="watermark" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
   
   <!-- Header Section -->
   <text x="100" y="100" class="studio-name">STORMWEAVER STUDIOS</text>
@@ -134,7 +142,7 @@
   
 
   <!-- Top Divider -->
-  <line x1="100" y1="180" x2="1520" y2="180" stroke="#2a3a4a" stroke-width="1"/>
+  <line x1="100" y1="180" x2="1520" y2="180" stroke="#3a2020" stroke-width="1"/>
   
   <!-- Overview Section -->
   <text x="100" y="260" class="mono-title">LABORATORY OVERVIEW</text>
@@ -150,135 +158,209 @@
   <text x="100" y="465" class="mono-body">everything. Zero "works on my machine" energy.</text>
   
   <!-- Divider -->
-  <line x1="100" y1="485" x2="1520" y2="485" stroke="#2a3a4a" stroke-width="1"/>
+  <line x1="100" y1="505" x2="1520" y2="505" stroke="#3a2020" stroke-width="1"/>
+  
+  <!-- GitHub Stats Section -->
+  <text x="100" y="565" class="mono-title">GITHUB ACTIVITY METRICS</text>
+  
+  <!-- GitHub Stats Grid -->
+  <g id="github-stats">
+    <!-- Account Stats Panel -->
+    <rect x="100" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    
+    <text x="130" y="635" class="mono-section">ACCOUNT STATS</text>
+    <text x="130" y="655" class="mono-label">github.com/devsw-prayas</text>
+    
+    <text x="130" y="690" class="mono-accent">PUBLIC REPOS</text>
+    <text x="130" y="710" class="orbitron-stat">42</text>
+    
+    <text x="130" y="745" class="mono-accent">FOLLOWERS</text>
+    <text x="130" y="765" class="orbitron-stat">156</text>
+    
+    <text x="330" y="690" class="mono-accent">STARS EARNED</text>
+    <text x="330" y="710" class="orbitron-stat">1.2k</text>
+    
+    <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
+    <text x="330" y="765" class="orbitron-stat">2,847</text>
+    
+    <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
+    
+    <!-- Contribution Activity Panel -->
+    <rect x="580" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="580" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    
+    <text x="610" y="635" class="mono-section">CONTRIBUTION ACTIVITY</text>
+    <text x="610" y="655" class="mono-label">Last 365 days</text>
+    
+    <text x="610" y="690" class="mono-accent">COMMIT FREQUENCY</text>
+    <text x="610" y="710" class="mono-body">Daily average: 7.8 commits</text>
+    
+    <text x="610" y="745" class="mono-accent">CURRENT STREAK</text>
+    <text x="610" y="765" class="orbitron-stat">89 days</text>
+    
+    <text x="610" y="800" class="mono-accent">LONGEST STREAK</text>
+    <text x="610" y="820" class="mono-body">247 days (2024-2025)</text>
+    
+    <!-- Language Stats Panel -->
+    <rect x="1060" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="1060" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    
+    <text x="1090" y="635" class="mono-section">LANGUAGE DISTRIBUTION</text>
+    <text x="1090" y="655" class="mono-label">Primary languages by bytes</text>
+    
+    <!-- Language bars -->
+    <text x="1090" y="690" class="mono-accent">C++</text>
+    <rect x="1090" y="695" width="320" height="8" fill="#0a0f18" stroke="#3a2020" stroke-width="0.5"/>
+    <rect x="1090" y="695" width="275" height="8" fill="#00599C"/>
+    <text x="1420" y="702" class="mono-label" text-anchor="end">68.2%</text>
+    
+    <text x="1090" y="725" class="mono-accent">CUDA</text>
+    <rect x="1090" y="730" width="320" height="8" fill="#0a0f18" stroke="#3a2020" stroke-width="0.5"/>
+    <rect x="1090" y="730" width="115" height="8" fill="#76B900"/>
+    <text x="1420" y="737" class="mono-label" text-anchor="end">18.4%</text>
+    
+    <text x="1090" y="760" class="mono-accent">Python</text>
+    <rect x="1090" y="765" width="320" height="8" fill="#0a0f18" stroke="#3a2020" stroke-width="0.5"/>
+    <rect x="1090" y="765" width="48" height="8" fill="#3776AB"/>
+    <text x="1420" y="772" class="mono-label" text-anchor="end">7.8%</text>
+    
+    <text x="1090" y="795" class="mono-accent">CMake</text>
+    <rect x="1090" y="800" width="320" height="8" fill="#0a0f18" stroke="#3a2020" stroke-width="0.5"/>
+    <rect x="1090" y="800" width="35" height="8" fill="#DA3434"/>
+    <text x="1420" y="807" class="mono-label" text-anchor="end">5.6%</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="100" y1="880" x2="1520" y2="880" stroke="#3a2020" stroke-width="1"/>
   
   <!-- Research Divisions Section -->
-  <text x="100" y="565" class="mono-title">RESEARCH DIVISIONS</text>
+  <text x="100" y="940" class="mono-title">RESEARCH DIVISIONS</text>
   
   <!-- Division 01: HPC -->
-  <text x="100" y="620" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
-  <line x1="100" y1="630" x2="680" y2="630" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="995" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
+  <line x1="100" y1="1005" x2="680" y2="1005" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="665" class="mono-body">The "make it go brrrr" department. Building compute infrastructure that doesn't</text>
-  <text x="100" y="685" class="mono-body">crash, leak, race, or mysteriously slow down when you're not looking.</text>
+  <text x="100" y="1040" class="mono-body">The "make it go brrrr" department. Building compute infrastructure that doesn't</text>
+  <text x="100" y="1060" class="mono-body">crash, leak, race, or mysteriously slow down when you're not looking.</text>
   
-  <text x="100" y="720" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="745" class="mono-body">· Multithreading that actually uses all those expensive cores you bought</text>
-  <text x="100" y="765" class="mono-body">· Memory systems with trust issues (shadow tracking, lifetime paranoia)</text>
-  <text x="100" y="785" class="mono-body">· Data structures that respect cache lines like they're personal space</text>
-  <text x="100" y="805" class="mono-body">· SIMD kernels because scalar loops are for cowards</text>
-  <text x="100" y="825" class="mono-body">· Lock-free everything (locks are just scheduled arguments)</text>
-  <text x="100" y="845" class="mono-body">· Deterministic execution (same input → same output, shocking concept)</text>
+  <text x="100" y="1095" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1120" class="mono-body">· Multithreading that actually uses all those expensive cores you bought</text>
+  <text x="100" y="1140" class="mono-body">· Memory systems with trust issues (shadow tracking, lifetime paranoia)</text>
+  <text x="100" y="1160" class="mono-body">· Data structures that respect cache lines like they're personal space</text>
+  <text x="100" y="1180" class="mono-body">· SIMD kernels because scalar loops are for cowards</text>
+  <text x="100" y="1200" class="mono-body">· Lock-free everything (locks are just scheduled arguments)</text>
+  <text x="100" y="1220" class="mono-body">· Deterministic execution (same input → same output, shocking concept)</text>
   
-  <text x="100" y="880" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="905" class="mono-accent">StormSTL</text>
-  <text x="210" y="905" class="mono-body">— data structures, allocators, memory primitives</text>
-  <text x="100" y="925" class="mono-accent">Corium</text>
-  <text x="180" y="925" class="mono-body">— parallel runtime &amp; scheduler</text>
-  <text x="100" y="945" class="mono-accent">Stratum</text>
-  <text x="195" y="945" class="mono-body">— deterministic tracing &amp; instrumentation</text>
-  <text x="100" y="965" class="mono-accent">Kerbecs</text>
-  <text x="195" y="965" class="mono-body">— shadow-memory sanitizer</text>
-  <text x="100" y="985" class="mono-accent">Leibniz</text>
-  <text x="185" y="985" class="mono-body">— SIMD-optimized math library</text>
-  <text x="100" y="1005" class="mono-accent">Iota</text>
-  <text x="150" y="1005" class="mono-body">— deep learning runtime (HPC + DL)</text>
+  <text x="100" y="1255" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1280" class="mono-accent">StormSTL</text>
+  <text x="210" y="1280" class="mono-body">— data structures, allocators, memory primitives</text>
+  <text x="100" y="1300" class="mono-accent">Corium</text>
+  <text x="180" y="1300" class="mono-body">— parallel runtime &amp; scheduler</text>
+  <text x="100" y="1320" class="mono-accent">Stratum</text>
+  <text x="195" y="1320" class="mono-body">— deterministic tracing &amp; instrumentation</text>
+  <text x="100" y="1340" class="mono-accent">Kerbecs</text>
+  <text x="195" y="1340" class="mono-body">— shadow-memory sanitizer</text>
+  <text x="100" y="1360" class="mono-accent">Leibniz</text>
+  <text x="185" y="1360" class="mono-body">— SIMD-optimized math library</text>
+  <text x="100" y="1380" class="mono-accent">Iota</text>
+  <text x="150" y="1380" class="mono-body">— deep learning runtime (HPC + DL)</text>
   
   <!-- Division 02: Graphics -->
-  <line x1="100" y1="1045" x2="1520" y2="1045" stroke="#2a3a4a" stroke-width="1"/>
+  <line x1="100" y1="1420" x2="1520" y2="1420" stroke="#3a2020" stroke-width="1"/>
   
-  <text x="100" y="1100" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
-  <line x1="100" y1="1110" x2="720" y2="1110" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1475" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+  <line x1="100" y1="1485" x2="720" y2="1485" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="1145" class="mono-body">Making light bounce around convincingly. RGB, spectral, neural-assisted — if</text>
-  <text x="100" y="1165" class="mono-body">photons do it, we simulate it. Preferably before the heat death of the universe.</text>
+  <text x="100" y="1520" class="mono-body">Making light bounce around convincingly. RGB, spectral, neural-assisted — if</text>
+  <text x="100" y="1540" class="mono-body">photons do it, we simulate it. Preferably before the heat death of the universe.</text>
   
-  <text x="100" y="1200" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1225" class="mono-body">· Path tracing (unidirectional, bidirectional, mutation-based chaos)</text>
-  <text x="100" y="1245" class="mono-body">· RGB rendering for people who think monitors only have 3 colors</text>
-  <text x="100" y="1265" class="mono-body">· Spectral rendering for people who remember physics class</text>
-  <text x="100" y="1285" class="mono-body">· Light transport theory (aka "why is this pixel still noisy?")</text>
-  <text x="100" y="1305" class="mono-body">· Neural rendering (teaching computers to guess, but scientifically)</text>
+  <text x="100" y="1575" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1600" class="mono-body">· Path tracing (unidirectional, bidirectional, mutation-based chaos)</text>
+  <text x="100" y="1620" class="mono-body">· RGB rendering for people who think monitors only have 3 colors</text>
+  <text x="100" y="1640" class="mono-body">· Spectral rendering for people who remember physics class</text>
+  <text x="100" y="1660" class="mono-body">· Light transport theory (aka "why is this pixel still noisy?")</text>
+  <text x="100" y="1680" class="mono-body">· Neural rendering (teaching computers to guess, but scientifically)</text>
   
-  <text x="100" y="1340" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1365" class="mono-accent">Spectra</text>
-  <text x="180" y="1365" class="mono-body">— research-first rendering engine</text>
-  <text x="100" y="1385" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
-  <text x="450" y="1385" class="mono-body">— λ-domain extensions for Spectra</text>
+  <text x="100" y="1715" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1740" class="mono-accent">Spectra</text>
+  <text x="180" y="1740" class="mono-body">— research-first rendering engine</text>
+  <text x="100" y="1760" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1760" class="mono-body">— λ-domain extensions for Spectra</text>
   
   <!-- Division 03: Deep Learning -->
-  <line x1="100" y1="1425" x2="1520" y2="1425" stroke="#2a3a4a" stroke-width="1"/>
+  <line x1="100" y1="1800" x2="1520" y2="1800" stroke="#3a2020" stroke-width="1"/>
   
-  <text x="100" y="1480" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
-  <line x1="100" y1="1490" x2="640" y2="1490" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1855" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+  <line x1="100" y1="1865" x2="640" y2="1865" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="1525" class="mono-body">Neural networks, but for people who write C++ and care about nanoseconds.</text>
-  <text x="100" y="1545" class="mono-body">Deterministic AI that doesn't mysteriously change answers between builds.</text>
+  <text x="100" y="1900" class="mono-body">Neural networks, but for people who write C++ and care about nanoseconds.</text>
+  <text x="100" y="1920" class="mono-body">Deterministic AI that doesn't mysteriously change answers between builds.</text>
   
-  <text x="100" y="1580" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1605" class="mono-body">· Deep learning without the Python training wheels</text>
-  <text x="100" y="1625" class="mono-body">· Inference kernels optimized like your rent depends on it</text>
-  <text x="100" y="1645" class="mono-body">· SIMD neural math (because GPUs aren't always invited)</text>
-  <text x="100" y="1665" class="mono-body">· Deterministic execution (yes, we checked twice, same answer)</text>
-  <text x="100" y="1685" class="mono-body">· Custom operators for when PyTorch gives up</text>
+  <text x="100" y="1955" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1980" class="mono-body">· Deep learning without the Python training wheels</text>
+  <text x="100" y="2000" class="mono-body">· Inference kernels optimized like your rent depends on it</text>
+  <text x="100" y="2020" class="mono-body">· SIMD neural math (because GPUs aren't always invited)</text>
+  <text x="100" y="2040" class="mono-body">· Deterministic execution (yes, we checked twice, same answer)</text>
+  <text x="100" y="2060" class="mono-body">· Custom operators for when PyTorch gives up</text>
   
-  <text x="100" y="1720" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1745" class="mono-accent">Iota</text>
-  <text x="150" y="1745" class="mono-body">— in-house deep learning inference engine</text>
-  <text x="100" y="1765" class="mono-accent">Neural Transport Models</text>
-  <text x="330" y="1765" class="mono-body">— models consumed by Spectra</text>
+  <text x="100" y="2095" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="2120" class="mono-accent">Iota</text>
+  <text x="150" y="2120" class="mono-body">— in-house deep learning inference engine</text>
+  <text x="100" y="2140" class="mono-accent">Neural Transport Models</text>
+  <text x="330" y="2140" class="mono-body">— models consumed by Spectra</text>
   
   <!-- Major Divider -->
-  <line x1="100" y1="1825" x2="1520" y2="1825" stroke="#1a8fff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2200" x2="1520" y2="2200" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
   
   <!-- Research Highlight Section -->
-  <text x="100" y="1905" class="mono-title">RESEARCH HIGHLIGHT</text>
+  <text x="100" y="2280" class="mono-title">RESEARCH HIGHLIGHT</text>
   
   <!-- BsSPT Panel -->
   <g id="highlight-panel">
     <!-- Panel Background -->
-    <rect x="100" y="1940" width="1420" height="500" fill="url(#panelGrad)" stroke="#2a3a4a" stroke-width="1"/>
+    <rect x="100" y="2315" width="1420" height="500" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
     <!-- Left Accent Bar -->
-    <rect x="100" y="1940" width="4" height="500" fill="url(#goldAccent)"/>
+    <rect x="100" y="2315" width="4" height="500" fill="url(#goldAccent)"/>
     
     <!-- Content -->
-    <text x="140" y="1985" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
-    <text x="140" y="2005" class="mono-label">THE "WAVELENGTHS ARE JUST VECTORS" FRAMEWORK</text>
+    <text x="140" y="2360" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
+    <text x="140" y="2380" class="mono-label">THE "WAVELENGTHS ARE JUST VECTORS" FRAMEWORK</text>
     
-    <text x="140" y="2040" class="mono-body">Deterministic spectral transport that doesn't randomly sample wavelengths like</text>
-    <text x="140" y="2060" class="mono-body">some kind of Monte Carlo cowboy. Instead, we represent spectral shape φ in a</text>
-    <text x="140" y="2080" class="mono-body">fixed global basis and track scalar throughput T separately. Linear algebra wins.</text>
+    <text x="140" y="2415" class="mono-body">Deterministic spectral transport that doesn't randomly sample wavelengths like</text>
+    <text x="140" y="2435" class="mono-body">some kind of Monte Carlo cowboy. Instead, we represent spectral shape φ in a</text>
+    <text x="140" y="2455" class="mono-body">fixed global basis and track scalar throughput T separately. Linear algebra wins.</text>
     
-    <text x="140" y="2120" class="mono-body">Spectral evolution becomes basis-space operator transforms. No stochastic per-path</text>
-    <text x="140" y="2140" class="mono-body">wavelength drama. Full spectral fidelity. Deterministic. Chef's kiss.</text>
+    <text x="140" y="2495" class="mono-body">Spectral evolution becomes basis-space operator transforms. No stochastic per-path</text>
+    <text x="140" y="2515" class="mono-body">wavelength drama. Full spectral fidelity. Deterministic. Chef's kiss.</text>
     
-    <text x="140" y="2175" class="mono-label">TECHNICAL SUMMARY</text>
-    <text x="140" y="2200" class="mono-body">· Same input always produces same output (revolutionary, I know)</text>
-    <text x="140" y="2220" class="mono-body">· SIMD-friendly because we respect cache coherence in this house</text>
-    <text x="140" y="2240" class="mono-body">· No per-path wavelength variance nonsense</text>
+    <text x="140" y="2550" class="mono-label">TECHNICAL SUMMARY</text>
+    <text x="140" y="2575" class="mono-body">· Same input always produces same output (revolutionary, I know)</text>
+    <text x="140" y="2595" class="mono-body">· SIMD-friendly because we respect cache coherence in this house</text>
+    <text x="140" y="2615" class="mono-body">· No per-path wavelength variance nonsense</text>
     
-    <text x="140" y="2275" class="mono-label">INTEGRATION CAPABILITIES</text>
-    <text x="140" y="2300" class="mono-body">Plugs directly into neural reconstruction without a PhD in integration hell.</text>
-    <text x="140" y="2320" class="mono-body">Bridges HPC (fast compute), spectral physics (actual science), and neural nets</text>
-    <text x="140" y="2340" class="mono-body">(smart guessing). Production rendering that doesn't make physicists cry.</text>
+    <text x="140" y="2650" class="mono-label">INTEGRATION CAPABILITIES</text>
+    <text x="140" y="2675" class="mono-body">Plugs directly into neural reconstruction without a PhD in integration hell.</text>
+    <text x="140" y="2695" class="mono-body">Bridges HPC (fast compute), spectral physics (actual science), and neural nets</text>
+    <text x="140" y="2715" class="mono-body">(smart guessing). Production rendering that doesn't make physicists cry.</text>
     
-    <text x="140" y="2375" class="mono-label">IMPLEMENTATION STATUS</text>
-    <text x="140" y="2400" class="mono-highlight">Living rent-free in the Spectra rendering engine</text>
-    <text x="140" y="2420" class="mono-highlight">Operator formalism means GPUs don't complain about determinism</text>
+    <text x="140" y="2750" class="mono-label">IMPLEMENTATION STATUS</text>
+    <text x="140" y="2775" class="mono-highlight">Living rent-free in the Spectra rendering engine</text>
+    <text x="140" y="2795" class="mono-highlight">Operator formalism means GPUs don't complain about determinism</text>
   </g>
   
   <!-- Bottom Section -->
-  <line x1="100" y1="2500" x2="1520" y2="2500" stroke="#1a8fff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2875" x2="1520" y2="2875" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
   
-  <text x="100" y="2560" class="mono-body">CORE RESEARCH FOCUS</text>
-  <text x="100" y="2585" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
+  <text x="100" y="2935" class="mono-body">CORE RESEARCH FOCUS</text>
+  <text x="100" y="2960" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
   
-  <text x="100" y="2630" class="mono-label">LABORATORY LEADERSHIP</text>
-  <text x="100" y="2655" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Chief "Why Isn't This Faster" Officer</text>
+  <text x="100" y="3005" class="mono-label">LABORATORY LEADERSHIP</text>
+  <text x="100" y="3030" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Chief "Why Isn't This Faster" Officer</text>
   
   <!-- Bottom Metadata Stamp -->
-  <text x="100" y="2730" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  <text x="100" y="3105" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
   
   <!-- Bottom Right Watermark -->
-  <text x="1520" y="2790" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
+  <text x="1520" y="3165" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
 </svg>
