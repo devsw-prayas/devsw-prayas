@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./stormweaver.svg" width="100%" />
+  <img src="./readme.svg" width="100%" />
 </p>
