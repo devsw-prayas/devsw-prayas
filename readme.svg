@@ -1,0 +1,284 @@
+<svg width="1600" height="2850" viewBox="0 0 1600 2850" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Deep Industrial Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f18"/>
+      <stop offset="50%" stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#0f1318"/>
+    </linearGradient>
+    
+    <!-- Highlight Panel Gradient -->
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060a10"/>
+      <stop offset="50%" stop-color="#080d14"/>
+      <stop offset="100%" stop-color="#0a0f16"/>
+    </linearGradient>
+    
+    <!-- Cool Electric Blue Accent -->
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a8fff"/>
+      <stop offset="100%" stop-color="#00bfff"/>
+    </linearGradient>
+    
+    <!-- Muted Gold for Theoretical Highlights -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8945f"/>
+      <stop offset="100%" stop-color="#d4a574"/>
+    </linearGradient>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;display=swap');
+      
+      .studio-name {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 48px;
+        fill: #ffffff;
+        font-weight: 900;
+        letter-spacing: 2px;
+      }
+      .watermark {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 180px;
+        fill: #ffffff;
+        font-weight: 900;
+        letter-spacing: 20px;
+        opacity: 0.05;
+      }
+      .watermark-small {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 11px;
+        fill: #4a5968;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .mono-title {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 32px;
+        fill: #e8edf2;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-section {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 22px;
+        fill: #c8d4e0;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-body {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 15px;
+        fill: #9aa8b8;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 1.6;
+      }
+      .mono-label {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 13px;
+        fill: #6a7a8a;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .mono-highlight {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 15px;
+        fill: #b8945f;
+        font-weight: 600;
+        letter-spacing: 0px;
+      }
+      .mono-accent {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 13px;
+        fill: #1a8fff;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .status-text {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 12px;
+        fill: #7a8a9a;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      .metadata-text {
+        font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        font-size: 10px;
+        fill: #4a5968;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern (very low opacity) -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2530" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.15"/>
+  
+  <!-- Left Margin Vertical Accent Line -->
+  <line x1="80" y1="0" x2="80" y2="2850" stroke="#1a8fff" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Large Background Watermark -->
+  <text x="1400" y="1600" class="watermark" text-anchor="end" transform="rotate(-90 1400 1600)">STORMWEAVER</text>
+  
+  <!-- Header Section -->
+  <text x="100" y="100" class="studio-name">STORMWEAVER STUDIOS</text>
+  <text x="100" y="125" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
+  
+
+  <!-- Top Divider -->
+  <line x1="100" y1="180" x2="1520" y2="180" stroke="#2a3a4a" stroke-width="1"/>
+  
+  <!-- Overview Section -->
+  <text x="100" y="260" class="mono-title">LABORATORY OVERVIEW</text>
+  
+  <text x="100" y="305" class="mono-body">StormWeaver Studios is where I build the stuff nobody asked for but everybody</text>
+  <text x="100" y="325" class="mono-body">needs. Independent R&amp;D lab focused on high-performance computing, graphics that</text>
+  <text x="100" y="345" class="mono-body">actually render, and neural nets that don't randomly decide Tuesday is opposite</text>
+  <text x="100" y="365" class="mono-body">day. Research-first mindset, production-grade execution.</text>
+  
+  <text x="100" y="405" class="mono-body">We're talking massive multithreading (because cores exist), wavelength-accurate</text>
+  <text x="100" y="425" class="mono-body">light transport (yes, the full spectrum), memory systems that remember their job,</text>
+  <text x="100" y="445" class="mono-body">and deep learning engines that produce the same answer twice. Deterministic</text>
+  <text x="100" y="465" class="mono-body">everything. Zero "works on my machine" energy.</text>
+  
+  <!-- Divider -->
+  <line x1="100" y1="485" x2="1520" y2="485" stroke="#2a3a4a" stroke-width="1"/>
+  
+  <!-- Research Divisions Section -->
+  <text x="100" y="565" class="mono-title">RESEARCH DIVISIONS</text>
+  
+  <!-- Division 01: HPC -->
+  <text x="100" y="620" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
+  <line x1="100" y1="630" x2="680" y2="630" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="665" class="mono-body">The "make it go brrrr" department. Building compute infrastructure that doesn't</text>
+  <text x="100" y="685" class="mono-body">crash, leak, race, or mysteriously slow down when you're not looking.</text>
+  
+  <text x="100" y="720" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="745" class="mono-body">· Multithreading that actually uses all those expensive cores you bought</text>
+  <text x="100" y="765" class="mono-body">· Memory systems with trust issues (shadow tracking, lifetime paranoia)</text>
+  <text x="100" y="785" class="mono-body">· Data structures that respect cache lines like they're personal space</text>
+  <text x="100" y="805" class="mono-body">· SIMD kernels because scalar loops are for cowards</text>
+  <text x="100" y="825" class="mono-body">· Lock-free everything (locks are just scheduled arguments)</text>
+  <text x="100" y="845" class="mono-body">· Deterministic execution (same input → same output, shocking concept)</text>
+  
+  <text x="100" y="880" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="905" class="mono-accent">StormSTL</text>
+  <text x="210" y="905" class="mono-body">— data structures, allocators, memory primitives</text>
+  <text x="100" y="925" class="mono-accent">Corium</text>
+  <text x="180" y="925" class="mono-body">— parallel runtime &amp; scheduler</text>
+  <text x="100" y="945" class="mono-accent">Stratum</text>
+  <text x="195" y="945" class="mono-body">— deterministic tracing &amp; instrumentation</text>
+  <text x="100" y="965" class="mono-accent">Kerbecs</text>
+  <text x="195" y="965" class="mono-body">— shadow-memory sanitizer</text>
+  <text x="100" y="985" class="mono-accent">Leibniz</text>
+  <text x="185" y="985" class="mono-body">— SIMD-optimized math library</text>
+  <text x="100" y="1005" class="mono-accent">Iota</text>
+  <text x="150" y="1005" class="mono-body">— deep learning runtime (HPC + DL)</text>
+  
+  <!-- Division 02: Graphics -->
+  <line x1="100" y1="1045" x2="1520" y2="1045" stroke="#2a3a4a" stroke-width="1"/>
+  
+  <text x="100" y="1100" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+  <line x1="100" y1="1110" x2="720" y2="1110" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="1145" class="mono-body">Making light bounce around convincingly. RGB, spectral, neural-assisted — if</text>
+  <text x="100" y="1165" class="mono-body">photons do it, we simulate it. Preferably before the heat death of the universe.</text>
+  
+  <text x="100" y="1200" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1225" class="mono-body">· Path tracing (unidirectional, bidirectional, mutation-based chaos)</text>
+  <text x="100" y="1245" class="mono-body">· RGB rendering for people who think monitors only have 3 colors</text>
+  <text x="100" y="1265" class="mono-body">· Spectral rendering for people who remember physics class</text>
+  <text x="100" y="1285" class="mono-body">· Light transport theory (aka "why is this pixel still noisy?")</text>
+  <text x="100" y="1305" class="mono-body">· Neural rendering (teaching computers to guess, but scientifically)</text>
+  
+  <text x="100" y="1340" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1365" class="mono-accent">Spectra</text>
+  <text x="180" y="1365" class="mono-body">— research-first rendering engine</text>
+  <text x="100" y="1385" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1385" class="mono-body">— λ-domain extensions for Spectra</text>
+  
+  <!-- Division 03: Deep Learning -->
+  <line x1="100" y1="1425" x2="1520" y2="1425" stroke="#2a3a4a" stroke-width="1"/>
+  
+  <text x="100" y="1480" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+  <line x1="100" y1="1490" x2="640" y2="1490" stroke="#1a8fff" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="1525" class="mono-body">Neural networks, but for people who write C++ and care about nanoseconds.</text>
+  <text x="100" y="1545" class="mono-body">Deterministic AI that doesn't mysteriously change answers between builds.</text>
+  
+  <text x="100" y="1580" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1605" class="mono-body">· Deep learning without the Python training wheels</text>
+  <text x="100" y="1625" class="mono-body">· Inference kernels optimized like your rent depends on it</text>
+  <text x="100" y="1645" class="mono-body">· SIMD neural math (because GPUs aren't always invited)</text>
+  <text x="100" y="1665" class="mono-body">· Deterministic execution (yes, we checked twice, same answer)</text>
+  <text x="100" y="1685" class="mono-body">· Custom operators for when PyTorch gives up</text>
+  
+  <text x="100" y="1720" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1745" class="mono-accent">Iota</text>
+  <text x="150" y="1745" class="mono-body">— in-house deep learning inference engine</text>
+  <text x="100" y="1765" class="mono-accent">Neural Transport Models</text>
+  <text x="330" y="1765" class="mono-body">— models consumed by Spectra</text>
+  
+  <!-- Major Divider -->
+  <line x1="100" y1="1825" x2="1520" y2="1825" stroke="#1a8fff" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Research Highlight Section -->
+  <text x="100" y="1905" class="mono-title">RESEARCH HIGHLIGHT</text>
+  
+  <!-- BsSPT Panel -->
+  <g id="highlight-panel">
+    <!-- Panel Background -->
+    <rect x="100" y="1940" width="1420" height="500" fill="url(#panelGrad)" stroke="#2a3a4a" stroke-width="1"/>
+    <!-- Left Accent Bar -->
+    <rect x="100" y="1940" width="4" height="500" fill="url(#goldAccent)"/>
+    
+    <!-- Content -->
+    <text x="140" y="1985" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
+    <text x="140" y="2005" class="mono-label">THE "WAVELENGTHS ARE JUST VECTORS" FRAMEWORK</text>
+    
+    <text x="140" y="2040" class="mono-body">Deterministic spectral transport that doesn't randomly sample wavelengths like</text>
+    <text x="140" y="2060" class="mono-body">some kind of Monte Carlo cowboy. Instead, we represent spectral shape φ in a</text>
+    <text x="140" y="2080" class="mono-body">fixed global basis and track scalar throughput T separately. Linear algebra wins.</text>
+    
+    <text x="140" y="2120" class="mono-body">Spectral evolution becomes basis-space operator transforms. No stochastic per-path</text>
+    <text x="140" y="2140" class="mono-body">wavelength drama. Full spectral fidelity. Deterministic. Chef's kiss.</text>
+    
+    <text x="140" y="2175" class="mono-label">TECHNICAL SUMMARY</text>
+    <text x="140" y="2200" class="mono-body">· Same input always produces same output (revolutionary, I know)</text>
+    <text x="140" y="2220" class="mono-body">· SIMD-friendly because we respect cache coherence in this house</text>
+    <text x="140" y="2240" class="mono-body">· No per-path wavelength variance nonsense</text>
+    
+    <text x="140" y="2275" class="mono-label">INTEGRATION CAPABILITIES</text>
+    <text x="140" y="2300" class="mono-body">Plugs directly into neural reconstruction without a PhD in integration hell.</text>
+    <text x="140" y="2320" class="mono-body">Bridges HPC (fast compute), spectral physics (actual science), and neural nets</text>
+    <text x="140" y="2340" class="mono-body">(smart guessing). Production rendering that doesn't make physicists cry.</text>
+    
+    <text x="140" y="2375" class="mono-label">IMPLEMENTATION STATUS</text>
+    <text x="140" y="2400" class="mono-highlight">Living rent-free in the Spectra rendering engine</text>
+    <text x="140" y="2420" class="mono-highlight">Operator formalism means GPUs don't complain about determinism</text>
+  </g>
+  
+  <!-- Bottom Section -->
+  <line x1="100" y1="2500" x2="1520" y2="2500" stroke="#1a8fff" stroke-width="1.5" opacity="0.5"/>
+  
+  <text x="100" y="2560" class="mono-body">CORE RESEARCH FOCUS</text>
+  <text x="100" y="2585" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
+  
+  <text x="100" y="2630" class="mono-label">LABORATORY LEADERSHIP</text>
+  <text x="100" y="2655" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Chief "Why Isn't This Faster" Officer</text>
+  
+  <!-- Bottom Metadata Stamp -->
+  <text x="100" y="2730" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  
+  <!-- Bottom Right Watermark -->
+  <text x="1520" y="2790" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
+</svg>
