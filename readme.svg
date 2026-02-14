@@ -232,28 +232,28 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="82.36587272626686" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="82.82487894672097" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          41.2%
+          41.4%
         </text>
       
         <text x="1090" y="752" class="mono-label">Java</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="32.174451931894325" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="32.04890780691369" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          16.1%
+          16.0%
         </text>
       
         <text x="1090" y="784" class="mono-label">TypeScript</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="31.379934093800937" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="31.25749016294253" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          15.7%
+          15.6%
         </text>
       
         <text x="1090" y="816" class="mono-label">Python</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="15.206371789419803" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="15.147036803870586" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
           7.6%
         </text>
