@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./readme.svg" width="100%" />
+  <img src="https://readme-repo-devsw-prayas-projects.vercel.app/api/research" />
 </p>
