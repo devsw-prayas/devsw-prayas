@@ -173,7 +173,7 @@
     <text x="130" y="655" class="mono-label">github.com/devsw-prayas</text>
     
     <text x="130" y="690" class="mono-accent">PUBLIC REPOS</text>
-    <text x="130" y="710" class="orbitron-stat">25</text>
+    <text x="130" y="710" class="orbitron-stat">24</text>
     
     <text x="130" y="745" class="mono-accent">FOLLOWERS</text>
   <text x="130" y="765" class="orbitron-stat"> 13</text>    
@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    346
+    344
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -198,11 +198,11 @@
     
     <text x="610" y="745" class="mono-accent">CURRENT STREAK</text>
  <text x="610" y="765" class="orbitron-stat">
-    0 days
+    19 days
   </text>    
     <text x="610" y="800" class="mono-accent">LONGEST STREAK</text>
   <text x="610" y="820" class="mono-body">
-    18 days
+    19 days
   </text>
   
   <!-- Language Distribution Panel -->
@@ -232,28 +232,28 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="74.15082196223214" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="74.35045096668577" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          37.1%
+          37.2%
         </text>
       
         <text x="1090" y="752" class="mono-label">Python</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="34.03118217876119" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="34.106461939091744" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          17.0%
+          17.1%
         </text>
       
         <text x="1090" y="784" class="mono-label">Java</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="28.72582133858857" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="28.78936520651264" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
           14.4%
         </text>
       
         <text x="1090" y="816" class="mono-label">TypeScript</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="28.01646419038591" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="28.078438902239384" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
           14.0%
         </text>
