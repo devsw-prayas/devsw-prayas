@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    357
+    358
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -198,7 +198,7 @@
     
     <text x="610" y="745" class="mono-accent">CURRENT STREAK</text>
  <text x="610" y="765" class="orbitron-stat">
-    0 days
+    6 days
   </text>    
     <text x="610" y="800" class="mono-accent">LONGEST STREAK</text>
   <text x="610" y="820" class="mono-body">
@@ -232,30 +232,30 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="83.88925492470796" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="84.85844792905962" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          41.9%
+          42.4%
         </text>
       
         <text x="1090" y="752" class="mono-label">Python</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="32.23058725405733" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="31.961578723601896" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          16.1%
+          16.0%
         </text>
       
         <text x="1090" y="784" class="mono-label">Java</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="25.929717219690996" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="25.713298106089027" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          13.0%
+          12.9%
         </text>
       
         <text x="1090" y="816" class="mono-label">TypeScript</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="25.28940723363839" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="25.078332386556486" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
-          12.6%
+          12.5%
         </text>
       
 </g>
