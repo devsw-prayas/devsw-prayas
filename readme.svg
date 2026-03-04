@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    358
+    359
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -232,28 +232,28 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="84.85844792905962" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="85.25354646386154" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          42.4%
+          42.6%
         </text>
       
         <text x="1090" y="752" class="mono-label">Python</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="31.961578723601896" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="31.851905259100814" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          16.0%
+          15.9%
         </text>
       
         <text x="1090" y="784" class="mono-label">Java</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="25.713298106089027" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="25.625065090084675" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          12.9%
+          12.8%
         </text>
       
         <text x="1090" y="816" class="mono-label">TypeScript</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="25.078332386556486" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="24.992278201920346" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
           12.5%
         </text>
