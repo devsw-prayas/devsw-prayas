@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    363
+    364
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -232,30 +232,30 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="79.6254066380624" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="78.86777568622026" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          39.8%
+          39.4%
         </text>
       
         <text x="1090" y="752" class="mono-label">Python</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="29.74915430090676" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="29.466092888210365" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          14.9%
+          14.7%
         </text>
       
         <text x="1090" y="784" class="mono-label">Java</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="23.933388258396093" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="23.70566350956764" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          12.0%
+          11.9%
         </text>
       
         <text x="1090" y="816" class="mono-label">TypeScript</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="23.34237573897349" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="23.12027443869678" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
-          11.7%
+          11.6%
         </text>
       
 </g>
