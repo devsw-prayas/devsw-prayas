@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    377
+    378
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -232,30 +232,30 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="71.28617747728124" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="67.53885647640367" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          35.6%
+          33.8%
         </text>
       
         <text x="1090" y="752" class="mono-label">C#</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="37.2256826260835" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="45.78228699855369" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          18.6%
+          22.9%
         </text>
       
         <text x="1090" y="784" class="mono-label">Python</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="26.243673548115503" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="24.86411481026102" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          13.1%
+          12.4%
         </text>
       
         <text x="1090" y="816" class="mono-label">Java</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="21.113206177242596" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="20.003342193736756" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
-          10.6%
+          10.0%
         </text>
       
 </g>
