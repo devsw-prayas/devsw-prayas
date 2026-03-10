@@ -173,7 +173,7 @@
     <text x="130" y="655" class="mono-label">github.com/devsw-prayas</text>
     
     <text x="130" y="690" class="mono-accent">PUBLIC REPOS</text>
-    <text x="130" y="710" class="orbitron-stat">28</text>
+    <text x="130" y="710" class="orbitron-stat">29</text>
     
     <text x="130" y="745" class="mono-accent">FOLLOWERS</text>
   <text x="130" y="765" class="orbitron-stat"> 13</text>    
@@ -184,7 +184,7 @@
     
     <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
   <text x="330" y="765" class="orbitron-stat">
-    385
+    387
   </text>
     
     <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
@@ -232,30 +232,30 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="73.57752169613251" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="72.72077639396753" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          36.8%
+          36.4%
         </text>
       
         <text x="1090" y="752" class="mono-label">C#</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="30.97694736341088" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="32.94507163514203" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          15.5%
+          16.5%
         </text>
       
         <text x="1090" y="784" class="mono-label">Python</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="28.23447462003909" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="27.905709082247316" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          14.1%
+          14.0%
         </text>
       
         <text x="1090" y="816" class="mono-label">Java</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="21.749622060057884" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="21.49636690693144" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
-          10.9%
+          10.7%
         </text>
       
 </g>
