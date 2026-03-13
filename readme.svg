@@ -232,30 +232,30 @@
   
         <text x="1090" y="720" class="mono-label">C++</text>
         <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="74.87654266779073" height="8" fill="#ff4757" />
+        <rect x="1190" y="710" width="73.43718430299305" height="8" fill="#ff4757" />
         <text x="1470" y="720" class="mono-label" text-anchor="end">
-          37.4%
+          36.7%
         </text>
       
         <text x="1090" y="752" class="mono-label">C#</text>
         <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="32.66708819259051" height="8" fill="#ff4757" />
+        <rect x="1190" y="742" width="35.88374347252981" height="8" fill="#ff4757" />
         <text x="1470" y="752" class="mono-label" text-anchor="end">
-          16.3%
+          17.9%
         </text>
       
         <text x="1090" y="784" class="mono-label">Python</text>
         <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="27.349275209592054" height="8" fill="#ff4757" />
+        <rect x="1190" y="774" width="26.82353768697786" height="8" fill="#ff4757" />
         <text x="1470" y="784" class="mono-label" text-anchor="end">
-          13.7%
+          13.4%
         </text>
       
         <text x="1090" y="816" class="mono-label">Java</text>
         <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="21.067733946887735" height="8" fill="#ff4757" />
+        <rect x="1190" y="806" width="20.662747044403126" height="8" fill="#ff4757" />
         <text x="1470" y="816" class="mono-label" text-anchor="end">
-          10.5%
+          10.3%
         </text>
       
 </g>
