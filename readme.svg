@@ -1,390 +1,223 @@
- <svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Spectra Dark: Deep amber/gold background -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070400"/>
-      <stop offset="50%" stop-color="#120a00"/>
-      <stop offset="100%" stop-color="#2a1a00"/>
-    </linearGradient>
-    
-    <!-- Spectra Dark: Panel surface -->
-    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d0700"/>
-      <stop offset="50%" stop-color="#180f00"/>
-      <stop offset="100%" stop-color="#120c00"/>
-    </linearGradient>
-    
-    <!-- Spectra Dark: Gold accent gradient -->
-    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f0b43c"/>
-      <stop offset="100%" stop-color="#f5c96a"/>
-    </linearGradient>
-    
-    <!-- Spectra Dark: Warm highlight gradient -->
-    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f0b43c"/>
-      <stop offset="100%" stop-color="#f5c96a"/>
-    </linearGradient>
-    
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&amp;display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
-      
-      .studio-name {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 48px;
-        fill: #fff7e4;
-        font-weight: 900;
-        letter-spacing: 2px;
-      }
-      .studio-sub {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 22px;
-        fill: #b78a36;
-        font-weight: 700;
-        letter-spacing: 3px;
-      }
-      .watermark {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 180px;
-        fill: #f0b43c;
-        font-weight: 900;
-        letter-spacing: 20px;
-        opacity: 0.04;
-      }
-      .watermark-small {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 11px;
-        fill: #5a4010;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .orbitron-stat {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 22px;
-        fill: #f0b43c;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .mono-title {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 32px;
-        fill: #fff7e4;
-        font-weight: 600;
-        letter-spacing: 0px;
-      }
-      .mono-section {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 22px;
-        fill: #f5dfa0;
-        font-weight: 600;
-        letter-spacing: 0px;
-      }
-      .mono-body {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 15px;
-        fill: #c8a87a;
-        font-weight: 400;
-        letter-spacing: 0px;
-        line-height: 1.6;
-      }
-      .mono-label {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 13px;
-        fill: #8a6a30;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-      }
-      .mono-highlight {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 15px;
-        fill: #f0b43c;
-        font-weight: 600;
-        letter-spacing: 0px;
-      }
-      .mono-accent {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 13px;
-        fill: #f0b43c;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-      }
-      .status-text {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 12px;
-        fill: #9a7a40;
-        font-weight: 400;
-        letter-spacing: 1px;
-      }
-      .metadata-text {
-        font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-        font-size: 10px;
-        fill: #5a4010;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-      }
-    </style>
-  </defs>
-  
+<svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
+
   <!-- Background -->
-  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
-  
-  <!-- Subtle grid pattern (very low opacity) -->
+  <rect width="1600" height="3200" fill="#120a00" />
+
+  <!-- Grid pattern -->
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a1800" stroke-width="0.5"/>
     </pattern>
   </defs>
-  <rect width="100%" height="100%" fill="url(#grid)" opacity="1.0"/>
-  
-  <!-- Left Margin Vertical Accent Line -->
+  <rect width="1600" height="3200" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Left accent line -->
   <line x1="80" y1="0" x2="80" y2="3200" stroke="#f0b43c" stroke-width="1.5" opacity="0.3"/>
-  
-  <!-- Large Background Watermark -->
-  <text x="1400" y="1750" class="watermark" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
-  
-  <!-- Header Section -->
-  <text x="100" y="100" class="studio-name">PRAYAS BHARADWAJ</text>
-  <text x="100" y="135" class="studio-sub">STORMWEAVER STUDIOS</text>
-  <text x="100" y="158" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
 
-  <!-- Top Divider -->
+  <!-- Watermark -->
+  <text x="1400" y="1750" style="font-family: 'Orbitron', monospace; font-size: 180px; fill: #f0b43c; font-weight: 900; letter-spacing: 20px; opacity: 0.04;" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
+
+  <!-- ── HEADER ─────────────────────────────────────────── -->
+  <text x="100" y="100"  style="font-family: 'Orbitron', monospace; font-size: 48px; fill: #fff7e4; font-weight: 900; letter-spacing: 2px;">PRAYAS BHARADWAJ</text>
+  <text x="100" y="135"  style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #b78a36; font-weight: 700; letter-spacing: 3px;">STORMWEAVER STUDIOS</text>
+  <text x="100" y="158"  style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
   <line x1="100" y1="195" x2="1520" y2="195" stroke="#2a1800" stroke-width="1"/>
-  
-  <!-- Overview Section -->
-  <text x="100" y="275" class="mono-title">LABORATORY OVERVIEW</text>
-  
-  <text x="100" y="320" class="mono-body">StormWeaver Studios is an independent research and development laboratory</text>
-  <text x="100" y="340" class="mono-body">focused on high-performance computing, physically accurate rendering systems,</text>
-  <text x="100" y="360" class="mono-body">and deterministic deep learning infrastructure. The studio operates with a</text>
-  <text x="100" y="380" class="mono-body">research-first methodology and production-grade engineering standards.</text>
-  
-  <text x="100" y="420" class="mono-body">Core areas of investigation include massively parallel multithreading, wavelength-</text>
-  <text x="100" y="440" class="mono-body">accurate spectral light transport, principled memory management systems, and</text>
-  <text x="100" y="460" class="mono-body">deterministic neural inference engines. All systems are engineered for</text>
-  <text x="100" y="480" class="mono-body">reproducibility, correctness, and measurable performance under rigorous conditions.</text>
-  
-  <!-- Divider -->
+
+  <!-- ── OVERVIEW ───────────────────────────────────────── -->
+  <text x="100" y="275" style="font-family: 'JetBrains Mono', monospace; font-size: 32px; fill: #fff7e4; font-weight: 600;">LABORATORY OVERVIEW</text>
+
+  <text x="100" y="320" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">StormWeaver Studios is an independent research and development laboratory</text>
+  <text x="100" y="340" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">focused on high-performance computing, physically accurate rendering systems,</text>
+  <text x="100" y="360" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">and deterministic deep learning infrastructure. The studio operates with a</text>
+  <text x="100" y="380" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">research-first methodology and production-grade engineering standards.</text>
+
+  <text x="100" y="420" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Core areas of investigation include massively parallel multithreading, wavelength-</text>
+  <text x="100" y="440" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">accurate spectral light transport, principled memory management systems, and</text>
+  <text x="100" y="460" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">deterministic neural inference engines. All systems are engineered for</text>
+  <text x="100" y="480" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">reproducibility, correctness, and measurable performance under rigorous conditions.</text>
+
   <line x1="100" y1="520" x2="1520" y2="520" stroke="#2a1800" stroke-width="1"/>
+
+  <!-- ── GITHUB STATS ───────────────────────────────────── -->
+  <text x="100" y="580" style="font-family: 'JetBrains Mono', monospace; font-size: 32px; fill: #fff7e4; font-weight: 600;">GITHUB ACTIVITY METRICS</text>
+
+  <!-- Account Stats Panel -->
+  <rect x="100" y="615" width="460" height="240" fill="#180f00" stroke="#2a1800" stroke-width="1"/>
+  <rect x="100" y="615" width="4"   height="240" fill="#f0b43c"/>
+  <text x="130" y="650" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">ACCOUNT STATS</text>
+  <text x="130" y="670" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">github.com/devsw-prayas</text>
+  <text x="130" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">PUBLIC REPOS</text>
+  <text x="130" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">29</text>
+  <text x="130" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">FOLLOWERS</text>
+  <text x="130" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">13</text>
+  <text x="330" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">STARS EARNED</text>
+  <text x="330" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">3</text>
+  <text x="330" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">CONTRIBUTIONS</text>
+  <text x="330" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">398</text>
+  <text x="130" y="825" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Member since 2020 · Active contributor</text>
+
+  <!-- Contribution Activity Panel -->
+  <rect x="580" y="615" width="460" height="240" fill="#180f00" stroke="#2a1800" stroke-width="1"/>
+  <rect x="580" y="615" width="4"   height="240" fill="#f0b43c"/>
+  <text x="610" y="650" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">CONTRIBUTION ACTIVITY</text>
+  <text x="610" y="670" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Last 365 days</text>
+  <text x="610" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">COMMITS TODAY</text>
+  <text x="610" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">5</text>
+  <text x="610" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">CURRENT STREAK</text>
+  <text x="610" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">3 days</text>
+  <text x="830" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">LONGEST STREAK</text>
+  <text x="830" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">21 days</text>
+
+  <!-- Language Distribution Panel -->
+  <rect x="1060" y="615" width="460" height="240" fill="#180f00" stroke="#2a1800" stroke-width="1"/>
+  <rect x="1060" y="615" width="4"   height="240" fill="#f0b43c"/>
+  <text x="1090" y="650" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">LANGUAGE DISTRIBUTION</text>
+  <text x="1090" y="670" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Aggregated across owned repositories</text>
+  <text x="1090" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">LANG</text>
+  <text x="1240" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">UTILIZATION</text>
+  <text x="1470" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;" text-anchor="end">%</text>
   
-  <!-- GitHub Stats Section -->
-  <text x="100" y="580" class="mono-title">GITHUB ACTIVITY METRICS</text>
-  
-  <!-- GitHub Stats Grid -->
-  <g id="github-stats">
-    <!-- Account Stats Panel -->
-    <rect x="100" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
-    <rect x="100" y="615" width="4" height="240" fill="url(#blueAccent)"/>
-    
-    <text x="130" y="650" class="mono-section">ACCOUNT STATS</text>
-    <text x="130" y="670" class="mono-label">github.com/devsw-prayas</text>
-    
-    <text x="130" y="705" class="mono-accent">PUBLIC REPOS</text>
-    <text x="130" y="725" class="orbitron-stat">29</text>
-    
-    <text x="130" y="760" class="mono-accent">FOLLOWERS</text>
-    <text x="130" y="780" class="orbitron-stat">13</text>
-    
-    <text x="330" y="705" class="mono-accent">STARS EARNED</text>
-    <text x="330" y="725" class="orbitron-stat">3</text>
-    
-    <text x="330" y="760" class="mono-accent">CONTRIBUTIONS</text>
-    <text x="330" y="780" class="orbitron-stat">397</text>
-    
-    <text x="130" y="825" class="mono-label">Member since 2020 · Active contributor</text>
-
-    <!-- Contribution Activity Panel -->
-    <rect x="580" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
-    <rect x="580" y="615" width="4" height="240" fill="url(#blueAccent)"/>
-    
-    <text x="610" y="650" class="mono-section">CONTRIBUTION ACTIVITY</text>
-    <text x="610" y="670" class="mono-label">Last 365 days</text>
-
-    <text x="610" y="705" class="mono-accent">COMMITS TODAY</text>
-    <text x="610" y="725" class="orbitron-stat">4</text>
-
-    <text x="610" y="760" class="mono-accent">CURRENT STREAK</text>
-    <text x="610" y="780" class="orbitron-stat">3 days</text>
-
-    <text x="830" y="760" class="mono-accent">LONGEST STREAK</text>
-    <text x="830" y="780" class="orbitron-stat">21 days</text>
-
-    <!-- Language Distribution Panel -->
-    <rect x="1060" y="615" width="460" height="240"
-          fill="url(#panelGrad)"
-          stroke="#2a1800"
-          stroke-width="1"/>
-    <rect x="1060" y="615" width="4" height="240"
-          fill="url(#blueAccent)"/>
-    <text x="1090" y="650" class="mono-section">LANGUAGE DISTRIBUTION</text>
-    <text x="1090" y="670" class="mono-label">Aggregated across owned repositories</text>
-    <text x="1090" y="705" class="mono-accent">LANG</text>
-    <text x="1240" y="705" class="mono-accent">UTILIZATION</text>
-    <text x="1470" y="705" class="mono-accent" text-anchor="end">%</text>
-    <g id="language-bars">
+        <text x="1090" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">C++</text>
+        <rect x="1190" y="725" width="220" height="8" fill="#2a1800" />
+        <rect x="1190" y="725" width="71.02702593883404" height="8" fill="#f0b43c" />
+        <text x="1470" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">35.5%</text>
       
-        <text x="1090" y="735" class="mono-label">C++</text>
-        <rect x="1190" y="725" width="220" height="8" fill="#0d1a0a" />
-        <rect x="1190" y="725" width="70.97868927915243" height="8" fill="#f0b43c" />
-        <text x="1470" y="735" class="mono-label" text-anchor="end">
-          35.5%
-        </text>
+        <text x="1090" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">C#</text>
+        <rect x="1190" y="757" width="220" height="8" fill="#2a1800" />
+        <rect x="1190" y="757" width="41.29720896604602" height="8" fill="#f0b43c" />
+        <text x="1470" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">20.6%</text>
       
-        <text x="1090" y="767" class="mono-label">C#</text>
-        <rect x="1190" y="757" width="220" height="8" fill="#0d1a0a" />
-        <rect x="1190" y="757" width="41.269104605639455" height="8" fill="#f0b43c" />
-        <text x="1470" y="767" class="mono-label" text-anchor="end">
-          20.6%
-        </text>
+        <text x="1090" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Python</text>
+        <rect x="1190" y="789" width="220" height="8" fill="#2a1800" />
+        <rect x="1190" y="789" width="25.943207452013105" height="8" fill="#f0b43c" />
+        <text x="1470" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">13.0%</text>
       
-        <text x="1090" y="799" class="mono-label">Python</text>
-        <rect x="1190" y="789" width="220" height="8" fill="#0d1a0a" />
-        <rect x="1190" y="789" width="25.925552088113495" height="8" fill="#f0b43c" />
-        <text x="1470" y="799" class="mono-label" text-anchor="end">
-          13.0%
-        </text>
+        <text x="1090" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Java</text>
+        <rect x="1190" y="821" width="220" height="8" fill="#2a1800" />
+        <rect x="1190" y="821" width="19.984609761659563" height="8" fill="#f0b43c" />
+        <text x="1470" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">10.0%</text>
       
-        <text x="1090" y="831" class="mono-label">Java</text>
-        <rect x="1190" y="821" width="220" height="8" fill="#0d1a0a" />
-        <rect x="1190" y="821" width="19.971009455745715" height="8" fill="#f0b43c" />
-        <text x="1470" y="831" class="mono-label" text-anchor="end">
-          10.0%
-        </text>
-      
-    </g>
 
-  </g>
-  
-  <!-- Divider -->
   <line x1="100" y1="895" x2="1520" y2="895" stroke="#2a1800" stroke-width="1"/>
-  
-  <!-- Research Divisions Section -->
-  <text x="100" y="955" class="mono-title">RESEARCH DIVISIONS</text>
-  
-  <!-- Division 01: HPC -->
-  <text x="100" y="1010" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
+
+  <!-- ── RESEARCH DIVISIONS ─────────────────────────────── -->
+  <text x="100" y="955" style="font-family: 'JetBrains Mono', monospace; font-size: 32px; fill: #fff7e4; font-weight: 600;">RESEARCH DIVISIONS</text>
+
+  <!-- Division 01 -->
+  <text x="100" y="1010" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
   <line x1="100" y1="1020" x2="680" y2="1020" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
-  
-  <text x="100" y="1055" class="mono-body">Dedicated to the design and implementation of compute infrastructure that is</text>
-  <text x="100" y="1075" class="mono-body">correct, performant, and reproducible. Systems are engineered to eliminate data</text>
-  <text x="100" y="1095" class="mono-body">races, memory unsafety, and non-deterministic execution at every level of the stack.</text>
-  
-  <text x="100" y="1130" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1155" class="mono-body">· Parallel multithreading with full utilisation of available hardware concurrency</text>
-  <text x="100" y="1175" class="mono-body">· Memory subsystems with shadow tracking, lifetime enforcement, and sanitisation</text>
-  <text x="100" y="1195" class="mono-body">· Cache-coherent data structures respecting hardware memory hierarchy</text>
-  <text x="100" y="1215" class="mono-body">· SIMD kernel development for vectorised throughput-critical workloads</text>
-  <text x="100" y="1235" class="mono-body">· Lock-free concurrency primitives with formal correctness guarantees</text>
-  <text x="100" y="1255" class="mono-body">· Deterministic execution semantics across all runtime configurations</text>
-  
-  <text x="100" y="1290" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1315" class="mono-accent">StormSTL</text>
-  <text x="210" y="1315" class="mono-body">— data structures, allocators, and memory primitives</text>
-  <text x="100" y="1335" class="mono-accent">Corium</text>
-  <text x="180" y="1335" class="mono-body">— parallel runtime and task scheduler</text>
-  <text x="100" y="1355" class="mono-accent">Stratum</text>
-  <text x="195" y="1355" class="mono-body">— deterministic execution tracing and instrumentation</text>
-  <text x="100" y="1375" class="mono-accent">Kerbecs</text>
-  <text x="195" y="1375" class="mono-body">— shadow-memory sanitiser and lifetime analyser</text>
-  <text x="100" y="1395" class="mono-accent">Leibniz</text>
-  <text x="185" y="1395" class="mono-body">— SIMD-optimised mathematics library</text>
-  <text x="100" y="1415" class="mono-accent">Helios-DLX</text>
-  <text x="220" y="1415" class="mono-body">— deep learning runtime (HPC + DL)</text>
-  
-  <!-- Division 02: Graphics -->
+
+  <text x="100" y="1055" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Dedicated to the design and implementation of compute infrastructure that is</text>
+  <text x="100" y="1075" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">correct, performant, and reproducible. Systems are engineered to eliminate data</text>
+  <text x="100" y="1095" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">races, memory unsafety, and non-deterministic execution at every level of the stack.</text>
+
+  <text x="100" y="1130" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">FOCUS AREAS</text>
+  <text x="100" y="1155" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Parallel multithreading with full utilisation of available hardware concurrency</text>
+  <text x="100" y="1175" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Memory subsystems with shadow tracking, lifetime enforcement, and sanitisation</text>
+  <text x="100" y="1195" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Cache-coherent data structures respecting hardware memory hierarchy</text>
+  <text x="100" y="1215" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· SIMD kernel development for vectorised throughput-critical workloads</text>
+  <text x="100" y="1235" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Lock-free concurrency primitives with formal correctness guarantees</text>
+  <text x="100" y="1255" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Deterministic execution semantics across all runtime configurations</text>
+
+  <text x="100" y="1290" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">ACTIVE PROJECTS</text>
+  <text x="100" y="1315" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">StormSTL</text>
+  <text x="210" y="1315" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— data structures, allocators, and memory primitives</text>
+  <text x="100" y="1335" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Corium</text>
+  <text x="180" y="1335" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— parallel runtime and task scheduler</text>
+  <text x="100" y="1355" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Stratum</text>
+  <text x="195" y="1355" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— deterministic execution tracing and instrumentation</text>
+  <text x="100" y="1375" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Kerbecs</text>
+  <text x="195" y="1375" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— shadow-memory sanitiser and lifetime analyser</text>
+  <text x="100" y="1395" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Leibniz</text>
+  <text x="185" y="1395" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— SIMD-optimised mathematics library</text>
+  <text x="100" y="1415" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Helios-DLX</text>
+  <text x="220" y="1415" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— deep learning runtime (HPC + DL)</text>
+
   <line x1="100" y1="1455" x2="1520" y2="1455" stroke="#2a1800" stroke-width="1"/>
-  
-  <text x="100" y="1510" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+
+  <!-- Division 02 -->
+  <text x="100" y="1510" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
   <line x1="100" y1="1520" x2="720" y2="1520" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
-  
-  <text x="100" y="1555" class="mono-body">Focused on physically accurate simulation of light transport across the visible</text>
-  <text x="100" y="1575" class="mono-body">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
-  <text x="100" y="1595" class="mono-body">investigation into neural-assisted reconstruction and denoising pipelines.</text>
-  
-  <text x="100" y="1630" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1655" class="mono-body">· Path tracing: unidirectional, bidirectional, and Metropolis-based variants</text>
-  <text x="100" y="1675" class="mono-body">· RGB rendering pipelines for standard display-referred output workflows</text>
-  <text x="100" y="1695" class="mono-body">· Spectral rendering with wavelength-accurate material and illuminant models</text>
-  <text x="100" y="1715" class="mono-body">· Light transport theory and Monte Carlo estimator variance reduction</text>
-  <text x="100" y="1735" class="mono-body">· Neural rendering and learned reconstruction for production-grade output</text>
-  
-  <text x="100" y="1770" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1795" class="mono-accent">Spectra</text>
-  <text x="180" y="1795" class="mono-body">— research-oriented physically based rendering engine</text>
-  <text x="100" y="1815" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
-  <text x="450" y="1815" class="mono-body">— wavelength-domain extensions integrated into Spectra</text>
-  
-  <!-- Division 03: Deep Learning -->
+
+  <text x="100" y="1555" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Focused on physically accurate simulation of light transport across the visible</text>
+  <text x="100" y="1575" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
+  <text x="100" y="1595" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">investigation into neural-assisted reconstruction and denoising pipelines.</text>
+
+  <text x="100" y="1630" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">FOCUS AREAS</text>
+  <text x="100" y="1655" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Path tracing: unidirectional, bidirectional, and Metropolis-based variants</text>
+  <text x="100" y="1675" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· RGB rendering pipelines for standard display-referred output workflows</text>
+  <text x="100" y="1695" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Spectral rendering with wavelength-accurate material and illuminant models</text>
+  <text x="100" y="1715" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Light transport theory and Monte Carlo estimator variance reduction</text>
+  <text x="100" y="1735" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Neural rendering and learned reconstruction for production-grade output</text>
+
+  <text x="100" y="1770" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">ACTIVE PROJECTS</text>
+  <text x="100" y="1795" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Spectra</text>
+  <text x="180" y="1795" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— research-oriented physically based rendering engine</text>
+  <text x="100" y="1815" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1815" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— wavelength-domain extensions integrated into Spectra</text>
+
   <line x1="100" y1="1855" x2="1520" y2="1855" stroke="#2a1800" stroke-width="1"/>
-  
-  <text x="100" y="1910" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+
+  <!-- Division 03 -->
+  <text x="100" y="1910" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">03 · DEEP LEARNING SYSTEMS DIVISION</text>
   <line x1="100" y1="1920" x2="640" y2="1920" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
-  
-  <text x="100" y="1955" class="mono-body">Concerned with the engineering of neural inference systems built to the same</text>
-  <text x="100" y="1975" class="mono-body">correctness and performance standards as the broader compute infrastructure.</text>
-  <text x="100" y="1995" class="mono-body">Deterministic output and numerical reproducibility are non-negotiable requirements.</text>
-  
-  <text x="100" y="2030" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="2055" class="mono-body">· Native deep learning inference without external framework dependencies</text>
-  <text x="100" y="2075" class="mono-body">· Inference kernels optimised for latency and throughput under constrained resources</text>
-  <text x="100" y="2095" class="mono-body">· SIMD-accelerated neural arithmetic for CPU-bound execution environments</text>
-  <text x="100" y="2115" class="mono-body">· Deterministic execution with bit-exact reproducibility across runs</text>
-  <text x="100" y="2135" class="mono-body">· Custom operator development for workloads not addressed by existing frameworks</text>
-  
-  <text x="100" y="2170" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="2195" class="mono-accent">Helios-DLX</text>
-  <text x="220" y="2195" class="mono-body">— in-house deep learning inference engine</text>
-  <text x="100" y="2215" class="mono-accent">Neural Transport Models</text>
-  <text x="330" y="2215" class="mono-body">— learned reconstruction models integrated into Spectra</text>
-  
-  <!-- Major Divider -->
+
+  <text x="100" y="1955" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Concerned with the engineering of neural inference systems built to the same</text>
+  <text x="100" y="1975" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">correctness and performance standards as the broader compute infrastructure.</text>
+  <text x="100" y="1995" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Deterministic output and numerical reproducibility are non-negotiable requirements.</text>
+
+  <text x="100" y="2030" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">FOCUS AREAS</text>
+  <text x="100" y="2055" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Native deep learning inference without external framework dependencies</text>
+  <text x="100" y="2075" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Inference kernels optimised for latency and throughput under constrained resources</text>
+  <text x="100" y="2095" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· SIMD-accelerated neural arithmetic for CPU-bound execution environments</text>
+  <text x="100" y="2115" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Deterministic execution with bit-exact reproducibility across runs</text>
+  <text x="100" y="2135" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Custom operator development for workloads not addressed by existing frameworks</text>
+
+  <text x="100" y="2170" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">ACTIVE PROJECTS</text>
+  <text x="100" y="2195" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Helios-DLX</text>
+  <text x="220" y="2195" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— in-house deep learning inference engine</text>
+  <text x="100" y="2215" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">Neural Transport Models</text>
+  <text x="330" y="2215" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">— learned reconstruction models integrated into Spectra</text>
+
+  <!-- ── RESEARCH HIGHLIGHT ─────────────────────────────── -->
   <line x1="100" y1="2275" x2="1520" y2="2275" stroke="#f0b43c" stroke-width="1.5" opacity="0.5"/>
-  
-  <!-- Research Highlight Section -->
-  <text x="100" y="2355" class="mono-title">RESEARCH HIGHLIGHT</text>
-  
-  <!-- BsSPT Panel -->
-  <g id="highlight-panel">
-    <rect x="100" y="2390" width="1420" height="500" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
-    <rect x="100" y="2390" width="4" height="500" fill="url(#goldAccent)"/>
-    
-    <text x="140" y="2435" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
-    <text x="140" y="2455" class="mono-label">DETERMINISTIC SPECTRAL TRANSPORT VIA LINEAR BASIS DECOMPOSITION</text>
-    
-    <text x="140" y="2495" class="mono-body">A formal framework for deterministic spectral light transport in which spectral</text>
-    <text x="140" y="2515" class="mono-body">power distributions are decomposed over a fixed global basis. The spectral shape</text>
-    <text x="140" y="2535" class="mono-body">φ is represented as a basis-space vector, with scalar throughput T tracked</text>
-    <text x="140" y="2555" class="mono-body">independently. Spectral evolution reduces to a sequence of linear operator</text>
-    <text x="140" y="2575" class="mono-body">transforms in basis space, eliminating per-path stochastic wavelength sampling.</text>
-    
-    <text x="140" y="2615" class="mono-label">TECHNICAL PROPERTIES</text>
-    <text x="140" y="2640" class="mono-body">· Fully deterministic: identical inputs produce identical outputs across all runs</text>
-    <text x="140" y="2660" class="mono-body">· SIMD-compatible operator structure with natural cache coherence properties</text>
-    <text x="140" y="2680" class="mono-body">· Eliminates per-path wavelength variance without sacrificing spectral fidelity</text>
-    
-    <text x="140" y="2715" class="mono-label">INTEGRATION CAPABILITIES</text>
-    <text x="140" y="2740" class="mono-body">The framework interfaces directly with neural reconstruction pipelines, providing</text>
-    <text x="140" y="2760" class="mono-body">a structured bridge between high-performance compute, physically accurate spectral</text>
-    <text x="140" y="2780" class="mono-body">physics, and learned inference. Suitable for deployment in production rendering</text>
-    <text x="140" y="2800" class="mono-body">contexts where correctness and reproducibility are primary engineering constraints.</text>
-    
-    <text x="140" y="2835" class="mono-label">IMPLEMENTATION STATUS</text>
-    <text x="140" y="2860" class="mono-highlight">Integrated into the Spectra rendering engine as the primary spectral transport backend</text>
-    <text x="140" y="2880" class="mono-highlight">Operator formalism enables deterministic GPU execution without architectural compromise</text>
-  </g>
-  
-  <!-- Bottom Section -->
+  <text x="100" y="2355" style="font-family: 'JetBrains Mono', monospace; font-size: 32px; fill: #fff7e4; font-weight: 600;">RESEARCH HIGHLIGHT</text>
+
+  <rect x="100" y="2390" width="1420" height="500" fill="#180f00" stroke="#2a1800" stroke-width="1"/>
+  <rect x="100" y="2390" width="4"    height="500" fill="#f0b43c"/>
+
+  <text x="140" y="2435" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">Basis-Space Spectral Path Tracing (BsSPT)</text>
+  <text x="140" y="2455" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">DETERMINISTIC SPECTRAL TRANSPORT VIA LINEAR BASIS DECOMPOSITION</text>
+
+  <text x="140" y="2495" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">A formal framework for deterministic spectral light transport in which spectral</text>
+  <text x="140" y="2515" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">power distributions are decomposed over a fixed global basis. The spectral shape</text>
+  <text x="140" y="2535" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">&#x3C6; is represented as a basis-space vector, with scalar throughput T tracked</text>
+  <text x="140" y="2555" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">independently. Spectral evolution reduces to a sequence of linear operator</text>
+  <text x="140" y="2575" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">transforms in basis space, eliminating per-path stochastic wavelength sampling.</text>
+
+  <text x="140" y="2615" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">TECHNICAL PROPERTIES</text>
+  <text x="140" y="2640" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Fully deterministic: identical inputs produce identical outputs across all runs</text>
+  <text x="140" y="2660" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· SIMD-compatible operator structure with natural cache coherence properties</text>
+  <text x="140" y="2680" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">· Eliminates per-path wavelength variance without sacrificing spectral fidelity</text>
+
+  <text x="140" y="2715" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">INTEGRATION CAPABILITIES</text>
+  <text x="140" y="2740" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">The framework interfaces directly with neural reconstruction pipelines, providing</text>
+  <text x="140" y="2760" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">a structured bridge between high-performance compute, physically accurate spectral</text>
+  <text x="140" y="2780" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">physics, and learned inference. Suitable for deployment in production rendering</text>
+  <text x="140" y="2800" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">contexts where correctness and reproducibility are primary engineering constraints.</text>
+
+  <text x="140" y="2835" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">IMPLEMENTATION STATUS</text>
+  <text x="140" y="2860" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #f0b43c; font-weight: 600;">Integrated into the Spectra rendering engine as the primary spectral transport backend</text>
+  <text x="140" y="2880" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #f0b43c; font-weight: 600;">Operator formalism enables deterministic GPU execution without architectural compromise</text>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
   <line x1="100" y1="2950" x2="1520" y2="2950" stroke="#f0b43c" stroke-width="1.5" opacity="0.5"/>
-  
-  <text x="100" y="3010" class="mono-body">CORE RESEARCH FOCUS</text>
-  <text x="100" y="3035" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
-  
-  <text x="100" y="3080" class="mono-label">LABORATORY LEADERSHIP</text>
-  <text x="100" y="3105" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Principal Investigator</text>
-  
-  <!-- Bottom Metadata Stamp -->
-  <text x="100" y="3175" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
-  
-  <!-- Bottom Right Watermark -->
-  <text x="1520" y="3165" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
-</svg> 
+
+  <text x="100" y="3010" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">CORE RESEARCH FOCUS</text>
+  <text x="100" y="3035" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
+  <text x="100" y="3080" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">LABORATORY LEADERSHIP</text>
+  <text x="100" y="3105" style="font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #c8a87a; font-weight: 400;">Prayas Bharadwaj — Founder, Lead Engineer, Principal Investigator</text>
+  <text x="100" y="3175" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #5a4010; font-weight: 400; letter-spacing: 0.5px;">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  <text x="1520" y="3165" style="font-family: 'Orbitron', monospace; font-size: 11px; fill: #5a4010; font-weight: 700; letter-spacing: 1px;" text-anchor="end">STORMWEAVER STUDIOS</text>
+
+</svg>
