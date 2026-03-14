@@ -164,21 +164,39 @@ async function main(): Promise<void> {
   // ----------------------------
   // SVG OUTPUT
   // ----------------------------
-  const svg = `<svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
+  const svg = `<svg width="1600" height="3700" viewBox="0 0 1600 3700" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- Background -->
-  <rect width="1600" height="3200" fill="${T.bg}" />
-
-  <!-- Grid pattern -->
   <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#070400"/>
+      <stop offset="60%"  stop-color="#1a0e00"/>
+      <stop offset="100%" stop-color="#3d2000"/>
+    </linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="${T.panelBorder}" stroke-width="0.5"/>
     </pattern>
   </defs>
-  <rect width="1600" height="3200" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Background: gradient via linearGradient (local) + stepped rects (GitHub fallback) -->
+  <rect width="1600" height="3700" fill="#070400"/>
+  <rect width="1600" height="370"  y="0"    fill="#0a0600" opacity="0.6"/>
+  <rect width="1600" height="370"  y="370"  fill="#0e0800" opacity="0.6"/>
+  <rect width="1600" height="370"  y="740"  fill="#120a00" opacity="0.6"/>
+  <rect width="1600" height="370"  y="1110" fill="#171000" opacity="0.6"/>
+  <rect width="1600" height="370"  y="1480" fill="#1e1400" opacity="0.6"/>
+  <rect width="1600" height="370"  y="1850" fill="#261800" opacity="0.6"/>
+  <rect width="1600" height="370"  y="2220" fill="#2e1c00" opacity="0.6"/>
+  <rect width="1600" height="370"  y="2590" fill="#361f00" opacity="0.6"/>
+  <rect width="1600" height="370"  y="2960" fill="#3a2200" opacity="0.6"/>
+  <rect width="1600" height="370"  y="3330" fill="#3d2400" opacity="0.6"/>
+  <!-- linearGradient overlay (works locally, stripped by GitHub) -->
+  <rect width="1600" height="3700" fill="url(#bgGrad)" opacity="0.7"/>
+
+  <!-- Grid overlay -->
+  <rect width="1600" height="3700" fill="url(#grid)" opacity="0.6"/>
 
   <!-- Left accent line -->
-  <line x1="80" y1="0" x2="80" y2="3200" stroke="${T.accent}" stroke-width="1.5" opacity="0.3"/>
+  <line x1="80" y1="0" x2="80" y2="3700" stroke="${T.accent}" stroke-width="1.5" opacity="0.3"/>
 
   <!-- Watermark -->
   <text x="1400" y="1750" style="${s.watermark}" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
@@ -276,95 +294,122 @@ async function main(): Promise<void> {
   <text x="195" y="1375" style="${s.body}">— shadow-memory sanitiser and lifetime analyser</text>
   <text x="100" y="1395" style="${s.accent}">Leibniz</text>
   <text x="185" y="1395" style="${s.body}">— SIMD-optimised mathematics library</text>
-  <text x="100" y="1415" style="${s.accent}">Helios-DLX</text>
-  <text x="220" y="1415" style="${s.body}">— deep learning runtime (HPC + DL)</text>
+  <text x="100" y="1415" style="${s.accent}">Hades-Benchmark</text>
+  <text x="265" y="1415" style="${s.body}">— statistically rigorous HPC microbenchmarking pipeline</text>
+  <text x="100" y="1435" style="${s.accent}">Helios-DLX</text>
+  <text x="220" y="1435" style="${s.body}">— deep learning runtime (HPC + DL)</text>
 
-  <line x1="100" y1="1455" x2="1520" y2="1455" stroke="${T.panelBorder}" stroke-width="1"/>
+  <line x1="100" y1="1475" x2="1520" y2="1475" stroke="${T.panelBorder}" stroke-width="1"/>
 
   <!-- Division 02 -->
-  <text x="100" y="1510" style="${s.section}">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
-  <line x1="100" y1="1520" x2="720" y2="1520" stroke="${T.accent}" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1530" style="${s.section}">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+  <line x1="100" y1="1540" x2="720" y2="1540" stroke="${T.accent}" stroke-width="1" opacity="0.4"/>
 
-  <text x="100" y="1555" style="${s.body}">Focused on physically accurate simulation of light transport across the visible</text>
-  <text x="100" y="1575" style="${s.body}">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
-  <text x="100" y="1595" style="${s.body}">investigation into neural-assisted reconstruction and denoising pipelines.</text>
+  <text x="100" y="1575" style="${s.body}">Focused on physically accurate simulation of light transport across the visible</text>
+  <text x="100" y="1595" style="${s.body}">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
+  <text x="100" y="1615" style="${s.body}">investigation into neural-assisted reconstruction and denoising pipelines.</text>
 
-  <text x="100" y="1630" style="${s.label}">FOCUS AREAS</text>
-  <text x="100" y="1655" style="${s.body}">· Path tracing: unidirectional, bidirectional, and Metropolis-based variants</text>
-  <text x="100" y="1675" style="${s.body}">· RGB rendering pipelines for standard display-referred output workflows</text>
-  <text x="100" y="1695" style="${s.body}">· Spectral rendering with wavelength-accurate material and illuminant models</text>
-  <text x="100" y="1715" style="${s.body}">· Light transport theory and Monte Carlo estimator variance reduction</text>
-  <text x="100" y="1735" style="${s.body}">· Neural rendering and learned reconstruction for production-grade output</text>
+  <text x="100" y="1650" style="${s.label}">FOCUS AREAS</text>
+  <text x="100" y="1675" style="${s.body}">· Path tracing: unidirectional, bidirectional, and Metropolis-based variants</text>
+  <text x="100" y="1695" style="${s.body}">· RGB rendering pipelines for standard display-referred output workflows</text>
+  <text x="100" y="1715" style="${s.body}">· Spectral rendering with wavelength-accurate material and illuminant models</text>
+  <text x="100" y="1735" style="${s.body}">· Light transport theory and Monte Carlo estimator variance reduction</text>
+  <text x="100" y="1755" style="${s.body}">· Neural rendering and learned reconstruction for production-grade output</text>
 
-  <text x="100" y="1770" style="${s.label}">ACTIVE PROJECTS</text>
-  <text x="100" y="1795" style="${s.accent}">Spectra</text>
-  <text x="180" y="1795" style="${s.body}">— research-oriented physically based rendering engine</text>
-  <text x="100" y="1815" style="${s.accent}">Spectral &amp; Neural Transport Modules</text>
-  <text x="450" y="1815" style="${s.body}">— wavelength-domain extensions integrated into Spectra</text>
+  <text x="100" y="1790" style="${s.label}">ACTIVE PROJECTS</text>
+  <text x="100" y="1815" style="${s.accent}">Spectra</text>
+  <text x="180" y="1815" style="${s.body}">— research-oriented physically based rendering engine</text>
+  <text x="100" y="1835" style="${s.accent}">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1835" style="${s.body}">— wavelength-domain extensions integrated into Spectra</text>
 
-  <line x1="100" y1="1855" x2="1520" y2="1855" stroke="${T.panelBorder}" stroke-width="1"/>
+  <line x1="100" y1="1875" x2="1520" y2="1875" stroke="${T.panelBorder}" stroke-width="1"/>
 
   <!-- Division 03 -->
-  <text x="100" y="1910" style="${s.section}">03 · DEEP LEARNING SYSTEMS DIVISION</text>
-  <line x1="100" y1="1920" x2="640" y2="1920" stroke="${T.accent}" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1930" style="${s.section}">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+  <line x1="100" y1="1940" x2="640" y2="1940" stroke="${T.accent}" stroke-width="1" opacity="0.4"/>
 
-  <text x="100" y="1955" style="${s.body}">Concerned with the engineering of neural inference systems built to the same</text>
-  <text x="100" y="1975" style="${s.body}">correctness and performance standards as the broader compute infrastructure.</text>
-  <text x="100" y="1995" style="${s.body}">Deterministic output and numerical reproducibility are non-negotiable requirements.</text>
+  <text x="100" y="1975" style="${s.body}">Concerned with the engineering of neural inference systems built to the same</text>
+  <text x="100" y="1995" style="${s.body}">correctness and performance standards as the broader compute infrastructure.</text>
+  <text x="100" y="2015" style="${s.body}">Deterministic output and numerical reproducibility are non-negotiable requirements.</text>
 
-  <text x="100" y="2030" style="${s.label}">FOCUS AREAS</text>
-  <text x="100" y="2055" style="${s.body}">· Native deep learning inference without external framework dependencies</text>
-  <text x="100" y="2075" style="${s.body}">· Inference kernels optimised for latency and throughput under constrained resources</text>
-  <text x="100" y="2095" style="${s.body}">· SIMD-accelerated neural arithmetic for CPU-bound execution environments</text>
-  <text x="100" y="2115" style="${s.body}">· Deterministic execution with bit-exact reproducibility across runs</text>
-  <text x="100" y="2135" style="${s.body}">· Custom operator development for workloads not addressed by existing frameworks</text>
+  <text x="100" y="2050" style="${s.label}">FOCUS AREAS</text>
+  <text x="100" y="2075" style="${s.body}">· Native deep learning inference without external framework dependencies</text>
+  <text x="100" y="2095" style="${s.body}">· Inference kernels optimised for latency and throughput under constrained resources</text>
+  <text x="100" y="2115" style="${s.body}">· SIMD-accelerated neural arithmetic for CPU-bound execution environments</text>
+  <text x="100" y="2135" style="${s.body}">· Deterministic execution with bit-exact reproducibility across runs</text>
+  <text x="100" y="2155" style="${s.body}">· Custom operator development for workloads not addressed by existing frameworks</text>
 
-  <text x="100" y="2170" style="${s.label}">ACTIVE PROJECTS</text>
-  <text x="100" y="2195" style="${s.accent}">Helios-DLX</text>
-  <text x="220" y="2195" style="${s.body}">— in-house deep learning inference engine</text>
-  <text x="100" y="2215" style="${s.accent}">Neural Transport Models</text>
-  <text x="330" y="2215" style="${s.body}">— learned reconstruction models integrated into Spectra</text>
+  <text x="100" y="2190" style="${s.label}">ACTIVE PROJECTS</text>
+  <text x="100" y="2215" style="${s.accent}">Helios-DLX</text>
+  <text x="220" y="2215" style="${s.body}">— in-house deep learning inference engine</text>
+  <text x="100" y="2235" style="${s.accent}">Neural Transport Models</text>
+  <text x="330" y="2235" style="${s.body}">— learned reconstruction models integrated into Spectra</text>
+
+  <line x1="100" y1="2275" x2="1520" y2="2275" stroke="${T.panelBorder}" stroke-width="1"/>
+
+  <!-- Division 04 -->
+  <text x="100" y="2330" style="${s.section}">04 · TOOLING &amp; DEVELOPER INFRASTRUCTURE DIVISION</text>
+  <line x1="100" y1="2340" x2="800" y2="2340" stroke="${T.accent}" stroke-width="1" opacity="0.4"/>
+
+  <text x="100" y="2375" style="${s.body}">Focused on the construction of developer-facing tools that close the gap between</text>
+  <text x="100" y="2395" style="${s.body}">high-performance systems code and the inspection, profiling, and validation</text>
+  <text x="100" y="2415" style="${s.body}">workflows required to reason about it rigorously.</text>
+
+  <text x="100" y="2450" style="${s.label}">FOCUS AREAS</text>
+  <text x="100" y="2475" style="${s.body}">· Native compiler tooling with direct integration into local toolchains</text>
+  <text x="100" y="2495" style="${s.body}">· Source-to-assembly inspection with bidirectional mapping and inline annotation</text>
+  <text x="100" y="2515" style="${s.body}">· Statistically rigorous microbenchmarking with convergence-driven termination</text>
+  <text x="100" y="2535" style="${s.body}">· Determinism validation and jitter rejection in benchmark execution pipelines</text>
+  <text x="100" y="2555" style="${s.body}">· Multi-compiler comparative analysis and per-instruction throughput modelling</text>
+
+  <text x="100" y="2590" style="${s.label}">ACTIVE PROJECTS</text>
+  <text x="100" y="2615" style="${s.accent}">Caldera</text>
+  <text x="185" y="2615" style="${s.body}">— native Windows C++ to ASM inspection IDE with live source mapping,</text>
+  <text x="185" y="2635" style="${s.body}">    llvm-mca integration, opcode reference, and multi-compiler diff</text>
+  <text x="100" y="2660" style="${s.accent}">Hades-Benchmark</text>
+  <text x="265" y="2660" style="${s.body}">— low-overhead benchmarking pipeline with Welford convergence,</text>
+  <text x="265" y="2680" style="${s.body}">    jitter rejection, determinism validation, and work-stealing fan-out</text>
 
   <!-- ── RESEARCH HIGHLIGHT ─────────────────────────────── -->
-  <line x1="100" y1="2275" x2="1520" y2="2275" stroke="${T.accent}" stroke-width="1.5" opacity="0.5"/>
-  <text x="100" y="2355" style="${s.title}">RESEARCH HIGHLIGHT</text>
+  <line x1="100" y1="2750" x2="1520" y2="2750" stroke="${T.accent}" stroke-width="1.5" opacity="0.5"/>
+  <text x="100" y="2830" style="${s.title}">RESEARCH HIGHLIGHT</text>
 
-  <rect x="100" y="2390" width="1420" height="500" fill="${T.panel}" stroke="${T.panelBorder}" stroke-width="1"/>
-  <rect x="100" y="2390" width="4"    height="500" fill="${T.accent}"/>
+  <rect x="100" y="2865" width="1420" height="500" fill="${T.panel}" stroke="${T.panelBorder}" stroke-width="1"/>
+  <rect x="100" y="2865" width="4"    height="500" fill="${T.accent}"/>
 
-  <text x="140" y="2435" style="${s.section}">Basis-Space Spectral Path Tracing (BsSPT)</text>
-  <text x="140" y="2455" style="${s.label}">DETERMINISTIC SPECTRAL TRANSPORT VIA LINEAR BASIS DECOMPOSITION</text>
+  <text x="140" y="2910" style="${s.section}">Basis-Space Spectral Path Tracing (BsSPT)</text>
+  <text x="140" y="2930" style="${s.label}">DETERMINISTIC SPECTRAL TRANSPORT VIA LINEAR BASIS DECOMPOSITION</text>
 
-  <text x="140" y="2495" style="${s.body}">A formal framework for deterministic spectral light transport in which spectral</text>
-  <text x="140" y="2515" style="${s.body}">power distributions are decomposed over a fixed global basis. The spectral shape</text>
-  <text x="140" y="2535" style="${s.body}">&#x3C6; is represented as a basis-space vector, with scalar throughput T tracked</text>
-  <text x="140" y="2555" style="${s.body}">independently. Spectral evolution reduces to a sequence of linear operator</text>
-  <text x="140" y="2575" style="${s.body}">transforms in basis space, eliminating per-path stochastic wavelength sampling.</text>
+  <text x="140" y="2970" style="${s.body}">A formal framework for deterministic spectral light transport in which spectral</text>
+  <text x="140" y="2990" style="${s.body}">power distributions are decomposed over a fixed global basis. The spectral shape</text>
+  <text x="140" y="3010" style="${s.body}">&#x3C6; is represented as a basis-space vector, with scalar throughput T tracked</text>
+  <text x="140" y="3030" style="${s.body}">independently. Spectral evolution reduces to a sequence of linear operator</text>
+  <text x="140" y="3050" style="${s.body}">transforms in basis space, eliminating per-path stochastic wavelength sampling.</text>
 
-  <text x="140" y="2615" style="${s.label}">TECHNICAL PROPERTIES</text>
-  <text x="140" y="2640" style="${s.body}">· Fully deterministic: identical inputs produce identical outputs across all runs</text>
-  <text x="140" y="2660" style="${s.body}">· SIMD-compatible operator structure with natural cache coherence properties</text>
-  <text x="140" y="2680" style="${s.body}">· Eliminates per-path wavelength variance without sacrificing spectral fidelity</text>
+  <text x="140" y="3090" style="${s.label}">TECHNICAL PROPERTIES</text>
+  <text x="140" y="3115" style="${s.body}">· Fully deterministic: identical inputs produce identical outputs across all runs</text>
+  <text x="140" y="3135" style="${s.body}">· SIMD-compatible operator structure with natural cache coherence properties</text>
+  <text x="140" y="3155" style="${s.body}">· Eliminates per-path wavelength variance without sacrificing spectral fidelity</text>
 
-  <text x="140" y="2715" style="${s.label}">INTEGRATION CAPABILITIES</text>
-  <text x="140" y="2740" style="${s.body}">The framework interfaces directly with neural reconstruction pipelines, providing</text>
-  <text x="140" y="2760" style="${s.body}">a structured bridge between high-performance compute, physically accurate spectral</text>
-  <text x="140" y="2780" style="${s.body}">physics, and learned inference. Suitable for deployment in production rendering</text>
-  <text x="140" y="2800" style="${s.body}">contexts where correctness and reproducibility are primary engineering constraints.</text>
+  <text x="140" y="3190" style="${s.label}">INTEGRATION CAPABILITIES</text>
+  <text x="140" y="3215" style="${s.body}">The framework interfaces directly with neural reconstruction pipelines, providing</text>
+  <text x="140" y="3235" style="${s.body}">a structured bridge between high-performance compute, physically accurate spectral</text>
+  <text x="140" y="3255" style="${s.body}">physics, and learned inference. Suitable for deployment in production rendering</text>
+  <text x="140" y="3275" style="${s.body}">contexts where correctness and reproducibility are primary engineering constraints.</text>
 
-  <text x="140" y="2835" style="${s.label}">IMPLEMENTATION STATUS</text>
-  <text x="140" y="2860" style="${s.highlight}">Integrated into the Spectra rendering engine as the primary spectral transport backend</text>
-  <text x="140" y="2880" style="${s.highlight}">Operator formalism enables deterministic GPU execution without architectural compromise</text>
+  <text x="140" y="3310" style="${s.label}">IMPLEMENTATION STATUS</text>
+  <text x="140" y="3335" style="${s.highlight}">Integrated into the Spectra rendering engine as the primary spectral transport backend</text>
+  <text x="140" y="3355" style="${s.highlight}">Operator formalism enables deterministic GPU execution without architectural compromise</text>
 
   <!-- ── FOOTER ─────────────────────────────────────────── -->
-  <line x1="100" y1="2950" x2="1520" y2="2950" stroke="${T.accent}" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="3430" x2="1520" y2="3430" stroke="${T.accent}" stroke-width="1.5" opacity="0.5"/>
 
-  <text x="100" y="3010" style="${s.body}">CORE RESEARCH FOCUS</text>
-  <text x="100" y="3035" style="${s.section}">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
-  <text x="100" y="3080" style="${s.label}">LABORATORY LEADERSHIP</text>
-  <text x="100" y="3105" style="${s.body}">Prayas Bharadwaj — Founder, Lead Engineer, Principal Investigator</text>
-  <text x="100" y="3175" style="${s.meta}">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
-  <text x="1520" y="3165" style="${s.watermarkSm}" text-anchor="end">STORMWEAVER STUDIOS</text>
+  <text x="100" y="3490" style="${s.body}">CORE RESEARCH FOCUS</text>
+  <text x="100" y="3515" style="${s.section}">Deterministic Compute · Spectral Transport · Neural Acceleration · Developer Tooling</text>
+  <text x="100" y="3560" style="${s.label}">LABORATORY LEADERSHIP</text>
+  <text x="100" y="3585" style="${s.body}">Prayas Bharadwaj — Founder, Lead Engineer, Principal Investigator</text>
+  <text x="100" y="3650" style="${s.meta}">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  <text x="1520" y="3640" style="${s.watermarkSm}" text-anchor="end">STORMWEAVER STUDIOS</text>
 
 </svg>`;
 
