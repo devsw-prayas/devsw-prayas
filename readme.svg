@@ -37,6 +37,13 @@
         font-weight: 900;
         letter-spacing: 2px;
       }
+      .studio-sub {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 22px;
+        fill: #cc3344;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
       .watermark {
         font-family: 'Orbitron', sans-serif;
         font-size: 180px;
@@ -137,260 +144,246 @@
   <text x="1400" y="1750" class="watermark" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
   
   <!-- Header Section -->
-  <text x="100" y="100" class="studio-name">STORMWEAVER STUDIOS</text>
-  <text x="100" y="125" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
-  
+  <text x="100" y="100" class="studio-name">PRAYAS BHARADWAJ</text>
+  <text x="100" y="135" class="studio-sub">STORMWEAVER STUDIOS</text>
+  <text x="100" y="158" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
 
   <!-- Top Divider -->
-  <line x1="100" y1="180" x2="1520" y2="180" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="195" x2="1520" y2="195" stroke="#3a2020" stroke-width="1"/>
   
   <!-- Overview Section -->
-  <text x="100" y="260" class="mono-title">LABORATORY OVERVIEW</text>
+  <text x="100" y="275" class="mono-title">LABORATORY OVERVIEW</text>
   
-  <text x="100" y="305" class="mono-body">StormWeaver Studios is where I build the stuff nobody asked for but everybody</text>
-  <text x="100" y="325" class="mono-body">needs. Independent R&amp;D lab focused on high-performance computing, graphics that</text>
-  <text x="100" y="345" class="mono-body">actually render, and neural nets that don't randomly decide Tuesday is opposite</text>
-  <text x="100" y="365" class="mono-body">day. Research-first mindset, production-grade execution.</text>
+  <text x="100" y="320" class="mono-body">StormWeaver Studios is an independent research and development laboratory</text>
+  <text x="100" y="340" class="mono-body">focused on high-performance computing, physically accurate rendering systems,</text>
+  <text x="100" y="360" class="mono-body">and deterministic deep learning infrastructure. The studio operates with a</text>
+  <text x="100" y="380" class="mono-body">research-first methodology and production-grade engineering standards.</text>
   
-  <text x="100" y="405" class="mono-body">We're talking massive multithreading (because cores exist), wavelength-accurate</text>
-  <text x="100" y="425" class="mono-body">light transport (yes, the full spectrum), memory systems that remember their job,</text>
-  <text x="100" y="445" class="mono-body">and deep learning engines that produce the same answer twice. Deterministic</text>
-  <text x="100" y="465" class="mono-body">everything. Zero "works on my machine" energy.</text>
+  <text x="100" y="420" class="mono-body">Core areas of investigation include massively parallel multithreading, wavelength-</text>
+  <text x="100" y="440" class="mono-body">accurate spectral light transport, principled memory management systems, and</text>
+  <text x="100" y="460" class="mono-body">deterministic neural inference engines. All systems are engineered for</text>
+  <text x="100" y="480" class="mono-body">reproducibility, correctness, and measurable performance under rigorous conditions.</text>
   
   <!-- Divider -->
-  <line x1="100" y1="505" x2="1520" y2="505" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="520" x2="1520" y2="520" stroke="#3a2020" stroke-width="1"/>
   
   <!-- GitHub Stats Section -->
-  <text x="100" y="565" class="mono-title">GITHUB ACTIVITY METRICS</text>
+  <text x="100" y="580" class="mono-title">GITHUB ACTIVITY METRICS</text>
   
   <!-- GitHub Stats Grid -->
   <g id="github-stats">
     <!-- Account Stats Panel -->
-    <rect x="100" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
-    <rect x="100" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    <rect x="100" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="615" width="4" height="240" fill="url(#blueAccent)"/>
     
-    <text x="130" y="635" class="mono-section">ACCOUNT STATS</text>
-    <text x="130" y="655" class="mono-label">github.com/devsw-prayas</text>
+    <text x="130" y="650" class="mono-section">ACCOUNT STATS</text>
+    <text x="130" y="670" class="mono-label">github.com/devsw-prayas</text>
     
-    <text x="130" y="690" class="mono-accent">PUBLIC REPOS</text>
-    <text x="130" y="710" class="orbitron-stat">29</text>
+    <text x="130" y="705" class="mono-accent">PUBLIC REPOS</text>
+    <text x="130" y="725" class="orbitron-stat">29</text>
     
-    <text x="130" y="745" class="mono-accent">FOLLOWERS</text>
-  <text x="130" y="765" class="orbitron-stat"> 13</text>    
-    <text x="330" y="690" class="mono-accent">STARS EARNED</text>
-<text x="330" y="710" class="orbitron-stat">
-    3
-  </text>
+    <text x="130" y="760" class="mono-accent">FOLLOWERS</text>
+    <text x="130" y="780" class="orbitron-stat">13</text>
     
-    <text x="330" y="745" class="mono-accent">CONTRIBUTIONS</text>
-  <text x="330" y="765" class="orbitron-stat">
-    395
-  </text>
+    <text x="330" y="705" class="mono-accent">STARS EARNED</text>
+    <text x="330" y="725" class="orbitron-stat">3</text>
     
-    <text x="130" y="810" class="mono-label">Member since 2020 · Active contributor</text>
+    <text x="330" y="760" class="mono-accent">CONTRIBUTIONS</text>
+    <text x="330" y="780" class="orbitron-stat">396</text>
     
+    <text x="130" y="825" class="mono-label">Member since 2020 · Active contributor</text>
+
     <!-- Contribution Activity Panel -->
-    <rect x="580" y="600" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
-    <rect x="580" y="600" width="4" height="240" fill="url(#blueAccent)"/>
+    <rect x="580" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="580" y="615" width="4" height="240" fill="url(#blueAccent)"/>
     
-    <text x="610" y="635" class="mono-section">CONTRIBUTION ACTIVITY</text>
-    <text x="610" y="655" class="mono-label">Last 365 days</text>
-    
-    <text x="610" y="745" class="mono-accent">CURRENT STREAK</text>
- <text x="610" y="765" class="orbitron-stat">
-    3 days
-  </text>    
-    <text x="610" y="800" class="mono-accent">LONGEST STREAK</text>
-  <text x="610" y="820" class="mono-body">
-    21 days
-  </text>
-  
-  <!-- Language Distribution Panel -->
-<rect x="1060" y="600" width="460" height="240"
-      fill="url(#panelGrad)"
-      stroke="#3a2020"
-      stroke-width="1"/>
+    <text x="610" y="650" class="mono-section">CONTRIBUTION ACTIVITY</text>
+    <text x="610" y="670" class="mono-label">Last 365 days</text>
 
-<rect x="1060" y="600" width="4" height="240"
-      fill="url(#blueAccent)"/>
+    <text x="610" y="705" class="mono-accent">COMMITS TODAY</text>
+    <text x="610" y="725" class="orbitron-stat">3</text>
 
-<text x="1090" y="635" class="mono-section">
-  LANGUAGE DISTRIBUTION
-</text>
+    <text x="610" y="760" class="mono-accent">CURRENT STREAK</text>
+    <text x="610" y="780" class="orbitron-stat">3 days</text>
 
-<text x="1090" y="655" class="mono-label">
-  Aggregated across owned repositories
-</text>
+    <text x="830" y="760" class="mono-accent">LONGEST STREAK</text>
+    <text x="830" y="780" class="orbitron-stat">21 days</text>
 
-<!-- Column Headers -->
-<text x="1090" y="690" class="mono-accent">LANG</text>
-<text x="1240" y="690" class="mono-accent">UTILIZATION</text>
-<text x="1470" y="690" class="mono-accent" text-anchor="end">%</text>
-
-<!-- Bars Injected Dynamically -->
-<g id="language-bars">
-  
-        <text x="1090" y="720" class="mono-label">C++</text>
-        <rect x="1190" y="710" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="710" width="71.01733855294576" height="8" fill="#ff4757" />
-        <text x="1470" y="720" class="mono-label" text-anchor="end">
+    <!-- Language Distribution Panel -->
+    <rect x="1060" y="615" width="460" height="240"
+          fill="url(#panelGrad)"
+          stroke="#3a2020"
+          stroke-width="1"/>
+    <rect x="1060" y="615" width="4" height="240"
+          fill="url(#blueAccent)"/>
+    <text x="1090" y="650" class="mono-section">LANGUAGE DISTRIBUTION</text>
+    <text x="1090" y="670" class="mono-label">Aggregated across owned repositories</text>
+    <text x="1090" y="705" class="mono-accent">LANG</text>
+    <text x="1240" y="705" class="mono-accent">UTILIZATION</text>
+    <text x="1470" y="705" class="mono-accent" text-anchor="end">%</text>
+    <g id="language-bars">
+      
+        <text x="1090" y="735" class="mono-label">C++</text>
+        <rect x="1190" y="725" width="220" height="8" fill="#2a1a1a" />
+        <rect x="1190" y="725" width="70.97881237764499" height="8" fill="#ff4757" />
+        <text x="1470" y="735" class="mono-label" text-anchor="end">
           35.5%
         </text>
       
-        <text x="1090" y="752" class="mono-label">C#</text>
-        <rect x="1190" y="742" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="742" width="41.291576434005215" height="8" fill="#ff4757" />
-        <text x="1470" y="752" class="mono-label" text-anchor="end">
+        <text x="1090" y="767" class="mono-label">C#</text>
+        <rect x="1190" y="757" width="220" height="8" fill="#2a1a1a" />
+        <rect x="1190" y="757" width="41.26917617873579" height="8" fill="#ff4757" />
+        <text x="1470" y="767" class="mono-label" text-anchor="end">
           20.6%
         </text>
       
-        <text x="1090" y="784" class="mono-label">Python</text>
-        <rect x="1190" y="774" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="774" width="25.93966905436171" height="8" fill="#ff4757" />
-        <text x="1470" y="784" class="mono-label" text-anchor="end">
+        <text x="1090" y="799" class="mono-label">Python</text>
+        <rect x="1190" y="789" width="220" height="8" fill="#2a1a1a" />
+        <rect x="1190" y="789" width="25.9255970508539" height="8" fill="#ff4757" />
+        <text x="1470" y="799" class="mono-label" text-anchor="end">
           13.0%
         </text>
       
-        <text x="1090" y="816" class="mono-label">Java</text>
-        <rect x="1190" y="806" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="806" width="19.981884057971016" height="8" fill="#ff4757" />
-        <text x="1470" y="816" class="mono-label" text-anchor="end">
+        <text x="1090" y="831" class="mono-label">Java</text>
+        <rect x="1190" y="821" width="220" height="8" fill="#2a1a1a" />
+        <rect x="1190" y="821" width="19.971044091510105" height="8" fill="#ff4757" />
+        <text x="1470" y="831" class="mono-label" text-anchor="end">
           10.0%
         </text>
       
-</g>
-
     </g>
+
+  </g>
   
   <!-- Divider -->
-  <line x1="100" y1="880" x2="1520" y2="880" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="895" x2="1520" y2="895" stroke="#3a2020" stroke-width="1"/>
   
   <!-- Research Divisions Section -->
-  <text x="100" y="940" class="mono-title">RESEARCH DIVISIONS</text>
+  <text x="100" y="955" class="mono-title">RESEARCH DIVISIONS</text>
   
   <!-- Division 01: HPC -->
-  <text x="100" y="995" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
-  <line x1="100" y1="1005" x2="680" y2="1005" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1010" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
+  <line x1="100" y1="1020" x2="680" y2="1020" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="1040" class="mono-body">The "make it go brrrr" department. Building compute infrastructure that doesn't</text>
-  <text x="100" y="1060" class="mono-body">crash, leak, race, or mysteriously slow down when you're not looking.</text>
+  <text x="100" y="1055" class="mono-body">Dedicated to the design and implementation of compute infrastructure that is</text>
+  <text x="100" y="1075" class="mono-body">correct, performant, and reproducible. Systems are engineered to eliminate data</text>
+  <text x="100" y="1095" class="mono-body">races, memory unsafety, and non-deterministic execution at every level of the stack.</text>
   
-  <text x="100" y="1095" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1120" class="mono-body">· Multithreading that actually uses all those expensive cores you bought</text>
-  <text x="100" y="1140" class="mono-body">· Memory systems with trust issues (shadow tracking, lifetime paranoia)</text>
-  <text x="100" y="1160" class="mono-body">· Data structures that respect cache lines like they're personal space</text>
-  <text x="100" y="1180" class="mono-body">· SIMD kernels because scalar loops are for cowards</text>
-  <text x="100" y="1200" class="mono-body">· Lock-free everything (locks are just scheduled arguments)</text>
-  <text x="100" y="1220" class="mono-body">· Deterministic execution (same input → same output, shocking concept)</text>
+  <text x="100" y="1130" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1155" class="mono-body">· Parallel multithreading with full utilisation of available hardware concurrency</text>
+  <text x="100" y="1175" class="mono-body">· Memory subsystems with shadow tracking, lifetime enforcement, and sanitisation</text>
+  <text x="100" y="1195" class="mono-body">· Cache-coherent data structures respecting hardware memory hierarchy</text>
+  <text x="100" y="1215" class="mono-body">· SIMD kernel development for vectorised throughput-critical workloads</text>
+  <text x="100" y="1235" class="mono-body">· Lock-free concurrency primitives with formal correctness guarantees</text>
+  <text x="100" y="1255" class="mono-body">· Deterministic execution semantics across all runtime configurations</text>
   
-  <text x="100" y="1255" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1280" class="mono-accent">StormSTL</text>
-  <text x="210" y="1280" class="mono-body">— data structures, allocators, memory primitives</text>
-  <text x="100" y="1300" class="mono-accent">Corium</text>
-  <text x="180" y="1300" class="mono-body">— parallel runtime &amp; scheduler</text>
-  <text x="100" y="1320" class="mono-accent">Stratum</text>
-  <text x="195" y="1320" class="mono-body">— deterministic tracing &amp; instrumentation</text>
-  <text x="100" y="1340" class="mono-accent">Kerbecs</text>
-  <text x="195" y="1340" class="mono-body">— shadow-memory sanitizer</text>
-  <text x="100" y="1360" class="mono-accent">Leibniz</text>
-  <text x="185" y="1360" class="mono-body">— SIMD-optimized math library</text>
-  <text x="100" y="1380" class="mono-accent">Iota</text>
-  <text x="150" y="1380" class="mono-body">— deep learning runtime (HPC + DL)</text>
+  <text x="100" y="1290" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1315" class="mono-accent">StormSTL</text>
+  <text x="210" y="1315" class="mono-body">— data structures, allocators, and memory primitives</text>
+  <text x="100" y="1335" class="mono-accent">Corium</text>
+  <text x="180" y="1335" class="mono-body">— parallel runtime and task scheduler</text>
+  <text x="100" y="1355" class="mono-accent">Stratum</text>
+  <text x="195" y="1355" class="mono-body">— deterministic execution tracing and instrumentation</text>
+  <text x="100" y="1375" class="mono-accent">Kerbecs</text>
+  <text x="195" y="1375" class="mono-body">— shadow-memory sanitiser and lifetime analyser</text>
+  <text x="100" y="1395" class="mono-accent">Leibniz</text>
+  <text x="185" y="1395" class="mono-body">— SIMD-optimised mathematics library</text>
+  <text x="100" y="1415" class="mono-accent">Helios-DLX</text>
+  <text x="220" y="1415" class="mono-body">— deep learning runtime (HPC + DL)</text>
   
   <!-- Division 02: Graphics -->
-  <line x1="100" y1="1420" x2="1520" y2="1420" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="1455" x2="1520" y2="1455" stroke="#3a2020" stroke-width="1"/>
   
-  <text x="100" y="1475" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
-  <line x1="100" y1="1485" x2="720" y2="1485" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1510" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
+  <line x1="100" y1="1520" x2="720" y2="1520" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="1520" class="mono-body">Making light bounce around convincingly. RGB, spectral, neural-assisted — if</text>
-  <text x="100" y="1540" class="mono-body">photons do it, we simulate it. Preferably before the heat death of the universe.</text>
+  <text x="100" y="1555" class="mono-body">Focused on physically accurate simulation of light transport across the visible</text>
+  <text x="100" y="1575" class="mono-body">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
+  <text x="100" y="1595" class="mono-body">investigation into neural-assisted reconstruction and denoising pipelines.</text>
   
-  <text x="100" y="1575" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1600" class="mono-body">· Path tracing (unidirectional, bidirectional, mutation-based chaos)</text>
-  <text x="100" y="1620" class="mono-body">· RGB rendering for people who think monitors only have 3 colors</text>
-  <text x="100" y="1640" class="mono-body">· Spectral rendering for people who remember physics class</text>
-  <text x="100" y="1660" class="mono-body">· Light transport theory (aka "why is this pixel still noisy?")</text>
-  <text x="100" y="1680" class="mono-body">· Neural rendering (teaching computers to guess, but scientifically)</text>
+  <text x="100" y="1630" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="1655" class="mono-body">· Path tracing: unidirectional, bidirectional, and Metropolis-based variants</text>
+  <text x="100" y="1675" class="mono-body">· RGB rendering pipelines for standard display-referred output workflows</text>
+  <text x="100" y="1695" class="mono-body">· Spectral rendering with wavelength-accurate material and illuminant models</text>
+  <text x="100" y="1715" class="mono-body">· Light transport theory and Monte Carlo estimator variance reduction</text>
+  <text x="100" y="1735" class="mono-body">· Neural rendering and learned reconstruction for production-grade output</text>
   
-  <text x="100" y="1715" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="1740" class="mono-accent">Spectra</text>
-  <text x="180" y="1740" class="mono-body">— research-first rendering engine</text>
-  <text x="100" y="1760" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
-  <text x="450" y="1760" class="mono-body">— λ-domain extensions for Spectra</text>
+  <text x="100" y="1770" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="1795" class="mono-accent">Spectra</text>
+  <text x="180" y="1795" class="mono-body">— research-oriented physically based rendering engine</text>
+  <text x="100" y="1815" class="mono-accent">Spectral &amp; Neural Transport Modules</text>
+  <text x="450" y="1815" class="mono-body">— wavelength-domain extensions integrated into Spectra</text>
   
   <!-- Division 03: Deep Learning -->
-  <line x1="100" y1="1800" x2="1520" y2="1800" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="1855" x2="1520" y2="1855" stroke="#3a2020" stroke-width="1"/>
   
-  <text x="100" y="1855" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
-  <line x1="100" y1="1865" x2="640" y2="1865" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <text x="100" y="1910" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
+  <line x1="100" y1="1920" x2="640" y2="1920" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
   
-  <text x="100" y="1900" class="mono-body">Neural networks, but for people who write C++ and care about nanoseconds.</text>
-  <text x="100" y="1920" class="mono-body">Deterministic AI that doesn't mysteriously change answers between builds.</text>
+  <text x="100" y="1955" class="mono-body">Concerned with the engineering of neural inference systems built to the same</text>
+  <text x="100" y="1975" class="mono-body">correctness and performance standards as the broader compute infrastructure.</text>
+  <text x="100" y="1995" class="mono-body">Deterministic output and numerical reproducibility are non-negotiable requirements.</text>
   
-  <text x="100" y="1955" class="mono-label">FOCUS AREAS</text>
-  <text x="100" y="1980" class="mono-body">· Deep learning without the Python training wheels</text>
-  <text x="100" y="2000" class="mono-body">· Inference kernels optimized like your rent depends on it</text>
-  <text x="100" y="2020" class="mono-body">· SIMD neural math (because GPUs aren't always invited)</text>
-  <text x="100" y="2040" class="mono-body">· Deterministic execution (yes, we checked twice, same answer)</text>
-  <text x="100" y="2060" class="mono-body">· Custom operators for when PyTorch gives up</text>
+  <text x="100" y="2030" class="mono-label">FOCUS AREAS</text>
+  <text x="100" y="2055" class="mono-body">· Native deep learning inference without external framework dependencies</text>
+  <text x="100" y="2075" class="mono-body">· Inference kernels optimised for latency and throughput under constrained resources</text>
+  <text x="100" y="2095" class="mono-body">· SIMD-accelerated neural arithmetic for CPU-bound execution environments</text>
+  <text x="100" y="2115" class="mono-body">· Deterministic execution with bit-exact reproducibility across runs</text>
+  <text x="100" y="2135" class="mono-body">· Custom operator development for workloads not addressed by existing frameworks</text>
   
-  <text x="100" y="2095" class="mono-label">ACTIVE PROJECTS</text>
-  <text x="100" y="2120" class="mono-accent">Iota</text>
-  <text x="150" y="2120" class="mono-body">— in-house deep learning inference engine</text>
-  <text x="100" y="2140" class="mono-accent">Neural Transport Models</text>
-  <text x="330" y="2140" class="mono-body">— models consumed by Spectra</text>
+  <text x="100" y="2170" class="mono-label">ACTIVE PROJECTS</text>
+  <text x="100" y="2195" class="mono-accent">Helios-DLX</text>
+  <text x="220" y="2195" class="mono-body">— in-house deep learning inference engine</text>
+  <text x="100" y="2215" class="mono-accent">Neural Transport Models</text>
+  <text x="330" y="2215" class="mono-body">— learned reconstruction models integrated into Spectra</text>
   
   <!-- Major Divider -->
-  <line x1="100" y1="2200" x2="1520" y2="2200" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2275" x2="1520" y2="2275" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
   
   <!-- Research Highlight Section -->
-  <text x="100" y="2280" class="mono-title">RESEARCH HIGHLIGHT</text>
+  <text x="100" y="2355" class="mono-title">RESEARCH HIGHLIGHT</text>
   
   <!-- BsSPT Panel -->
   <g id="highlight-panel">
-    <!-- Panel Background -->
-    <rect x="100" y="2315" width="1420" height="500" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
-    <!-- Left Accent Bar -->
-    <rect x="100" y="2315" width="4" height="500" fill="url(#goldAccent)"/>
+    <rect x="100" y="2390" width="1420" height="500" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="2390" width="4" height="500" fill="url(#goldAccent)"/>
     
-    <!-- Content -->
-    <text x="140" y="2360" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
-    <text x="140" y="2380" class="mono-label">THE "WAVELENGTHS ARE JUST VECTORS" FRAMEWORK</text>
+    <text x="140" y="2435" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
+    <text x="140" y="2455" class="mono-label">DETERMINISTIC SPECTRAL TRANSPORT VIA LINEAR BASIS DECOMPOSITION</text>
     
-    <text x="140" y="2415" class="mono-body">Deterministic spectral transport that doesn't randomly sample wavelengths like</text>
-    <text x="140" y="2435" class="mono-body">some kind of Monte Carlo cowboy. Instead, we represent spectral shape φ in a</text>
-    <text x="140" y="2455" class="mono-body">fixed global basis and track scalar throughput T separately. Linear algebra wins.</text>
+    <text x="140" y="2495" class="mono-body">A formal framework for deterministic spectral light transport in which spectral</text>
+    <text x="140" y="2515" class="mono-body">power distributions are decomposed over a fixed global basis. The spectral shape</text>
+    <text x="140" y="2535" class="mono-body">φ is represented as a basis-space vector, with scalar throughput T tracked</text>
+    <text x="140" y="2555" class="mono-body">independently. Spectral evolution reduces to a sequence of linear operator</text>
+    <text x="140" y="2575" class="mono-body">transforms in basis space, eliminating per-path stochastic wavelength sampling.</text>
     
-    <text x="140" y="2495" class="mono-body">Spectral evolution becomes basis-space operator transforms. No stochastic per-path</text>
-    <text x="140" y="2515" class="mono-body">wavelength drama. Full spectral fidelity. Deterministic. Chef's kiss.</text>
+    <text x="140" y="2615" class="mono-label">TECHNICAL PROPERTIES</text>
+    <text x="140" y="2640" class="mono-body">· Fully deterministic: identical inputs produce identical outputs across all runs</text>
+    <text x="140" y="2660" class="mono-body">· SIMD-compatible operator structure with natural cache coherence properties</text>
+    <text x="140" y="2680" class="mono-body">· Eliminates per-path wavelength variance without sacrificing spectral fidelity</text>
     
-    <text x="140" y="2550" class="mono-label">TECHNICAL SUMMARY</text>
-    <text x="140" y="2575" class="mono-body">· Same input always produces same output (revolutionary, I know)</text>
-    <text x="140" y="2595" class="mono-body">· SIMD-friendly because we respect cache coherence in this house</text>
-    <text x="140" y="2615" class="mono-body">· No per-path wavelength variance nonsense</text>
+    <text x="140" y="2715" class="mono-label">INTEGRATION CAPABILITIES</text>
+    <text x="140" y="2740" class="mono-body">The framework interfaces directly with neural reconstruction pipelines, providing</text>
+    <text x="140" y="2760" class="mono-body">a structured bridge between high-performance compute, physically accurate spectral</text>
+    <text x="140" y="2780" class="mono-body">physics, and learned inference. Suitable for deployment in production rendering</text>
+    <text x="140" y="2800" class="mono-body">contexts where correctness and reproducibility are primary engineering constraints.</text>
     
-    <text x="140" y="2650" class="mono-label">INTEGRATION CAPABILITIES</text>
-    <text x="140" y="2675" class="mono-body">Plugs directly into neural reconstruction without a PhD in integration hell.</text>
-    <text x="140" y="2695" class="mono-body">Bridges HPC (fast compute), spectral physics (actual science), and neural nets</text>
-    <text x="140" y="2715" class="mono-body">(smart guessing). Production rendering that doesn't make physicists cry.</text>
-    
-    <text x="140" y="2750" class="mono-label">IMPLEMENTATION STATUS</text>
-    <text x="140" y="2775" class="mono-highlight">Living rent-free in the Spectra rendering engine</text>
-    <text x="140" y="2795" class="mono-highlight">Operator formalism means GPUs don't complain about determinism</text>
+    <text x="140" y="2835" class="mono-label">IMPLEMENTATION STATUS</text>
+    <text x="140" y="2860" class="mono-highlight">Integrated into the Spectra rendering engine as the primary spectral transport backend</text>
+    <text x="140" y="2880" class="mono-highlight">Operator formalism enables deterministic GPU execution without architectural compromise</text>
   </g>
   
   <!-- Bottom Section -->
-  <line x1="100" y1="2875" x2="1520" y2="2875" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2950" x2="1520" y2="2950" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
   
-  <text x="100" y="2935" class="mono-body">CORE RESEARCH FOCUS</text>
-  <text x="100" y="2960" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
+  <text x="100" y="3010" class="mono-body">CORE RESEARCH FOCUS</text>
+  <text x="100" y="3035" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
   
-  <text x="100" y="3005" class="mono-label">LABORATORY LEADERSHIP</text>
-  <text x="100" y="3030" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Chief "Why Isn't This Faster" Officer</text>
+  <text x="100" y="3080" class="mono-label">LABORATORY LEADERSHIP</text>
+  <text x="100" y="3105" class="mono-body">Prayas Bharadwaj — Founder, Lead Engineer, Principal Investigator</text>
   
   <!-- Bottom Metadata Stamp -->
-  <text x="100" y="3105" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
+  <text x="100" y="3175" class="metadata-text">Research Document v1.0 · Established 2025 · Deterministic Compute Systems</text>
   
   <!-- Bottom Right Watermark -->
   <text x="1520" y="3165" class="watermark-small" text-anchor="end">STORMWEAVER STUDIOS</text>
