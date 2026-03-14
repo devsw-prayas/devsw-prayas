@@ -76,8 +76,8 @@ async function main(): Promise<void> {
 
       return `
         <text x="1090" y="${y}" class="mono-label">${l.lang}</text>
-        <rect x="1190" y="${y - 10}" width="220" height="8" fill="#2a1a1a" />
-        <rect x="1190" y="${y - 10}" width="${barWidth}" height="8" fill="#ff4757" />
+        <rect x="1190" y="${y - 10}" width="220" height="8" fill="#0d1a0a" />
+        <rect x="1190" y="${y - 10}" width="${barWidth}" height="8" fill="#f0b43c" />
         <text x="1470" y="${y}" class="mono-label" text-anchor="end">
           ${l.percent.toFixed(1)}%
         </text>
@@ -165,30 +165,30 @@ async function main(): Promise<void> {
   // ----------------------------
  const svg = ` <svg width="1600" height="3200" viewBox="0 0 1600 3200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Deep Dark Red Background Gradient -->
+    <!-- Spectra Dark: Deep amber/gold background -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a0a0a"/>
-      <stop offset="50%" stop-color="#2a0f0f"/>
-      <stop offset="100%" stop-color="#1f0d0d"/>
+      <stop offset="0%" stop-color="#070400"/>
+      <stop offset="50%" stop-color="#120a00"/>
+      <stop offset="100%" stop-color="#2a1a00"/>
     </linearGradient>
     
-    <!-- Highlight Panel Gradient (Darker Red) -->
+    <!-- Spectra Dark: Panel surface -->
     <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#150808"/>
-      <stop offset="50%" stop-color="#1d0a0a"/>
-      <stop offset="100%" stop-color="#180909"/>
+      <stop offset="0%" stop-color="#0d0700"/>
+      <stop offset="50%" stop-color="#180f00"/>
+      <stop offset="100%" stop-color="#120c00"/>
     </linearGradient>
     
-    <!-- Coral Red Accent (Primary) -->
+    <!-- Spectra Dark: Gold accent gradient -->
     <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ff4757"/>
-      <stop offset="100%" stop-color="#ff6b7a"/>
+      <stop offset="0%" stop-color="#f0b43c"/>
+      <stop offset="100%" stop-color="#f5c96a"/>
     </linearGradient>
     
-    <!-- Muted Gold for Theoretical Highlights -->
+    <!-- Spectra Dark: Warm highlight gradient -->
     <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d4a574"/>
-      <stop offset="100%" stop-color="#e6b887"/>
+      <stop offset="0%" stop-color="#f0b43c"/>
+      <stop offset="100%" stop-color="#f5c96a"/>
     </linearGradient>
     
     <style>
@@ -198,57 +198,57 @@ async function main(): Promise<void> {
       .studio-name {
         font-family: 'Orbitron', sans-serif;
         font-size: 48px;
-        fill: #ffffff;
+        fill: #fff7e4;
         font-weight: 900;
         letter-spacing: 2px;
       }
       .studio-sub {
         font-family: 'Orbitron', sans-serif;
         font-size: 22px;
-        fill: #cc3344;
+        fill: #b78a36;
         font-weight: 700;
         letter-spacing: 3px;
       }
       .watermark {
         font-family: 'Orbitron', sans-serif;
         font-size: 180px;
-        fill: #ffffff;
+        fill: #f0b43c;
         font-weight: 900;
         letter-spacing: 20px;
-        opacity: 0.05;
+        opacity: 0.04;
       }
       .watermark-small {
         font-family: 'Orbitron', sans-serif;
         font-size: 11px;
-        fill: #5a4049;
+        fill: #5a4010;
         font-weight: 700;
         letter-spacing: 1px;
       }
       .orbitron-stat {
         font-family: 'Orbitron', sans-serif;
         font-size: 22px;
-        fill: #d4a574;
+        fill: #f0b43c;
         font-weight: 700;
         letter-spacing: 1px;
       }
       .mono-title {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 32px;
-        fill: #f5e8e8;
+        fill: #fff7e4;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-section {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 22px;
-        fill: #e8d4d4;
+        fill: #f5dfa0;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-body {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 15px;
-        fill: #b8a8a8;
+        fill: #c8a87a;
         font-weight: 400;
         letter-spacing: 0px;
         line-height: 1.6;
@@ -256,35 +256,35 @@ async function main(): Promise<void> {
       .mono-label {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 13px;
-        fill: #8a7a7a;
+        fill: #8a6a30;
         font-weight: 400;
         letter-spacing: 0.5px;
       }
       .mono-highlight {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 15px;
-        fill: #d4a574;
+        fill: #f0b43c;
         font-weight: 600;
         letter-spacing: 0px;
       }
       .mono-accent {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 13px;
-        fill: #ff4757;
+        fill: #f0b43c;
         font-weight: 600;
         letter-spacing: 0.5px;
       }
       .status-text {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 12px;
-        fill: #9a8a8a;
+        fill: #9a7a40;
         font-weight: 400;
         letter-spacing: 1px;
       }
       .metadata-text {
         font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
         font-size: 10px;
-        fill: #5a4968;
+        fill: #5a4010;
         font-weight: 400;
         letter-spacing: 0.5px;
       }
@@ -297,13 +297,13 @@ async function main(): Promise<void> {
   <!-- Subtle grid pattern (very low opacity) -->
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3a1515" stroke-width="0.5"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2a1800" stroke-width="0.5"/>
     </pattern>
   </defs>
   <rect width="100%" height="100%" fill="url(#grid)" opacity="1.0"/>
   
   <!-- Left Margin Vertical Accent Line -->
-  <line x1="80" y1="0" x2="80" y2="3200" stroke="#ff4757" stroke-width="1.5" opacity="0.3"/>
+  <line x1="80" y1="0" x2="80" y2="3200" stroke="#f0b43c" stroke-width="1.5" opacity="0.3"/>
   
   <!-- Large Background Watermark -->
   <text x="1400" y="1750" class="watermark" text-anchor="end" transform="rotate(-90 1400 1750)">STORMWEAVER</text>
@@ -314,7 +314,7 @@ async function main(): Promise<void> {
   <text x="100" y="158" class="mono-label">RESEARCH &amp; DEVELOPMENT LABORATORY</text>
 
   <!-- Top Divider -->
-  <line x1="100" y1="195" x2="1520" y2="195" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="195" x2="1520" y2="195" stroke="#2a1800" stroke-width="1"/>
   
   <!-- Overview Section -->
   <text x="100" y="275" class="mono-title">LABORATORY OVERVIEW</text>
@@ -330,7 +330,7 @@ async function main(): Promise<void> {
   <text x="100" y="480" class="mono-body">reproducibility, correctness, and measurable performance under rigorous conditions.</text>
   
   <!-- Divider -->
-  <line x1="100" y1="520" x2="1520" y2="520" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="520" x2="1520" y2="520" stroke="#2a1800" stroke-width="1"/>
   
   <!-- GitHub Stats Section -->
   <text x="100" y="580" class="mono-title">GITHUB ACTIVITY METRICS</text>
@@ -338,7 +338,7 @@ async function main(): Promise<void> {
   <!-- GitHub Stats Grid -->
   <g id="github-stats">
     <!-- Account Stats Panel -->
-    <rect x="100" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
     <rect x="100" y="615" width="4" height="240" fill="url(#blueAccent)"/>
     
     <text x="130" y="650" class="mono-section">ACCOUNT STATS</text>
@@ -359,7 +359,7 @@ async function main(): Promise<void> {
     <text x="130" y="825" class="mono-label">Member since 2020 · Active contributor</text>
 
     <!-- Contribution Activity Panel -->
-    <rect x="580" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="580" y="615" width="460" height="240" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
     <rect x="580" y="615" width="4" height="240" fill="url(#blueAccent)"/>
     
     <text x="610" y="650" class="mono-section">CONTRIBUTION ACTIVITY</text>
@@ -377,7 +377,7 @@ async function main(): Promise<void> {
     <!-- Language Distribution Panel -->
     <rect x="1060" y="615" width="460" height="240"
           fill="url(#panelGrad)"
-          stroke="#3a2020"
+          stroke="#2a1800"
           stroke-width="1"/>
     <rect x="1060" y="615" width="4" height="240"
           fill="url(#blueAccent)"/>
@@ -393,14 +393,14 @@ async function main(): Promise<void> {
   </g>
   
   <!-- Divider -->
-  <line x1="100" y1="895" x2="1520" y2="895" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="895" x2="1520" y2="895" stroke="#2a1800" stroke-width="1"/>
   
   <!-- Research Divisions Section -->
   <text x="100" y="955" class="mono-title">RESEARCH DIVISIONS</text>
   
   <!-- Division 01: HPC -->
   <text x="100" y="1010" class="mono-section">01 · HIGH-PERFORMANCE COMPUTING DIVISION</text>
-  <line x1="100" y1="1020" x2="680" y2="1020" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="1020" x2="680" y2="1020" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
   
   <text x="100" y="1055" class="mono-body">Dedicated to the design and implementation of compute infrastructure that is</text>
   <text x="100" y="1075" class="mono-body">correct, performant, and reproducible. Systems are engineered to eliminate data</text>
@@ -429,10 +429,10 @@ async function main(): Promise<void> {
   <text x="220" y="1415" class="mono-body">— deep learning runtime (HPC + DL)</text>
   
   <!-- Division 02: Graphics -->
-  <line x1="100" y1="1455" x2="1520" y2="1455" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="1455" x2="1520" y2="1455" stroke="#2a1800" stroke-width="1"/>
   
   <text x="100" y="1510" class="mono-section">02 · GRAPHICS &amp; RENDERING RESEARCH DIVISION</text>
-  <line x1="100" y1="1520" x2="720" y2="1520" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="1520" x2="720" y2="1520" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
   
   <text x="100" y="1555" class="mono-body">Focused on physically accurate simulation of light transport across the visible</text>
   <text x="100" y="1575" class="mono-body">spectrum. Research spans RGB and spectral rendering paradigms, with active</text>
@@ -452,10 +452,10 @@ async function main(): Promise<void> {
   <text x="450" y="1815" class="mono-body">— wavelength-domain extensions integrated into Spectra</text>
   
   <!-- Division 03: Deep Learning -->
-  <line x1="100" y1="1855" x2="1520" y2="1855" stroke="#3a2020" stroke-width="1"/>
+  <line x1="100" y1="1855" x2="1520" y2="1855" stroke="#2a1800" stroke-width="1"/>
   
   <text x="100" y="1910" class="mono-section">03 · DEEP LEARNING SYSTEMS DIVISION</text>
-  <line x1="100" y1="1920" x2="640" y2="1920" stroke="#ff4757" stroke-width="1" opacity="0.4"/>
+  <line x1="100" y1="1920" x2="640" y2="1920" stroke="#f0b43c" stroke-width="1" opacity="0.4"/>
   
   <text x="100" y="1955" class="mono-body">Concerned with the engineering of neural inference systems built to the same</text>
   <text x="100" y="1975" class="mono-body">correctness and performance standards as the broader compute infrastructure.</text>
@@ -475,14 +475,14 @@ async function main(): Promise<void> {
   <text x="330" y="2215" class="mono-body">— learned reconstruction models integrated into Spectra</text>
   
   <!-- Major Divider -->
-  <line x1="100" y1="2275" x2="1520" y2="2275" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2275" x2="1520" y2="2275" stroke="#f0b43c" stroke-width="1.5" opacity="0.5"/>
   
   <!-- Research Highlight Section -->
   <text x="100" y="2355" class="mono-title">RESEARCH HIGHLIGHT</text>
   
   <!-- BsSPT Panel -->
   <g id="highlight-panel">
-    <rect x="100" y="2390" width="1420" height="500" fill="url(#panelGrad)" stroke="#3a2020" stroke-width="1"/>
+    <rect x="100" y="2390" width="1420" height="500" fill="url(#panelGrad)" stroke="#2a1800" stroke-width="1"/>
     <rect x="100" y="2390" width="4" height="500" fill="url(#goldAccent)"/>
     
     <text x="140" y="2435" class="mono-section">Basis-Space Spectral Path Tracing (BsSPT)</text>
@@ -511,7 +511,7 @@ async function main(): Promise<void> {
   </g>
   
   <!-- Bottom Section -->
-  <line x1="100" y1="2950" x2="1520" y2="2950" stroke="#ff4757" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="2950" x2="1520" y2="2950" stroke="#f0b43c" stroke-width="1.5" opacity="0.5"/>
   
   <text x="100" y="3010" class="mono-body">CORE RESEARCH FOCUS</text>
   <text x="100" y="3035" class="mono-section">Deterministic Compute · Spectral Transport · Neural Acceleration</text>
