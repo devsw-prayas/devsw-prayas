@@ -80,9 +80,9 @@
   <text x="610" y="650" style="font-family: 'JetBrains Mono', monospace; font-size: 22px; fill: #f5dfa0; font-weight: 600;">CONTRIBUTION ACTIVITY</text>
   <text x="610" y="670" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Last 365 days</text>
   <text x="610" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">COMMITS TODAY</text>
-  <text x="610" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">1</text>
+  <text x="610" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">0</text>
   <text x="610" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">CURRENT STREAK</text>
-  <text x="610" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">6 days</text>
+  <text x="610" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">0 days</text>
   <text x="830" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">LONGEST STREAK</text>
   <text x="830" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">21 days</text>
 
