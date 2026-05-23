@@ -95,25 +95,25 @@
   <text x="1240" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">UTILIZATION</text>
   <text x="1470" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;" text-anchor="end">%</text>
   
-        <text x="1090" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">C++</text>
+        <text x="1090" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Java</text>
         <rect x="1190" y="725" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="725" width="108.02133752264027" height="8" fill="#f0b43c" />
-        <text x="1470" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">54.0%</text>
+        <rect x="1190" y="725" width="0" height="8" fill="#f0b43c" />
+        <text x="1470" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">0.0%</text>
       
-        <text x="1090" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Python</text>
+        <text x="1090" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Batchfile</text>
         <rect x="1190" y="757" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="757" width="23.631720747413027" height="8" fill="#f0b43c" />
-        <text x="1470" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">11.8%</text>
+        <rect x="1190" y="757" width="0" height="8" fill="#f0b43c" />
+        <text x="1470" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">0.0%</text>
       
-        <text x="1090" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Kotlin</text>
+        <text x="1090" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Python</text>
         <rect x="1190" y="789" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="789" width="18.50163169356843" height="8" fill="#f0b43c" />
-        <text x="1470" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">9.3%</text>
+        <rect x="1190" y="789" width="0" height="8" fill="#f0b43c" />
+        <text x="1470" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">0.0%</text>
       
-        <text x="1090" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Java</text>
+        <text x="1090" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">C#</text>
         <rect x="1190" y="821" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="821" width="15.438223464918167" height="8" fill="#f0b43c" />
-        <text x="1470" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">7.7%</text>
+        <rect x="1190" y="821" width="0" height="8" fill="#f0b43c" />
+        <text x="1470" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">0.0%</text>
       
 
   <line x1="100" y1="895" x2="1520" y2="895" stroke="#2a1800" stroke-width="1"/>
