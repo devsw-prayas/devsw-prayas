@@ -71,7 +71,7 @@
   <text x="330" y="705" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">STARS EARNED</text>
   <text x="330" y="725" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">5</text>
   <text x="330" y="760" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #f0b43c; font-weight: 600; letter-spacing: 0.5px;">CONTRIBUTIONS</text>
-  <text x="330" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">541</text>
+  <text x="330" y="780" style="font-family: 'Orbitron', monospace; font-size: 22px; fill: #f0b43c; font-weight: 700; letter-spacing: 1px;">542</text>
   <text x="130" y="825" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Member since 2020 · Active contributor</text>
 
   <!-- Contribution Activity Panel -->
@@ -97,22 +97,22 @@
   
         <text x="1090" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">C++</text>
         <rect x="1190" y="725" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="725" width="104.89474274605568" height="8" fill="#f0b43c" />
-        <text x="1470" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">52.4%</text>
+        <rect x="1190" y="725" width="105.34176716550452" height="8" fill="#f0b43c" />
+        <text x="1470" y="735" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">52.7%</text>
       
         <text x="1090" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Python</text>
         <rect x="1190" y="757" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="757" width="32.535569910359506" height="8" fill="#f0b43c" />
+        <rect x="1190" y="757" width="32.6742250409205" height="8" fill="#f0b43c" />
         <text x="1470" y="767" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">16.3%</text>
       
         <text x="1090" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Kotlin</text>
         <rect x="1190" y="789" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="789" width="16.907069892039974" height="8" fill="#f0b43c" />
+        <rect x="1190" y="789" width="16.979121864381117" height="8" fill="#f0b43c" />
         <text x="1470" y="799" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">8.5%</text>
       
         <text x="1090" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;">Java</text>
         <rect x="1190" y="821" width="220" height="8" fill="#2a1800" />
-        <rect x="1190" y="821" width="14.107681282026466" height="8" fill="#f0b43c" />
+        <rect x="1190" y="821" width="14.16780324686254" height="8" fill="#f0b43c" />
         <text x="1470" y="831" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #8a6a30; font-weight: 400; letter-spacing: 0.5px;" text-anchor="end">7.1%</text>
       
 
