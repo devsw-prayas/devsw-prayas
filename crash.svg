@@ -1,0 +1,88 @@
+<svg width="1400" height="1280" viewBox="0 0 1400 1280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .mono { font-family: 'Consolas', 'JetBrains Mono', monospace; }
+      .fatal   { fill: #ff4040; font-weight: 700; }
+      .bugchk  { fill: #ff4040; }
+      .label   { fill: #808080; }
+      .value   { fill: #cccccc; }
+      .warn    { fill: #ffff00; }
+      .section { fill: #55aaff; font-weight: 700; }
+      .stack   { fill: #cccccc; }
+      .stackfn { fill: #00ffff; }
+      .good    { fill: #55ff55; font-weight: 700; }
+      .dim     { fill: #808080; }
+      .titlebar { fill: #cccccc; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="1280" fill="#000000"/>
+
+  <!-- classic windows console title bar -->
+  <rect x="0" y="0" width="1400" height="34" fill="#1a1a1a"/>
+  <circle cx="20" cy="17" r="6" fill="#ff5c5c"/>
+  <circle cx="42" cy="17" r="6" fill="#ffbd4c"/>
+  <circle cx="64" cy="17" r="6" fill="#4cd964"/>
+  <text x="700" y="22" text-anchor="middle" class="mono titlebar" font-size="13">C:\WINDOWS\system32\prayas.exe — WinDbg</text>
+
+  <rect x="0" y="34" width="1400" height="2" fill="#3a3a3a"/>
+
+  <g class="mono" font-size="14">
+    <text x="30" y="65"  class="fatal" font-size="18">*** FATAL SYSTEM ERROR ***</text>
+
+    <text x="30" y="93" class="bugchk">BugCheck HYPERVISOR_ERROR, {0xDEADFEED, 0xABSTRACTION, 0x00000000, 0xC0FFEE01}</text>
+
+    <text x="30" y="121" class="value">Probably caused by : </text><text x="200" y="121" class="stackfn">prayas.exe (SYSTEMS_PROGRAMMER+0x1a4c)</text>
+
+    <text x="30"  y="153" class="label">PROCESS_NAME:</text>     <text x="210" y="153" class="value">prayas.exe</text>
+    <text x="30"  y="175" class="label">FAULTING_MODULE:</text> <text x="210" y="175" class="dim">frameworks.dll (UNLOADED — never loaded)</text>
+    <text x="30"  y="197" class="label">BUGCHECK_STR:</text>    <text x="210" y="197" class="warn">UNHANDLED_ABSTRACTION_AVOIDANCE</text>
+    <text x="30"  y="219" class="label">CURRENT_IRQL:</text>    <text x="210" y="219" class="value">rendering / inference / high-perf compute</text>
+
+    <text x="30"  y="251" class="section">STACK_TEXT:</text>
+    <text x="46" y="272" class="stack">00 <tspan class="stackfn">prayas!SeeSimplerPath</tspan>+0x00      (acknowledged)</text>
+    <text x="46" y="292" class="stack">01 <tspan class="stackfn">prayas!IgnoreItAnyway</tspan>+0x1a      (proceeded)</text>
+    <text x="46" y="312" class="stack">02 <tspan class="stackfn">prayas!RebuildFromScratch</tspan>+0x45  (in progress)</text>
+    <text x="46" y="332" class="stack">03 <tspan class="stackfn">prayas!QuestionEveryLayer</tspan>+0x90  (recursive, no base case)</text>
+    <text x="46" y="352" class="stack">04 <tspan class="stackfn">prayas!InventNewSuffering</tspan>+0xff  (novel — not in KB)</text>
+
+    <line x1="30" y1="375" x2="1370" y2="375" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="30" y="400" class="section">WATCHDOG LOG</text>
+    <text x="30"  y="424" class="label">WATCHDOG:</text>       <text x="180" y="424" class="value">prayas_wdt (armed at boot, never disarmed)</text>
+    <text x="30"  y="444" class="label">LAST_PING:</text>      <text x="180" y="444" class="dim">never — no check-in since inception</text>
+    <text x="30"  y="464" class="label">TIMEOUT_ACTION:</text> <text x="200" y="464" class="warn">force bugcheck, take the whole host with it</text>
+    <text x="30"  y="484" class="label">VERDICT:</text>        <text x="180" y="484" class="fatal" font-size="14">watchdog fired. it was right to.</text>
+
+    <line x1="30" y1="507" x2="1370" y2="507" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="30" y="532" class="section">HYPERVISOR ANALYSIS</text>
+    <text x="30" y="560" class="stackfn">!vm</text>
+
+    <text x="30"  y="588" class="value">Root Partition  : </text><text x="220" y="588" class="good">PRAYAS_CORE</text><text x="450" y="588" class="good">STATE: RUNNING</text>
+    <text x="46" y="608" class="label">UPTIME:</text>   <text x="180" y="608" class="dim">no reboots since inception</text>
+    <text x="46" y="628" class="label">RUNNING:</text>  <text x="180" y="628" class="value">Spectra.sys, Corium.sys, Leibniz.sys</text>
+
+    <text x="30"  y="660" class="value">Child Partition : </text><text x="220" y="660" class="warn">research-experimental</text><text x="450" y="660" class="warn">STATE: RUNNING (unstable)</text>
+    <text x="46" y="680" class="label">HYPERVISOR:</text> <text x="200" y="680" class="dim">Type-1, hosted directly on PRAYAS_CORE</text>
+    <text x="46" y="700" class="label">ISOLATION:</text>  <text x="200" y="700" class="dim">sandboxed — in theory</text>
+    <text x="46" y="720" class="label">WORKLOAD:</text>   <text x="200" y="720" class="value">differentiable rendering x ReSTIR resampling</text>
+    <text x="46" y="740" class="label">SNAPSHOT:</text>   <text x="200" y="740" class="dim">none — no rollback guarantee</text>
+    <text x="46" y="760" class="label">MIGRATION:</text>  <text x="200" y="760" class="dim">pending, will merge into root once (if) stable</text>
+
+    <text x="30" y="792" class="section">ANALYSIS:</text>
+    <text x="46" y="814" class="value">Watchdog detected no forward progress in child partition and triggered the</text>
+    <text x="46" y="834" class="value">bugcheck itself. Isolation boundary between partitions did not hold —</text>
+    <text x="46" y="854" class="value">root went down with it. Not the first occurrence.</text>
+
+    <text x="46" y="884" class="stackfn">Simpler paths were located, evaluated, and disregarded.</text>
+    <text x="46" y="904" class="stackfn">Root cause is not ignorance. Root cause is preference.</text>
+
+    <line x1="30" y1="927" x2="1370" y2="927" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="30" y="953" class="label">RESULT_CODE:</text> <text x="200" y="953" class="good">0x00000000 (control, performance, clarity)</text>
+    <text x="30" y="975" class="label">COST:</text>         <text x="200" y="975" class="warn">STATUS_PAIN_UNNECESSARY_BUT_PAID_IN_FULL</text>
+
+    <line x1="30" y1="998" x2="1370" y2="998" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="30" y="1024" class="fatal" font-size="15">*** END OF DUMP FILE — WATCHDOG DID ITS JOB. NOBODY LISTENED. ***</text>
+
+    <text x="30" y="1060" class="value">C:\&gt; <tspan fill="#cccccc">_</tspan></text>
+  </g>
+</svg>
