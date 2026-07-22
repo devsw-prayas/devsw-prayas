@@ -18,25 +18,14 @@ const T = {
   textLabel:   "#6b7488",
   textMeta:    "#4a5164",
   accentBright:"rgb(120,235,220)",
-  crashRed:    "rgb(255,110,110)",
 };
 
 const s = {
-  studioName:  `font-family:'Orbitron',monospace;font-size:44px;fill:${T.textPrimary};font-weight:900;letter-spacing:2px;`,
-  watermark:   `font-family:'Orbitron',monospace;font-size:180px;fill:${T.purple};font-weight:900;letter-spacing:20px;opacity:0.045;`,
-  watermarkSm: `font-family:'Orbitron',monospace;font-size:11px;fill:${T.textMeta};font-weight:700;letter-spacing:1px;`,
   stat:        `font-family:'JetBrains Mono',monospace;font-size:24px;fill:${T.accentBright};font-weight:700;letter-spacing:1px;`,
-  title:       `font-family:'JetBrains Mono',monospace;font-size:22px;fill:${T.textSection};font-weight:700;letter-spacing:0.5px;`,
-  body:        `font-family:'JetBrains Mono',monospace;font-size:15px;fill:${T.textBody};font-weight:400;`,
   label:       `font-family:'JetBrains Mono',monospace;font-size:13px;fill:${T.textLabel};font-weight:400;letter-spacing:0.5px;`,
   accent:      `font-family:'JetBrains Mono',monospace;font-size:13px;fill:${T.teal};font-weight:600;letter-spacing:0.5px;`,
-  crash:       `font-family:'JetBrains Mono',monospace;font-size:13px;fill:${T.textBody};font-weight:400;`,
-  crashHead:   `font-family:'JetBrains Mono',monospace;font-size:13px;fill:${T.crashRed};font-weight:700;letter-spacing:0.5px;`,
-  prompt:      `font-family:'JetBrains Mono',monospace;font-size:14px;fill:${T.teal};font-weight:700;letter-spacing:0.5px;`,
   promptSm:    `font-family:'JetBrains Mono',monospace;font-size:13px;fill:${T.teal};font-weight:700;letter-spacing:0.5px;`,
-  termLabel:   `font-family:'JetBrains Mono',monospace;font-size:11px;fill:${T.textMeta};font-weight:600;letter-spacing:1px;`,
   bar:         `font-family:'JetBrains Mono',monospace;font-size:15px;fill:${T.teal};font-weight:400;letter-spacing:-0.5px;`,
-  barTrack:    `font-family:'JetBrains Mono',monospace;font-size:15px;fill:#262b38;font-weight:400;letter-spacing:-0.5px;`,
 };
 
 function mulberry32(a: number) {
@@ -61,7 +50,7 @@ function starfield(count: number, w: number, h: number): string {
   return out;
 }
 
-// every panel is a CRT terminal window: flat border, no offset shadow, command-prompt title bar
+// every panel is a CRT terminal window: flat border, command-prompt title bar
 function terminalPanel(x: number, y: number, w: number, h: number, titleBarH: number, cmd: string): string {
   return `
     <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${T.panel}" stroke="url(#auroraBorder)" stroke-width="2"/>
@@ -75,91 +64,12 @@ function asciiBar(percent: number, totalChars: number): string {
   return "█".repeat(filled) + "░".repeat(totalChars - filled);
 }
 
-const CRASH_LINES: string[] = [
-  "*** FATAL SYSTEM ERROR ***",
-  "",
-  "BugCheck HYPERVISOR_ERROR, {0xDEADFEED, 0xABSTRACTION, 0x00000000, 0xC0FFEE01}",
-  "",
-  "Probably caused by : prayas.exe (SYSTEMS_PROGRAMMER+0x1a4c)",
-  "",
-  "PROCESS_NAME:     prayas.exe",
-  "FAULTING_MODULE:  frameworks.dll (UNLOADED — never loaded)",
-  "BUGCHECK_STR:     UNHANDLED_ABSTRACTION_AVOIDANCE",
-  "",
-  "CURRENT_IRQL:     rendering / inference / high-perf compute",
-  "",
-  "STACK_TEXT:",
-  "  00 prayas!SeeSimplerPath+0x00      (acknowledged)",
-  "  01 prayas!IgnoreItAnyway+0x1a      (proceeded)",
-  "  02 prayas!RebuildFromScratch+0x45  (in progress)",
-  "  03 prayas!QuestionEveryLayer+0x90  (recursive, no base case)",
-  "  04 prayas!InventNewSuffering+0xff  (novel — not in KB)",
-  "",
-  "------------------------------------------------------------",
-  "WATCHDOG LOG",
-  "------------------------------------------------------------",
-  "",
-  "WATCHDOG:         prayas_wdt (armed at boot, never once disarmed)",
-  "LAST_PING:        never — process has not checked in since inception",
-  "TIMEOUT_ACTION:   force bugcheck, take the whole host with it",
-  "VERDICT:          watchdog fired. it was right to.",
-  "",
-  "------------------------------------------------------------",
-  "HYPERVISOR ANALYSIS",
-  "------------------------------------------------------------",
-  "",
-  "!vm",
-  "",
-  "  Root Partition   : PRAYAS_CORE           STATE: RUNNING",
-  "    UPTIME:            no reboots since inception",
-  "    RUNNING:           Spectra.sys, Corium.sys, Leibniz.sys",
-  "",
-  "  Child Partition  : research-experimental STATE: RUNNING (unstable)",
-  "    HYPERVISOR:        Type-1, hosted directly on PRAYAS_CORE",
-  "    ISOLATION:         sandboxed — in theory",
-  "    WORKLOAD:          differentiable rendering x ReSTIR resampling",
-  "    SNAPSHOT:          none — no rollback guarantee",
-  "    MIGRATION:         pending, will merge into root once (if) stable",
-  "",
-  "ANALYSIS:",
-  "  Watchdog detected no forward progress in child partition and",
-  "  triggered the bugcheck itself. Isolation boundary between",
-  "  partitions did not hold — root went down with it. Not the",
-  "  first occurrence.",
-  "",
-  "  Simpler paths were located, evaluated, and disregarded.",
-  "  Root cause is not ignorance. Root cause is preference.",
-  "",
-  "RESULT_CODE:      0x00000000 (control, performance, clarity)",
-  "COST:             STATUS_PAIN_UNNECESSARY_BUT_PAID_IN_FULL",
-  "",
-  "*** END OF DUMP FILE — WATCHDOG DID ITS JOB. NOBODY LISTENED. ***"
-];
-
 const TERM_TITLE_H = 40;
-const CRASH_PAD_TOP = 30;
-const CRASH_LINE_H = 20;
-
-function crashLog(panelY: number): string {
-  const textX = 128;
-  let out = "";
-  CRASH_LINES.forEach((line, i) => {
-    const y = panelY + TERM_TITLE_H + CRASH_PAD_TOP + i * CRASH_LINE_H;
-    const isHeader = line.startsWith("***") || line === "!vm" || line === "WATCHDOG LOG" || line === "HYPERVISOR ANALYSIS" || line === "STACK_TEXT:" || line === "ANALYSIS:";
-    const style = isHeader ? "crashHead" : "crash";
-    const esc = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    out += `<text x="${textX}" y="${y}" style="${s[style]}">${esc || " "}</text>`;
-  });
-  const cursorY = panelY + TERM_TITLE_H + CRASH_PAD_TOP + CRASH_LINES.length * CRASH_LINE_H;
-  out += `<rect x="${textX}" y="${cursorY - 12}" width="9" height="15" fill="${T.crashRed}"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/></rect>`;
-  return out;
-}
-
-function crashLogHeight(): number {
-  return TERM_TITLE_H + CRASH_PAD_TOP + CRASH_LINES.length * CRASH_LINE_H + 24;
-}
 
 async function main(): Promise<void> {
+  const STATS_Y = 60;
+  const STATS_H = 280;
+
   const headers = {
     Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     "Content-Type": "application/json",
@@ -173,11 +83,11 @@ async function main(): Promise<void> {
   const reposRes = await fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100`, { headers });
   const repos = await reposRes.json();
 
-  const totalStars: number = repos.reduce(
+  const ownedRepos = repos.filter((repo: any) => !repo.fork);
+
+  const totalStars: number = ownedRepos.reduce(
     (sum: number, repo: any) => sum + repo.stargazers_count, 0
   );
-
-  const ownedRepos = repos.filter((repo: any) => !repo.fork);
 
   const languageResponses = await Promise.all(
     ownedRepos.map((repo: any) =>
@@ -268,8 +178,6 @@ async function main(): Promise<void> {
   const todayData = allDays.find((d: any) => d.date === today);
   const commitsToday: number = todayData?.contributionCount ?? 0;
 
-  const STATS_Y = 60;
-  const STATS_H = 280;
   const SVG_HEIGHT = STATS_Y + STATS_H + 80;
 
   const svg = `<svg width="1600" height="${SVG_HEIGHT}" viewBox="0 0 1600 ${SVG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
