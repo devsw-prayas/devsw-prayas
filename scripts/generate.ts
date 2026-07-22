@@ -204,7 +204,7 @@ async function main(): Promise<void> {
 
   const languageLines = languages
     .map((l, i) => {
-      const y = 310 + TERM_TITLE_H + 46 + i * 42;
+      const y = STATS_Y + TERM_TITLE_H + 46 + i * 42;
       return `
         <text x="1090" y="${y}" style="${s.label}">${l.lang.toUpperCase()}</text>
         <text x="1090" y="${y + 20}" style="${s.bar}">${asciiBar(l.percent, 24)}</text>
