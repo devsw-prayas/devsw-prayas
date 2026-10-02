@@ -48,11 +48,11 @@
   
         <text x="1090" y="146" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;">ACTIONSCRIPT</text>
         <text x="1090" y="166" style="font-family:'JetBrains Mono',monospace;font-size:15px;fill:rgb(45,217,200);font-weight:400;letter-spacing:-0.5px;">██████████████████░░░░░░</text>
-        <text x="1470" y="166" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;" text-anchor="end">74.3%</text>
+        <text x="1470" y="166" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;" text-anchor="end">73.9%</text>
       
         <text x="1090" y="188" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;">C++</text>
         <text x="1090" y="208" style="font-family:'JetBrains Mono',monospace;font-size:15px;fill:rgb(45,217,200);font-weight:400;letter-spacing:-0.5px;">███░░░░░░░░░░░░░░░░░░░░░</text>
-        <text x="1470" y="208" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;" text-anchor="end">12.1%</text>
+        <text x="1470" y="208" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;" text-anchor="end">12.3%</text>
       
         <text x="1090" y="230" style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#6b7488;font-weight:400;letter-spacing:0.5px;">PYTHON</text>
         <text x="1090" y="250" style="font-family:'JetBrains Mono',monospace;font-size:15px;fill:rgb(45,217,200);font-weight:400;letter-spacing:-0.5px;">█░░░░░░░░░░░░░░░░░░░░░░░</text>
