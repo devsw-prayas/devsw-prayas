@@ -13,14 +13,16 @@ const C = {
   bg: "#0b0d10", border: "#21262d", rule: "#30363d",
   text: "#e6e8eb", dim: "#7d8590", legend: "#9aa3ad",
 };
-const PALETTE = ["#2dd9c8", "#e3a03a", "#8b6cf0", "#2f6fb0"]; // slot 0 = accent (pinned)
-const OTHER   = "#8b949e"; // public repos outside the top N
-const PRIVATE = "#3d434d"; // calendar total − public commits
+const PALETTE = ["#2dd9c8", "#1f9c90", "#9fece3", "#16655e"]; // one teal ramp, slot 0 = accent (pinned)
+const LANG_COLORS = ["#c9d1d9", "#8b949e", "#6e7681", "#484f58"]; // greys: no clash with repo teals
+const LANG_OTHER  = "#30363d";
+const OTHER   = "#4b525c"; // public repos outside the top N
+const PRIVATE = "#2a2f36"; // calendar total − public commits
 
 // ─────────────────────────── layout ───────────────────────────
-const W = 880, H = 290, PAD = 36;
+const W = 880, PAD = 36, SEC = 296, H = SEC + 100; // SEC = top of the languages/stats section
 const FS_SMALL = 12, CHAR_W = 0.6 * FS_SMALL; // JetBrains Mono advance = 0.6em
-const CHART_TOP = 108, CHART_BOT = 248, GAP = 2;
+const CHART_TOP = 108, CHART_BOT = 248, FILL = 0.5; // bar width as a fraction of the pitch
 
 // ─────────────────────────── helpers ──────────────────────────
 const headers = {
@@ -56,7 +58,16 @@ const flatten = (c: Cal): Day[] =>
 const QUERY = `
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
+    followers { totalCount }
+    repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
+      totalCount
+      nodes {
+        stargazerCount
+        languages(first: 10, orderBy: { field: SIZE, direction: DESC }) { edges { size node { name } } }
+      }
+    }
     year: contributionsCollection {
+      contributionYears
       contributionCalendar { weeks { contributionDays { date contributionCount } } }
     }
     win: contributionsCollection(from: $from, to: $to) {
@@ -71,7 +82,12 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 
 type Resp = {
   user: {
-    year: { contributionCalendar: Cal };
+    followers: { totalCount: number };
+    repositories: {
+      totalCount: number;
+      nodes: { stargazerCount: number; languages: { edges: { size: number; node: { name: string } }[] } }[];
+    };
+    year: { contributionYears: number[]; contributionCalendar: Cal };
     win: {
       contributionCalendar: Cal;
       commitContributionsByRepository: {
@@ -89,6 +105,16 @@ async function main(): Promise<void> {
   const dates = Array.from({ length: WINDOW_DAYS }, (_, k) => day(new Date(start.getTime() + k * 864e5)));
 
   const { user } = await gql<Resp>(QUERY, { login: USERNAME, from: start.toISOString(), to: now.toISOString() });
+
+  // ── all-time commits: contributionsCollection spans ≤ 1 year, so one alias per year ──
+  // restrictedContributionsCount = private contributions (can include a few non-commit ones)
+  const yearsQ = user.year.contributionYears.map((y) =>
+    `y${y}: contributionsCollection(from: "${y}-01-01T00:00:00Z", to: "${y}-12-31T23:59:59Z") { totalCommitContributions restrictedContributionsCount }`
+  ).join("\n");
+  const allTime = await gql<{ user: Record<string, { totalCommitContributions: number; restrictedContributionsCount: number }> }>(
+    `query($login: String!) { user(login: $login) { ${yearsQ} } }`, { login: USERNAME });
+  const allTimeCommits = Object.values(allTime.user)
+    .reduce((a, y) => a + y.totalCommitContributions + y.restrictedContributionsCount, 0);
 
   // ── streaks (full year) ──
   const year = flatten(user.year.contributionCalendar);
@@ -158,21 +184,35 @@ async function main(): Promise<void> {
   });
   const totalCommits = totals.reduce((a, b) => a + b, 0);
 
+  // ── languages (bytes, public non-fork repos) + account stats ──
+  const langBytes = new Map<string, number>();
+  let stars = 0;
+  for (const r of user.repositories.nodes) {
+    stars += r.stargazerCount;
+    for (const e of r.languages.edges) langBytes.set(e.node.name, (langBytes.get(e.node.name) ?? 0) + e.size);
+  }
+  const langTotal = [...langBytes.values()].reduce((a, b) => a + b, 0) || 1;
+  const langSorted = [...langBytes].sort((a, b) => b[1] - a[1]);
+  const langs = langSorted.slice(0, LANG_COLORS.length)
+    .map(([name, b], i) => ({ name, pct: (b / langTotal) * 100, color: LANG_COLORS[i] }));
+  const restPct = (langSorted.slice(LANG_COLORS.length).reduce((a, [, b]) => a + b, 0) / langTotal) * 100;
+  if (restPct >= 0.1) langs.push({ name: "other", pct: restPct, color: LANG_OTHER });
+
   // ── render ──
-  const barW = (W - 2 * PAD - (WINDOW_DAYS - 1) * GAP) / WINDOW_DAYS;
+  const pitch = (W - 2 * PAD) / WINDOW_DAYS;
+  const barW = pitch * FILL;
   const maxDay = Math.max(1, ...grid.map((r) => r.reduce((a, b) => a + b, 0)));
   const scale = (CHART_BOT - CHART_TOP - 2) / maxDay;
 
   let bars = "";
   grid.forEach((row, k) => {
-    const x = (PAD + k * (barW + GAP)).toFixed(2);
+    const x = (PAD + k * pitch + (pitch - barW) / 2).toFixed(2);
     let y = CHART_BOT;
     row.forEach((n, j) => {
       if (n <= 0) return;
-      const h = Math.max(2, n * scale - 1);
+      const h = Math.max(1.5, n * scale);
       y -= h;
       bars += `<rect x="${x}" y="${y.toFixed(2)}" width="${barW.toFixed(2)}" height="${h.toFixed(2)}" fill="${series[j].color}"/>`;
-      y -= 1;
     });
   });
 
@@ -190,9 +230,35 @@ async function main(): Promise<void> {
   const axis = [
     [0, "start"], [Math.round(WINDOW_DAYS / 3), "middle"], [Math.round((2 * WINDOW_DAYS) / 3), "middle"],
   ].map(([k, a]) => {
-    const x = PAD + (k as number) * (barW + GAP) + (a === "middle" ? barW / 2 : 0);
+    const x = PAD + (k as number) * pitch + (a === "middle" ? pitch / 2 : 0);
     return `<text x="${x.toFixed(1)}" y="268" class="s" font-size="11" fill="${C.dim}" text-anchor="${a}">${fmtAxis(dates[k as number])}</text>`;
   }).join("") + `<text x="${W - PAD}" y="268" class="s" font-size="11" fill="${C.dim}" text-anchor="end">today</text>`;
+
+  // bottom section: language bar (left), account stats (right)
+  const LX1 = 520, barLen = LX1 - PAD;
+  let lbar = "", bx = PAD;
+  langs.forEach((l, i) => {
+    const w = (barLen * l.pct) / 100;
+    const vis = Math.max(0, w - (i < langs.length - 1 ? 2 : 0));
+    lbar += `<rect x="${bx.toFixed(2)}" y="${SEC + 38}" width="${vis.toFixed(2)}" height="8" fill="${l.color}"/>`;
+    bx += w;
+  });
+  let llegend = "", gx = PAD;
+  for (const l of langs) {
+    const label = `${clip(l.name, 12)} `, num = `${l.pct.toFixed(l.pct < 10 ? 1 : 0)}%`;
+    const w = 16 + (label.length + num.length) * CHAR_W;
+    if (gx + w > LX1) break;
+    llegend += `<rect x="${gx}" y="${SEC + 61}" width="10" height="10" fill="${l.color}"/>` +
+      `<text x="${(gx + 16).toFixed(1)}" y="${SEC + 70}" class="s" fill="${C.legend}">${esc(label)}<tspan fill="${C.text}">${num}</tspan></text>`;
+    gx += w + 12;
+  }
+  const STAT_X = [560, 644, 708, 772];
+  const stats = ([[allTimeCommits, "commits"], [user.repositories.totalCount, "repos"], [stars, "stars"], [user.followers.totalCount, "followers"]] as const)
+    .map(([n, label], i) => {
+      const x = STAT_X[i];
+      return `<text x="${x}" y="${SEC + 48}" font-size="20" font-weight="700" fill="${C.text}">${n.toLocaleString("en-US")}</text>` +
+        `<text x="${x}" y="${SEC + 70}" class="s" fill="${C.dim}">${label}</text>`;
+    }).join("");
 
   const fontFace = fs.existsSync(FONT_FILE)
     ? `@font-face{font-family:'JBM';font-weight:100 800;src:url(data:font/woff2;base64,${fs.readFileSync(FONT_FILE).toString("base64")}) format('woff2');}`
@@ -210,6 +276,12 @@ ${legend}
 ${bars}
 <line x1="${PAD}" y1="${CHART_BOT + 0.5}" x2="${W - PAD}" y2="${CHART_BOT + 0.5}" stroke="${C.rule}"/>
 ${axis}
+<line x1="${PAD}" y1="${SEC + 0.5}" x2="${W - PAD}" y2="${SEC + 0.5}" stroke="${C.border}"/>
+<text x="${PAD}" y="${SEC + 24}" class="s" fill="${C.dim}">languages · public repos</text>
+${lbar}
+${llegend}
+<text x="560" y="${SEC + 24}" class="s" fill="${C.dim}">all time</text>
+${stats}
 </svg>`;
 
   fs.writeFileSync(OUT_FILE, svg);
