@@ -1,5 +1,5 @@
 
-name: Update Research SVG
+name: Update GitHub Stats
 
 on:
   schedule:
@@ -36,7 +36,7 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "no-reply@github.com"  # Non-contributory email
 
-          git add readme.svg
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto update research dashboard"
+          git add readme.svg colors.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update stats card"
           git push
 
