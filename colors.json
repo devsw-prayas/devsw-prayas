@@ -1,8 +1,8 @@
 {
   "slots": {
     "Vera": 1,
-    "Spectral-ReSTIR-DI": 2,
     "SpectraRenderer": 3,
+    "Spectral-ReSTIR-DI": 2,
     "Spectra": 0
   }
 }
