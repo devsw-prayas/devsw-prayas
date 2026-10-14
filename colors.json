@@ -2,7 +2,7 @@
   "slots": {
     "Vera": 1,
     "SpectraRenderer": 3,
-    "Spectral-ReSTIR-DI": 2,
+    "Inverse-Spectral-Rendering": 2,
     "Spectra": 0
   }
 }
