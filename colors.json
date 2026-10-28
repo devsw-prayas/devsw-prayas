@@ -1,8 +1,8 @@
 {
   "slots": {
     "SpectraRenderer": 3,
-    "Vera": 1,
     "Inverse-Spectral-Rendering": 2,
+    "Corium": 1,
     "Spectra": 0
   }
 }
